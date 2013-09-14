@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+    </style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        
+        				<li class="acc-header" id="astr"> 
+		        <a href="#astr">अडॅप्टिव्ह स्ट्रक्चरेशन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/gerry.png" alt="DeSanctis"><br></div>
+			        <p><strong>विचारक:</strong> जेरारडीन डेसॅन्क्टिस आणि मार्शल स्कॉट पूल यांनी 1994 साली ऍंथोनी गिड्डन्सच्या स्ट्रक्चरेशन सिद्धांताला पुढे नेत हा सिद्धांत मांडला.</p>
+		          <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>तंत्रज्ञानाचा उगम आणि विकास आणि संस्थांच्या संरचनांचा ताळमेळ कसा होतो हे समजण्यासाठी अडॅप्टिव्ह स्ट्रक्चरेशन सिद्धांताचा उपयोग होतो. या सिद्धांतामुळे संस्थांमधील उतरंड कशी तयार होते, गट कसे तयार होतात, त्यांतील संज्ञापन प्रक्रिया कशी असते आणि या सगळ्याचा संज्ञापन आणि निर्णय क्षमतेवर काय परिणाम होतो हे समजते. तंत्रज्ञानाकडे पाहायचा एक सामाजिक दृष्टिकोनही आहे हे या सिद्धांतातून कळते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> तंत्रज्ञानाचा प्रवास छपाई तंत्रज्ञान, टेलिग्राफ, रेडिओ, दूरचित्रवाणी, मायाजाल असा झाला आहे. अडॅप्टिव्ह स्ट्रक्चरेशन सिद्धांताचा उपयोग करून या तंत्रज्ञानाचा परिणाम संस्थात्मक आणि सामाजिक संरचनांवर कसा होतो याचा अभ्यास शक्य आहे.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.academia.edu/667633/Adaptive_Structuration_Theory_Understanding_How_Advancing_Technologies_Drive_Organizational_Change" target="_blank">लिंक 1</a><br>
+			        <a href="http://istheory.byu.edu/wiki/Adaptive_structuration_theory" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.business.unr.edu/faculty/davec/adaptive%20structuration%20theory%20poole%20and%20desanctis.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://highered.mcgraw-hill.com/sites/0073135615/student_view0/chapter15/" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Organizational%20Communication/AST_theory.doc/" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="agenda"> 
+		        <a href="#agenda">अजेंडा सेटिंग सिद्धांत </a>
+		        <div class="acc-content">
+                	<div class="imagePanel"><img src="assets/images/walterlippmann.png" alt="Walter Lippmann"></div>
+			          <br>
+			        <p><strong>विचारक:</strong> वॉल्टर लिपमॅन याने 1922 साली याची पहिल्यांदा मांडणी केली आणि पुढे मॅक्स्वेल मॅकूम्ब्स आणि डॉनल्ड शॉ यांनी 1972 साली त्याला पुढे नेले. </p><br>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>आपण माहितीसाठी अधिकाधिक माध्यमांवर अवलंबून होतो आहोत. त्यामुळे महत्त्वाची माहिती कुठली आहे आणि एकूणच आपल्यासाठी महत्त्वाचे काय आहे ते माध्यम ठरवू शकताहेत. या ठरवण्याच्या प्रक्रियेला अजेंडा सेटिंग असे म्हणतात. माध्यमांद्वारे प्रेक्षकांसाठी अशाप्रकारे अजेंडा तयार करणे याला राजकीय व व्यापारी कारणे आहेत. माध्यमे बातम्यांची विशिष्ट चौकट तयार करतात आणि गेटकीपिंगच्या प्रक्रिये द्वारे लोकांना काय व कसे सांगावे हे ठरवतात. यामुळे संपूर्ण सत्य स्पष्ट होत नाही. अशाप्रकारे काही विषयांना महत्त्व प्राप्त होते व काही विषय दृष्टिआड होतात. </p>
+			        <p>&nbsp;</p>
+			        <p>रॉजर्स आणि डिअरिंग यांनी अजेंडा सेटिंगचे तीन प्रकार सांगितले आहेत. <br>
+		            1) सार्वजनिक अजेंडा सेटिंग <br>
+		            2) माध्यम अजेंडा सेटिंग <br>
+		            3) नीतीचा अजेंडा सेटिंग </p>
+			        <p>&nbsp;</p>
+			        <p>सिद्धांताची उपयुक्तता: माध्यमांचा अजेंडा हा सामान्यत: राजकारण, परराष्ट्र धोरण, इतिहास, इत्यादींच्या बाबतीत स्पष्ट होतो.<br><br>
+                  	<strong>Online resources:</strong>.</p>
+			        <p><br>
+			          
+			          <a href="http://en.wikipedia.org/wiki/Agenda-setting_theory" target="_blank">लिंक 1</a><br>
+			          <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Agenda-Setting_Theory.doc/" target="_blank">लिंक 2</a><br>
+			          <a href="http://www.communicationstudies.com/communication-theories/agenda-setting-theory" target="_blank">लिंक 3</a><br>
+			          <a href="http://agendasetting.com/index.php/agenda-setting-theory" target="_blank">लिंक 4</a><br>
+		          </p>
+		        </div>
+         	</li>
+            
+            
+            <li class="acc-header" id="alter"> 
+		        <a href="#alter"><strong>आल्टरकास्टिंग सिद्धांत</strong></a>
+	          <div class="acc-content">
+			        <p><strong> विचारक: </strong>हा विचार यूजीन वाइनस्टाइन आणि पॉल डॉइशबर्जर यांनी 1963 साली मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> या माध्यम सिद्धांताचे मूळ समाजशास्त्रात आहे. या सिद्धांताची व्याख्या ‘आपली ओळख प्रक्षेपित करणे’ असा होतो. व्यक्ति समाजात कुठली ‘भूमिका’ पार पाडते किंवा कुठल्या भूमिका तिच्यावर सामाजिक दबावामुळे थोपवल्या जातात याबाबत हा सिद्धांत स्पष्टीकरण देतो. </p>
+			        <p>&nbsp;</p>
+			        <p>आल्टरकास्टिंग दोन प्रकारचे असते. <br>
+		            1) मँडेड आल्टरकास्टिंग होते जेव्हा एखाद्या व्यक्तीला ती व्यक्ती कोण आहे, तिने काय करावे आणि तिने कसे वागावे हे तिला दिलेल्या भूमिकेच्या आधारावर ठरते. उदाहरणर्थ शिक्षक-विद्यार्थी <br>
+		            2) टॅक्ट आल्टरकास्टिंग होते जेव्हा व्यक्ति स्वत: एखादी भूमिका स्वीकारते ज्यामुळे इतरांच्या तिच्याकडून काही अपेक्षा असतात. उदाहरणार्थ एखाद्या कीर्तनकाराकडून ‘कीर्तनकाराला शोभेल’ असे वर्तन अपेक्षित असते.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांताचा माध्यम विपणन प्रक्रियेत उपयोग होतो जेथे प्रेक्षकांना वेगवेगळ्या भूमिकांमध्ये घालून त्यांच्या वागण्याला प्रभावित केले जाते. . </p>
+		        <p>&nbsp;</p>
+			       <p><strong>Further reading: </strong></p>
+			       <p>&nbsp;</p>
+                    <a href="http://www.jstor.org/discover/10.2307/2786148?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102603804433" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.sagepub.com/newman5study/resources/blumstein1.htm" target="_blank">लिंक 2</a><br>
+			        <a href="http://singmeanadoreimi.wordpress.com/2011/10/16/altercasting-theory/" target="_blank">लिंक 3</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Altercasting" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+	          </div>
+            </li>
+            
+             <li class="acc-header2" id="argu"> 
+		        <a href="#argu"><strong>आर्ग्युमेंटेशन सिद्धांत</strong></a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/toulmin.png" alt="Toulmin" ></div>
+			        <p><strong>विचारक: </strong>स्टीफन टोलमिन याने ‘दि युसेस ऑफ आर्ग्युमेंट’ हा लेख 1958 साली लिहिला आणि या सिद्धांताची मुळे ऍरिस्टॉटलच्या तत्त्वांमध्ये आहेत हे दाखवून दिले. त्यापुढे जाऊन 1969 मध्ये पेरेलमनने ‘दि न्यू र्हेटॉरिक’ मध्ये आणि त्यानंतर शेलेंस (1985), वॅन इमेरेन आणि ग्रूनटेनडॉर्स्ट (1996) यांनी या सिद्धांताची अधिक परिपूर्ण मांडणी केली.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> लोकांतील संज्ञापनात तर्क आणि विचाराचा वापर कसा आणि कितपत असतो याबाबतचा हा सिद्धांत आहे. टोलमिननुसार आर्ग्युमेंटेशनचे सहा भाग आहेत – <br>
+		            क्लेम (दावा करणे), <br>
+		            डेटा (माहिती), <br>
+		            वॉरंट (एखादा मुद्द्यावर अधिकार स्पष्ट करणे), <br>
+		            बॅकिंग (मुद्द्यासाठीची सामग्री समोर ठेवणे), <br>
+		            रिबुट्टल (खंडन करणे) आणि <br>
+		            क्वालिफायर (मुद्द्याच्या मर्यादा स्पष्ट करणे). </p>
+			        <p>&nbsp;</p>
+			        <p>शेलेंस याने आर्ग्युमेंटेशनचे दोन प्रकार सांगितले - <br>
+		            रेस्ट्रिक्टेड (प्रतिबंधित) आणि <br>
+		            अनरेस्ट्रिक्टेड (प्रतिबंधित नसलेले). </p>
+			        <p>&nbsp;</p>
+			        <p>वॅन इमेरेन आणि ग्रूनटेनडॉर्स्ट यांनी आर्ग्युमेंटेशनच्या चार पायर्‍या स्पष्ट केल्या – <br>
+		            कन्फ्रंटेशन (सामना), <br>
+		            ओपनिंग (प्रारंभ), <br>
+		            आर्ग्युमेंटेशन (विवाद) आणि <br>
+		            कंक्ल्यूजन (निर्णय). </p>
+			        <p>&nbsp;</p>
+			        <p>एखाद्या विवादाची संरचना साधारणपणे अशाप्रकारची असते – विवादामधे अंतर्गत संरचना असते जिच्यात काही गृहित धरलेले असते, तर्काच्या काही पद्धती असतात, आणि विशिष्ट मुद्दा असतो. कुठल्याही विवादामधे किमान दोन पूर्वपक्ष असतात आणि एक निर्णय असतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांताचा उपयोग कुठल्याही दोन व्यक्ती अथवा गट यांच्यातील संज्ञापनाच्या अभ्यासासाठी होऊ शकतो. शास्त्रज्ञ, कायदेपंडित, पत्रकार, माध्यम व्यावसायिक, जाहिरातदार यांसारख्या अनेक क्षेत्रांतील व्यावसायिकांना याचा उपयोग होतो.</p>
+		          <p>&nbsp;</p>
+			        <strong>Links for more reading: </strong><br>
+			        <br>
+                	<a href="http://en.wikipedia.org/wiki/Argumentation_theory" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/levels%20of%20theories/micro/argumentation%20theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.dougwalton.ca/papers%20in%20pdf/09ArgShort.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.sjsu.edu/people/anand.vaidya/courses/c5/s2/Why%20Do%20Humans%20Reason%20Sperber.pdf" target="_blank">लिंक 4</a><br>
+			        <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="aristotle"> 
+		        <a href="#aristotle">ऍरिस्टॉटलचे र्हेटॉरिक</a>    
+	            <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/Aristotele.png" alt="Aristotle" ></div>
+			        <p>&nbsp;</p>
+			        <p> <strong>विचारक:</strong> ऍरिस्टॉटलने या विषयावर आपले मत इसवीसनपूर्व 350 मधे मांडले. यालाच आर्ट ऑफ परसुएशन (पटवून देण्याची कला) असेही म्हणतात. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> ऍरिस्टॉटलच्या मते एखाद्या विषयात पटवून देण्यासारखे काय आहे हे समजून घेणे आवश्यक असते आणि ते मुद्दा पटवून देण्यापेक्षा अधिक महत्त्वाचे असते. </p>
+			        <p>&nbsp;</p>
+			        <p>एखादा विषय पटवून देण्याच्या उपकरणांची ऍरिस्टॉटलने तीन वर्गात विभागाणी केली. <br>
+		            1) ईथॉस – बोलणारी व्यक्ती कोण आहे, विषयावर तिचा काय आणि किती अधिकार आहे <br>
+		            2) पॅथॉस – श्रोत्याची मनस्थिती काय आहे <br>
+		            3) लोगॉस – विषयाची तर्कशुद्ध मांडणी. </p>
+			        <p>&nbsp;</p>
+			        <p>र्हेटॉरिक मधे आर्ग्युमेंटेशन (विवाद) आणि पर्सुएशन (पटवून देणे) यांचा समन्वय दिसून येतो.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> प्रेक्षकांना एखादा मुद्दा पटवून देण्यासाठी र्हेटॉरिकचा उपयोग होतो. मात्र जे पटवून दिले जाते ते अयोग्य अथवा चुकीचे नसते. जाहिरातींमधे तर याचा उपयोग केला जातोच त्याचबरोबर सामाजिक जागृति घडवून आणण्यासाठीच्या संज्ञापनातही याचा उपयोग होतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Links for more reading: </strong><br>
+		         <br>
+                	<a href="http://plato.stanford.edu/entries/aristotle-rhetoric" target="_blank">लिंक 1</a><br>
+			        <a href="http://classics.mit.edu/Aristotle/rhetoric.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://courses.durhamtech.edu/perkins/aris.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://spot.colorado.edu/~hauserg/ArSynop.htm" target="_blank">लिंक 4</a><br>
+		        	<a href="http://en.wikipedia.org/wiki/Rhetoric_(Aristotle)" target="_blank">लिंक 5</a><br>
+			        </p>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+           
+            <li class="acc-header2" id="attr"> 
+		        <a href="#attr">ऍट्रिब्युशन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/heider.png" alt="Heider" ><br></div>
+                  <br>
+			        <p><strong>विचारक:</strong> फ्रिट्ज हायडर याने 1958 साली पहिल्यांदा हा विचार मांडला. त्यानंतर एडवर्ड जोन्स आणि कीथ डेव्हिस यांनी 1965 साली करस्पॉन्डंट इफरंस सिद्धांत मांडला आणि हॅरॉल्ड केलीने को-व्हेरियेशन मॉडेल यावरून तयार केला. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> या सिद्धांताची मुळे मानसशास्त्रात आहेत. स्वत:च्या आणि इतरांच्या वागण्या-बोलण्याचा लोक काय अर्थ लावतात याबाबत हा सिद्धांतविचार आहे. कुठल्याही शास्त्रीय आधाराशिवाय लोक स्वानुभवावरून भोवतालच्या घटनांबाबत मते तयार करतात. असे करण्यामागे आपल्या अनुभवविश्वाशी जुळवून घेणे, चहूकडे घडणार्‍या घटनांशी स्वत:च्या इच्छा, आकांक्षांचा ताळमेळ बसवणे हा असतो. </p>
+			        <p>&nbsp;</p>
+			        <p>हायडर याने ऍट्रिब्युशनचे दोन प्रकार सांगितले – <br>
+		            इंटर्नल (व्यक्तीच्या वर्तणूकीशी संबंधित) आणि <br>
+		            एक्स्टर्नल (व्यक्तीच्या सामाजिक परिसरातील घडामोडींशी संबंधित). </p>
+			        <p>&nbsp;</p>
+			        <p>हायडरने लोकांना ‘भोळसट मानसशास्त्रज्ञ’ म्हटले कारण ते आपल्या जगाचा अर्थ लावण्यासाठी आपल्या स्वानुभवाचा उपयोग करतात. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजशास्त्रीय अभ्यासात ऍट्रिब्युशन सिद्धांताचा उपयोग होतो आणि विशिष्ट प्रसंगात लोकांची वागणूक समजून घेण्यास मदत होते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong><br>
+			          <br>
+			        </p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/attribution_theory.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Attribution_(psychology)" target="_blank">लिंक 2</a><br>
+			        <a href="http://education.purduecal.edu/Vockell/EdPsyBook/Edpsy5/edpsy5_attribution.htm" target="_blank">लिंक 3</a><br>
+			        <p>&nbsp;</p>
+		        </div>
+		    </li>
+
+
+			 <li class="acc-header" id="commbarriers"> 
+		        <a href="#commbarriers">बॅरिअर्स टु कम्युनिकेशन - संज्ञापन प्रक्रियेतील अडचणी</a>    
+	            <div class="acc-content">
+                <p>&nbsp;</p>
+			        <p>संज्ञापन प्रक्रियेतील अडचणी अनेक आहेत. </p>
+			        <p>&nbsp;</p>
+			        <p>उदाहरणार्थ <br>
+		            शारीरिक, <br>
+		            मानसशास्त्रीय, <br>
+		            तांत्रिक, <br>
+		            स्वत:बाबतची प्रतिमा, <br>
+		            बदलाला असलेला विरोध, <br>
+		            बचावात्मक भूमिका, <br>
+		            भीती इत्यादि. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>References</strong></p>
+			        <p>&nbsp; </p>
+			        <a href="http://my.safaribooksonline.com/book/medicine/9789332501461/chapter-1-review-of-communication-process/ch1_7_xhtml" target="_blank">लिंक 1</a> <br>
+			        <a href="http://www.opin.ca/article/seven-barriers-communication" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.skillsyouneed.com/ips/barriers-communication.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Communication" target="_blank">लिंक 4</a><br>
+			        <a href="http://cas.upes.ac.in/pdf/Barriers%20to%20Commn%203.pdf" target="_blank">लिंक 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+             <li class="acc-header2" id="civil"> 
+		        <a href="#civil">सिव्हिल सोसायटी सिद्धांत</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/hobbes.png" width="75%" alt="Hobbes"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारक:</strong> थॉमस हॉब्स  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> समाजात सभ्यता ठेवण्यासाठी सक्षम राज्यव्यवस्थेची आवश्यकता हॉब्स याने मांडली. माणसे स्वहित जपणारी आणि आत्मकेंद्री असतात. त्यामुळे त्यांची उद्दिष्ट्ये अनेकदा परस्पर विरोधी असतात ज्यामुळे स्वाभाविकपणे सगळेच सगळ्यांच्या विरोधात उभे असल्यासारखे होते. यावर सिव्हिल सोसायटी (नागरिकांचा समाज) असा उपाय हॉब्सने सुचवला. स्वयंस्फूर्तीतून तयार झालेले सामाजिक संबंध, नागरी आणि सामाजिक संघटना आणि संस्था हे समाज आधारस्तंभ असतात. याउलट जबरदस्तीने तयार केलेली राज्याची संरचना, बाजाराधिष्ठित व्यापारी संस्था आणि संघटित गुन्हेगारी असते. समाज म्हणजे राज्य व्यवस्था, बाजारव्यवस्था आणि नागरिकांचा समाज. या तीनही व्यवस्थांचा समाजातील आंतरसंबंध, नाती, चारित्र्य आणि संरचना यांवर परिणाम होतो. तर्कसंगतपणा आणि स्वहित यांमुळे माणसे आपणहून एकमेकांशी करार करायला तयार होतात आणि आपले सार्वभौमत्व एका सार्वजनिक सत्तेकडे द्यायला तयार होतात. यामुळे समाजात शांति प्रस्थापित करण्यासाठी सामाजिक करार करण्याची आवश्यकता असते. अशा समाजात अधिकार आणि मूल्ये स्वाभाविकपणे तयार होतात. मार्क्सनुसार असा समाज उत्पादकीय शक्ती आणि सामाजिक संबंधांचा पाया असतो तर राजकीय समाज त्यावर उभा असतो. मार्क्सनुसार भांडवलशाही व्यवस्था आणि नागरिकांच्या समाजात परस्पर संबंध असतो आणि भांडवशहांचे हित अशा नागरिकांच्या समजांतून जपले जातात. </p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+                    <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Thomas_Hobbes" target="_blank">लिंक 1</a><br>
+                  <a href="http://jim.com/hobbes.htm" target="_blank">लिंक 2</a><br>
+                  <a href="http://www.jstor.org/discover/10.2307/3235060?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102596922137" target="_blank">लिंक 3</a><br>
+                  <a href="http://graduateinstitute.ch/files/live/sites/iheid/files/sites/political_science/shared/political_science/1836/Week_3_Pietrzyk.pdf" target="_blank">लिंक 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Civil_society" target="_blank">लिंक 5</a><br>
+                  <a href="http://www.arabmediasociety.com/?article=773" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="cnn"> 
+		        <a href="#cnn">सीएनएन इफेक्ट </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/cnn.png" width="75%" alt="CNN Effect"></div>
+		            <p>&nbsp;</p>
+		            <p> <strong>सिद्धांत स्पष्टीकरण:</strong> चोवीस तास प्रक्षेपित होणार्‍या दूरचित्रवाणी वाहिन्यांचा एकंदरीत राजकारण आणि अर्थकारण यांबाबतच्या नीती आणि धोरणांवर परिणाम होतो असे हा सिद्धांत सांगतो. या सैद्धांतिक मांडणीची सुरुवात सीएनएन या अमेरिकतील खाजगी वाहिनीच्या 1980च्या दशकातील आखाती युद्ध, बर्लिनची भिंत पाडली जाणे, बोस्निया येथील जातीय संघर्षाच्या प्रक्षेपणानंतर झाली. या सैद्धांतिक मांडणीचे विरोधकही आहेत. या सिद्धांताच्या बाजूने असलेले विचारवंत असे मानतात की चोवीस तास प्रक्षेपित बातम्यांमुळे विशिष्ट लोकमत तयार झाले आणि याचा परिणाम अमेरिकेच्या काही पराराष्ट्र धोरणांवर झाला.   </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्तता: </strong>राजकारणी आणि प्रशासक यांनी सीएनएन इफेक्ट होत नाही अशी आग्रही भूमिका घेतली आहे. मात्र माध्यम अभ्यासक आणि विचारवंतांनी याच्या उपयुक्ततेचा अभ्यास आवश्यक असल्याचे सांगितले आहे. सीएनएन इफेक्ट होत नाही असे सांग़ण्याचे एक कारण म्हणजे युद्धाची दृश्ये इतकी सर्रास आणि इतक्या जास्त प्रमाणात दाखविली जातात की त्यांचा परिणाम होईनासा झाला आहे. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/CNN_effect" target="_blank">लिंक 1</a><br>
+                  <a href="http://www.ajr.org/article.asp?id=3572" target="_blank">लिंक 2</a><br>
+                  <a href="http://courses.essex.ac.uk/gv/gv905/extras/Robinson_cnn_effect.pdf" target="_blank">लिंक 3</a><br>
+                  <a href="https://repository.library.georgetown.edu/bitstream/handle/10822/553423/zingarelliMeganElizabeth.pdf?sequence=1" target="_blank">लिंक 4</a><br>
+                  <a href="http://worldpoliticsblog.wordpress.com/2011/08/18/famine-in-somalia-and-the-cnn-effect/" target="_blank">लिंक 5</a><br>
+                  <a href="http://www.jbjv.com/Does-the-CNN-Effect-Exist-Military.html" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="contag"> 
+		        <a href="#contag">कंटेजियन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/gustaveLeBon.png" alt="Gustav" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत:</strong> गस्ताव ल बाँ याने मानसशास्त्रीय अंगाने हा सिद्धांत मांडला आहे. याचा पुढे माध्यम अभ्यासात अंतर्भाव करण्यात आला.  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांत स्पष्टीकरण:</strong> भावनांचा वापर करून एखाद्या मोठ्या गटाची किंवा गर्दीची वर्तणूक प्रभावित करता येते असे मानसशास्त्र सांगते. ले बाँच्या मते गर्दीत लोक भावनेला आहारी जाऊन एकमेकांचे अनुकरण करू लागतात आणि त्यायोगे एखाद्या झुंडीप्रमाणे, अतार्किक वागतात. आंतरवैयक्तिक संज्ञापन सिद्धांतांमध्ये संज्ञापनाचा परिणाम व्यक्तींच्या वागण्यावर आणि मनोभावावर काय होतो याचा अभ्यास करता येतो. कंटेजियन सिद्धांताचा येथे उपयोग होतो. त्याचप्रमाणे जे लोक एकसारखी संज्ञापन प्रक्रिया अथवा नवमाध्यमे वापरतात त्यांत देखील कंटेजियन आढळते. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्ततता:</strong> ज्या संस्थांमधे आंतरविभागीय संज्ञापन असते अथवा स्वयंकेंद्री गट किंवा जे गट एकसारखी संज्ञापन रचना वापरतात अशांना कंटेजियन सिद्धांत लागू होतो.  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading: </strong><br>
+		              <br>
+		            </p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Contagion_theories.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Introduction_to_Sociology/Collective_Behavior" target="_blank">लिंक 2</a><br>
+			        <a href="http://humannaturelab.net/wp-content/themes/human-nature-lab/media/pdf/publications/articles/136.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.columbia.edu/itc/hs/medical/bioethics/nyspi/material/MediaContagionAndSuicide.pdf" target="_blank">लिंक 4</a><br>
+			        <a href="http://www.terrorismanalysts.com/pt/index.php/pot/article/view/73/html" target="_blank">लिंक 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+          </li>
+            
+            <li class="acc-header" id="diss"> 
+		        <a href="#diss">कॉग्निटिव्ह दिसोनन्स सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/festinger.png" alt="Festinger" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत:</strong> लिआँ फेस्टिंगर याने 1951 साली हा सिद्धांत मांडला <br>
+		              <br>
+	                <strong>	                सिद्धांताचे स्पष्टीकरण:</strong> मानसशास्त्रीय सिद्धांतांचा आधार घेऊन हा सिद्धांत असे सांगतो की व्यक्ति एखाद्या घटनेबद्दल अस्वस्थ होते जेव्हा तिला तिच्या समोरील दोन विरोधी भूमिकांतून एक पर्याय निवडायचा असतो. व्यक्तींना आपली मते आणि मनोभाव प्यारे असतात आणि त्यांसमरस राहण्याचा ते आटोकाट प्रयत्न करत असतात. पर्याय निवडीमुळे त्रास, असंगत वर्तणूक करावी लागणार अथवा समरसता गमवावी लागणार असेल तर ते आपल्या मतांमध्ये आणि मनोभावांमध्ये अफरातफर करतात. फेस्टिंगरच्या मते कॉग्निटिव्ह कंसिसटंसी (सुसंगत जाणीव) इतकी महत्त्वाची असते की लोक कधी कधी अतार्किक पद्धतीने वागताने दिसतात जेव्हा घटना त्यांच्या जाणीवांच्या दृष्टीने असंगत वाटतात. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयक्तता: </strong>कठीण प्रसंगी किंवा संकटकाळी लोक कसे वागतात हे समजून घेण्यासाठी या सिद्धांताचा उपयोग होतो.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong><br>
+		              <br>
+		             <a href="http://en.wikipedia.org/wiki/Cognitive_dissonance" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.simplypsychology.org/cognitive-dissonance.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.ithaca.edu/faculty/stephens/cdback.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Cognitive_Dissonance_theory.doc/" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="cult"> 
+	          <a href="#cult">कल्टिव्हेशन सिद्धांत </a>
+		        <div class="acc-content">
+		          <div class="imagePanel"><img src="assets/images/gerbner.png" alt="Gerbner"></div>
+	              <br>
+	              <strong>विचारवंत: </strong>जॉर्ज गर्बनर याने हा सिद्धांत 1960च्या दशकात मांडला आणि 1976 साली गर्बनरसोबत ग्रॉस याने तो पुढे वाढवला<br>
+	              <br>
+	              <strong>	              सिद्धांचे स्पष्टीकरण:</strong> माध्यमांना जे सांगायचे आहे, दाखवायचे आहे ते सतत आणि हळू हळू दाखवत, सांगत, माध्यमे त्यांना हवे असलेले रुजवतात आणि माध्यमांना वाटत असलेले वास्तवाचे दर्शन लोकांमध्ये रुजते असे हा सिद्धांत सांगतो. एखादं बी जमिनीत रुजावं त्याप्रमाणे होते. दूरचित्रवाणीचा लोकांच्या मनोभावावर दूरवर परिणाम होतो मात्र त्यांच्या वागणूकीत बदल होत नाही. गर्बनरने दूरचित्रवाणी पाहणार्‍यांचे दोन गट केले. जे लोक दिवसात चार तासापेक्षा जास्त टीव्ही पाहतात अशांचा एक गट ‘हेवी व्ह्यूअर्स’चा आणि दुसरा गट ‘लाइट व्ह्यूअर्स’चा जे दिवसात चार तासापेक्षा कमी वेळ टीव्ही पाहतात. त्याच्या मते पहिल्या गटातील लोक असे मानू लागतात की जे टीव्हीवर दाखविले जाते आहे ते जग केवळ प्रातिनिधिक नसून वास्तव आहे. हा सिद्धांत असेही सांगतो की दूरचित्रवाणी मुळे नवे मनोभाव व मते तयार होत नाहीत मात्र असलेले अधिक घट्ट होतात.
+                  <p>&nbsp;</p>
+                  <p><strong>Further reading: </strong>                   
+                  <p><br>
+                    <a href"http://www.colorado.edu/communication/meta-discourses/Papers/App_Papers/Gulisano.htm" target="_blank">लिंक 1</a><br>
+                    <a href"http://www.aber.ac.uk/media/Documents/short/cultiv.html" target="_blank">लिंक 2</a><br>
+                    <a href"http://www.utwente.nl/cw/theorieenoverzicht/theory%20clusters/media,%20culture%20and%20society/cultivation_theory-1.doc/" target="_blank">लिंक 3</a> <br>
+                    <a href"http://masscommtheory.com/theory-overviews/cultivation-theory/" target="_blank">लिंक 4</a><br>
+                  <p>&nbsp;</p>
+              </div>
+	      </li>
+          
+          <li class="acc-header" id="depend"> 
+		        <a href="#depend">डिपेंडन्सी सिद्धांत </a>
+	        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/sandraball.png" alt="Sandra Ball"></div>
+	              <br>
+              <p><strong>विचारवंत: </strong>सँड्रा बॉल-रॉकईच आणि मेल्विन दफ्लोर यांनी 1976 मध्ये त्याअगोदर अस्तिवात असलेल्या युजेस अँड ग्रॅटिफिकेशन्स आणि अजेंडा सेटिंग या सिद्धांतांवर हा सिद्धांत आधारला.  </p>
+	            <p>&nbsp;</p>
+	            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> माध्यमांवर अवलंबित्व जसजसे वाढत जाते तसे तसे माध्यमांचा प्रभाव व्यक्तीच्या जीवनात वाढत जातो. या सिद्धांताने पहिल्यांदा असे दाखवून दिले की प्रेक्षक संज्ञापन प्रक्रियेत सक्रीय असतात आणि माध्यमे, प्रेक्षक आणि एकंदर समाज यांत परस्पर संबंध असतत. युजेस अँड ग्रॅटिफिकेशन्स सिद्धांत असे सांगतो की प्रेक्षक माध्यमांतून जे हवे असते तेच घेतात मात्र डिपेंडन्सी सिद्धांत असे सांगतो की माध्यमे प्रेक्षकांच्या गरजा भागवून  स्वत:वर अवलंबित बनवतात. </p>
+	            <p>&nbsp;</p>
+	            <p>हे अवलंबित्व किती असेल हे दोन गोष्टींवर ठरते. <br>
+	              1) जेव्हा आपल्या गरजा भागवेल असे माध्यम आपल्या सापडते तेव्हा आपण त्या मध्यमावर अधिकाधिक अवलंबून असतो <br>
+	              2) जेव्हा आपल्यासमोर एखादा सामाजिक संघर्ष उभा राहतो किंवा आपली मते, धार्मिक रीति रिवाज इत्यादींचे पुनरावलोकन करणे भाग असते तेव्हा माध्यमांवर आपले अवलंबित्व वाढते. स्थिरता आली की माध्यमांवरील अवलंबित्व कमी होत जाते.   <br>
+	              <br>
+	              <strong>Further reading:</strong></p>
+	            <p><br>
+	              <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Dependency%20Theory.doc/" target="_blank">लिंक 1</a><br>
+	              <a href"http://en.wikipedia.org/wiki/Media_systems_dependency_theory" target="_blank">लिंक 2</a><br>
+	              <br>
+              </p>
+	        </div>
+	      </li>
+          
+             <li class="acc-header2" id="diffu"> 
+		        <a href="#diffu">डिफ्युशन ऑफ इनोव्हेशंस सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rogers.png" alt="Rogers"><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत: </strong>एव्हेरेट रॉजर्स याने 1962 साली हा सिद्धांत मांडला</p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> वेगवेगळ्या संस्कृतींतून तंत्रज्ञान आणि नवे विचार कसे प्रसरण पावतात याबाबत हा सिद्धांत सांगतो. एखाद्या संस्कृतीत नवे विचार, उत्पादन किंवा तंत्रज्ञान कसे रुजतात याबाबत विचार मांडत असताना हा सिद्धांत टू स्टेप फ्लो सिद्धांताच्या पुढे जातो. </p>
+		            <p>&nbsp;</p>
+		            <p>समाजात वैचारिक पुढाकार घेणारे नेते असतात ज्यांच्यावर माध्यमांचा प्रभाव असतो. अशा लोकांना ‘अडॉप्टर’ असे म्हटले आहे. जे सर्व नवीन असते ते सर्व समाजांत किंवा संस्कृतीत एक सारखेच आणि एकाच वेळी रुजत नाही. येथे बदल घडवू पाहणारे, माध्यमे, ‘अडॉप्टर’ आणि सरते शेवटी प्रेक्षक अथवा समाजातील व्यक्ती यांच्यात आंतरसंज्ञापनाची आवश्यकता असते. अशाप्रकारे कालांतराने एखादा विचार, उत्पादन गती पकडते आणि त्याचे प्रसारण विशिष्ट समाजात होते. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्तता:</strong> नवमाध्यम तंत्रज्ञान किती खोलवर रुजले आहे आणि समाजात कशाप्रकारचे बदल घडवून आणते आहे ते अभ्यासण्यासाठी या सिद्धांताचा उपयोग होतो. एखाद्या संघटनेत विचारांचे आदानप्रदान समान व्हावे आणि नवीन विचारांसोबत काम करणे सोपे जावे यासाठीही या सिद्धांताचा उपयोग होतो. </p>
+	              <p>&nbsp;</p>
+		            <p><strong>Further reading: </strong></p>
+		            <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Diffusion_of_innovations" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Communication%20and%20Information%20Technology/Diffusion_of_Innovations_Theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.enablingchange.com.au/Summary_Diffusion_Theory.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.stanford.edu/class/symbsys205/Diffusion%20of%20Innovations.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.rogerclarke.com/SOS/InnDiff.html" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+           
+           
+           
+           <li class="acc-header" id="evt"> 
+		        <a href="#evt">एक्स्पेक्टेंसी व्हॅल्यू सिद्धांत  </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/fishbein.png" alt="Fishbein" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत: </strong>मार्टिन फिश्बाइन याने 1970च्या दशकात हा सिद्धांत मांडला </p>
+	              <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> युजेस अँड ग्रॅटिफिकेशन्स सिद्धांतावरून हा सिद्धांत पुढे जातो. अपेक्षांचं मूल्यांकन याबाबत हा सिद्धांत सांगतो. जगाकडे कसे पाहावे, त्याच्याशी कसे वागावे हे लोकांच्या जगाबाबतच्या अपेक्षा आणि त्याचे मूल्यांकन यांवर आधारलेले असते. </p>
+		            <p>&nbsp;</p>
+		            <p>या अपेक्षा दोन प्रकारच्या असतात <br>
+	                1) विश्वास कशात आहे <br>
+	                2) विश्वास कशाबाबत आहे. <br>
+	                <br>
+	                लोकांचा विश्वास आणि मूल्ये हे त्यांच्या उद्दिष्टांवर अवलंबून असतात आणि जेथे विश्वासाबाबत दुमत तयार होते, विभाजन होते तेथे ते असा पर्याय निवडतात ज्यातून यश आणि मूल्य अधिकाधिक प्राप्त होईल.  <br>
+	                <br>
+	                <strong>	                सिद्धांताची उपयुक्तता:</strong> मतदार कसे वागतील याचा अंदाज बांधण्यात या सिद्धांताचा उपयोग होतो किंवा जाहिरातीचा काय परिणाम होईल याचा अंदाज घेण्यासाठी होतो. . </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong></p>
+		            <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Expectancy-value_theory" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Expectancy_Value_Theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://aguda.org.il/files/academic_bank/2/322/55859/2_2007_55859_1170980723.97.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://130.18.140.19/persuasion/ExpectancyValueTheory.htm" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+          
+           <li class="acc-header2" id="frames"> 
+		        <a href="#frames">फ्रेमिंग सिद्धांत </a>
+            <div class="acc-content">
+            <div class="imagePanel"><img src="assets/images/fairhurst.png" alt="Gail Fairhurst"></div>
+			          <br>
+		            <p><strong>विचारवंत:</strong> अनेक माध्यम अभ्यासकांनी फ्रेमिंगबाबत आपले विचार मांडले आहेत. त्यांतील महत्त्वाचे आहेत टॉड गिट्लिन (1980), शांतो अय्यंगार (1990) आणि फेअरहर्स्ट आणि सार (1996)  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> माध्यमे एखादी घटना अथवा विषय कशा प्रकारे मांडतात आणि प्रेक्षक कशाप्रकारे त्याचा अर्थ लावतात याला फ्रेमिंग म्हणतात. माध्यमे काही घटना, व्यक्ती, विषयांवर अधिक भर देतात ज्यामुळे प्रेक्षक त्यांकडे अधिकाधिक एका विशिष्ट चौकटीतून (फ्रेम) ‘पाहतात’ जी माध्यमांनी तयार केलेली असते. माध्यम संस्थेच्या उद्दिष्टांना अनुसरून या चौकटी तयार केल्या जातात. त्यामुळे फ्रेमिंग सिद्धांत अजेंडा सेटिंग सिद्धांतासोबत अभ्यासला जातो. अशाप्रकारे दोन्ही सिद्धांतांचा  उपयोग करून माध्यम अभ्यास, संज्ञापन अभ्यास, मानसशास्त्र, मानववंशशास्त्र आणि समाजशास्त्रात अभ्यास केला जातो आहे. </p>
+		            <p>&nbsp;</p>
+		            <p>शांतो अय्यंगार याने दोने फ्रेम्स स्पष्ट केल्या:<br>
+		              <br>
+	                <strong>	                एपिसोडिक फ्रेम:</strong> बातम्या ज्यावेळी घटनात्मक चौकटीतून मांडल्या जातात तेव्हा त्यांना एपिसोडिक म्हटले जाते. अशा चौकटीमुळे एखादी घटना अथवा विषय सार्वजनिक चर्चेत नगण्य होऊन जातो. अशा बातम्यामधून घटनेचे विविध पैलू स्पष्ट होत नाहीत, त्यामागील कारणमीमांसा होत नाही. याचा संबंध पॅराश्यूट जर्नलिझमशी जोडता येऊ शकतो. <br>
+	                <strong>	                <br>
+	                थीमॅटिक फ्रेम:</strong> जेव्हा बातमीची चौकट विषयात्मक आणि विश्लेषणात्मक होते तेव्हा तिला थीमॅतिक फ्रेम म्हणतात. याचा संबंध इमर्शन जर्नलिझमशी जोडता येऊ शकतो. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांताचा उपयोग निवडणूक प्रसार, जाहिराती, कॉर्पोरेट बातम्या, राज्याची नीती इत्यांदींचा अभ्यास करण्यासाठी होतो. </p>
+              <p>&nbsp;</p>
+	              <p><strong>Further reading:</strong><br>
+	                <a href"http://www.asc.upenn.edu/usr/ogandy/c45405%20resources/scheufele%20framing%20as%20effects.pdf" target="_blank">लिंक 1</a><br>
+	                <a href"http://www.scottlondon.com/reports/frames.html" target="_blank">लिंक 2</a><br>
+	                <a href"http://www.frameworksinstitute.org/assets/files/iyengarinterview2009.pdf" target="_blank">लिंक 3</a><br>
+	                <a href"http://en.wikipedia.org/wiki/Framing_(social_sciences)" target="_blank">लिंक 4</a><br>
+	                <br>
+                  </p>
+            </div>
+		    </li>
+            
+          <li class="acc-header" id="frank"> 
+		        <a href="#frank">फ्रँक्फर्ट स्कूल ऑफ थॉट </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/frankfurt.png" width="85%" alt="Frankfurt"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> फ्रँक्फर्ट येथील पाच विचारवंतांनी मिळून क्रिटिकल सिद्धांताची मांडणी केली त्यामुळे याला फ्रँक्फर्ट स्कूल ऑफ थॉट म्हटले जाते. हर्बर्ट मार्कूस, थिओडोर अडोर्नो, मॅक्स हॉर्खायमर, वॉल्टर बेंजामिन आणि थोड्या काळाने युर्गेन हाबरमास हे ते पाच विचारवंत.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> प्रँक्फर्ट स्कूलवर महायुद्धांच्या काळातील राजकीय संघर्षांचा गहिरा परिणाम झाला. तेथील विचारवंताना पश्चिम यूरोपातील कामगार वर्गाच्या क्रांतीच्या पिछाडीचा (जेथे वर्ग क्रांती होईल असे मार्क्सने भाकीत केले होते) आणि नाझी विचारसरणीच्या यशाचा जर्मनी सारख्या तांत्रिक आणि अर्थशास्त्रीय दृष्ट्या प्रगत राज्यावर जो परिणाम झाला त्याचा प्रभाव पडला. </p>
+			        <p>&nbsp;</p>
+			        <p>भांडवली व्यवस्थेतील इतर उद्योगांप्रमाणे जनमाध्यमे वस्तूंचे उत्पादन करतात आणि विकतात. मात्र ही उत्पादने लोकांना वाटतात ती नसतात. कार्यक्रम अथवा जाहिरातींमधे दाखवलेल्या वस्तू ही उत्पादने नसतात. व्यक्तिमत्व म्हणजे काय तर केवळ चमकणारे पांढरे दात, लांब काळेभोर केस इतकेच, शरीराच्या नैसर्गिक वासापासून, भावभावनांपासून स्वातंत्र्य. जाहिरात केलेली वस्तू ही फसवी आहे हे माहीत असूनही ग्राहक ती विकत होण्यास उद्युक्त होतात यातच जाहिरातींचं यश आहे, असे अडोर्नो आणि हॉर्खायमर यांनी मत मांडले. </p>
+			        <p>&nbsp;</p>
+			        <p>गरजा, विचार आणि वर्तणूकीत एकसारखेपणा आणून मोठ्या प्रमाणात उत्पादने तयार करायची आणि विकायची ज्यातून एकसारखे उपभोग घेणारा विशिष्ट ‘मास’ समाज निर्माण होईल असा तो काळ होता. फ्रँक्फर्ट स्कूलच्या विचारवंतांनी या काळात ‘व्यक्तीचा अंत’ झाला असे जाहीर केले. व्यक्तिगत आचारविचारांतून सामाजिक आणि सांस्कृतिक प्रगती घडवून आणण्याचा काळ संपला आणि मोठमोठ्या संस्था आणि संघटनांनी व्यक्तींवर ताबा मिळविला. स्थिर, सर्वानुरूप वागणार्‍या, रूढिवादी अशा कॉर्पोरेट भांडवलशाही संस्थांचा त्या काळात वरचष्मा होता. या संस्थामधील स्त्री आणि पुरुषांच्या संघटना, मोठ्या प्रमाणावर उपभोग घेणे आणि जन संस्कृतित सहभागी होण्याचा कल यांमुळे एक अत्यंत संघटित आणि सामूहिक सामाजिक व्यवस्था निर्माण झाली. </p>
+			        <p>&nbsp;</p>
+			        <p>फ्रँक्फर्ट स्कूलने ‘कल्चर इंडस्ट्री’ (सांस्कृतिक उद्योग) अशी संकल्पना मांडली. मोठ्या प्रमाणात उपभोग्य वस्तू तयार करणे, जन संस्कृतिची निर्मिती करणे आणि त्यायोगे एक ग्राहक समाज तयार करणे ज्याच्या वस्तूंच्या आवश्यकता आणि इच्छा समाज संघटन आणि एकजिनसीपणा यांमुळे एकसारख्या होतील असे उद्दिष्ट्य या कल्चर इंडस्ट्रीचे होते. हा काळ सांस्कृतिक एकजिनसीपणाचा होता जेथे रेडिओ आणि दूरचित्रवाणीवर खूप निर्बंध होते आणि अतिसामान्य पॉप संगीत, चमकदार हॉलिवुड चित्रपट, इत्यादींची मोठ्या प्रामाणात निर्मिती होत होती. </p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Media_culture" target="_blank">लिंक 1</a><br>
+                  <a href="http://www.chegg.com/homework-help/definitions/mass-culture-47" target="_blank">लिंक 2</a><br>
+                  <a href="http://pages.gseis.ucla.edu/faculty/kellner/papers/fs.htm" target="_blank">लिंक 3</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Frankfurt_School" target="_blank">लिंक 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Culture_industry" target="_blank">लिंक 5</a><br>
+                  <a href="http://www.marxists.org/reference/archive/adorno/1944/culture-industry.htm" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+          
+           <li class="acc-header2" id="gate"> 
+		        <a href="#gate">गेटकीपिंग सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/shaw.png" alt="Donald Shaw"><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत:</strong> एकोणिसाव्या शतकाच्या उत्तरार्धात कुर्ट झादेक लेविन याच्या सामाजिक मानसशास्त्राच्या अभ्यासातून गेटकीपिंगची संकल्पना तयार झाली. 1970च्या दशकात मॅकूम्ब्स आणि शॉ यांनी त्याचा संबंध माध्यमांच्या अजेंडा सेटिंगशी जोडला.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टिकरण:</strong> बातमीचे उघड स्वरूप आणि माध्यम संस्थेचा अजेंडा यांच्या आधारे बातमी कशाची होईल याची निवड करणे याला गेटकीपिंग म्हणतात. बातमीचे मूल्यांकन आणि छाननीची एखाद्या माध्यम संस्थेतील प्रक्रिया गेटकीपिंग सिद्धांताने स्पष्ट होते. </p>
+		            <p>&nbsp;</p>
+		            <p>गेटकीपिंगचे चार स्तर आहेत – <br>
+	                वार्ताहराच्या पतळीवरील गेटकीपिंग, <br>
+	                उपसंपादक/संपादकाची पातळी, <br>
+	                जाहिरातदाराची पाताळी आणि <br>
+	                माध्यम मालकाच्या पातळीवरील गेटकीपिंग.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्तता:</strong> माहिती आणि बातम्यांचे प्रसारण करण्यात गेटकीपिंग होते हे आता सर्वांनाच मान्य आहे. या सिद्धांताचा उपयोग संस्थांमधील व्यवस्थापन आणि कर्मचारी यांच्यातील संज्ञापनाचा अभ्यास करण्यासाठीही होतो कारण यातही गेटकीपिंग होत असते. </p>
+	              <p>&nbsp;</p>
+		             <p><strong>Further reading: </strong></p>
+		             <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Gatekeeping_(communication)" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Media,%20Culture%20and%20Society/gatekeeping.doc/" target="_blank">लिंक 2</a><br>
+	          		<a href="http://41.89.160.5/chisimba/usrfiles/context/ins218/canvases/gatekeeping.pdf" target="_blank">लिंक 3</a><br>
+	          		<a href="http://wwwchinet.blogspot.in/2012/10/gatekeeping-theory-of-mass-communication.html" target="_blank">लिंक 4</a><br>
+                    <a href="http://communicationtheory.org/gatekeeping-theory/" target="_blank">लिंक 5</a><br>
+              		<p>&nbsp;</p>
+		        </div>
+		    </li>
+          
+             <li class="acc-header" id="innis"> 
+	            <a href="#innis">हॅरॉल्ड इनिस </a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/innis.png" width="75%" alt="Innis"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>हॅरॉल्ड इनिस – नोव्हेंबर 5, 1894 – नोव्हेंबर 8, 1952</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> इनिस यांनी मांडलेल्या सिद्धांताला स्टेपल्स थिसिस असेही म्हणतात. या शोधनिबंधात इनिसनी दाखवून दिले की देशाच्या अर्थकारणावर त्या देशातील कच्च्या मालाची निर्यात आणि शोध यांचा परिणाम होतो. कॅनडामधील फर, लाकूड आणि कागदाच्या व्यापारावर आपला अभ्यास सादर करताना इनिस यांनी पुढे सांगितले की जे साधनांवर नियंत्रण ठेवतात, सत्ता त्यांच्या हाती असते. याचाच परिणाम होतो की जे माहितीवर नियंत्रण ठेवतात, सत्ता त्यांच्या हातात असते. </p>
+			        <p>&nbsp;</p>
+			        <p>माध्यम अभ्यासात इनिसने टाइम-बायज्ड मीडिया आणि स्पेस-बायज्ड मीडिया अशा संकल्पना मांडल्या.(बायज्ड=पूर्वग्रहदूषित) </p>
+			        <p><strong>टाइम-बायज्ड मीडिया</strong> – काही माध्यमे कालातीत असतात, खूप काळ टिकणारी असतात, एका ठिकाणहून दुसरीकडे हलवण्यास कठीण आणि त्यामुळे स्थिर असतात. या सर्व कारणांमुळे या माध्यमांमुळे तयार होणारी सत्ता खूप काळ टिकते मात्र तिचा प्रभाव क्षेत्र मर्यादित असतो. दगड, माती, मौखिक परंपरा ही सगळी माध्यमे टाइम-बायज्ड आहेत. या माध्यमांतून माहिती पिढ्यानपिढ्या टिकते मात्र खूप कमी प्रेक्षकांपर्यंत ती पोहोचते. </p>
+			        <p><strong>स्पेस-बायज्ड मीडिया</strong> – ही माध्यमे हलकी, एका ठिकाणाहून दुसर्‍या ठिकाणी नेण्यासारखी असतात. ही माध्यमे टिकाऊ नसतात त्यामुळे यांची सत्ता फार काळ टिकत नाही. रेडिओ, दूरचित्रवाणी, वर्तमानपत्रे हे सगळे एका खूप मोठ्या परिसरावर आपला प्रभाव टाकतात. टाइम-बायज्ड मीडियामुळे स्थिरता, समाजग़ट, परंपरा, धार्मिकता तयार होण्यास मदत होते तर स्पेस-बायज्ड मीडियामुळे झपाट्याने बदल घडवून आणता येतो, भौतिकवाद, धर्मनिरपेक्षता आणि साम्राज्य तयार करण्यास मदत होते. </p>
+		          <p>&nbsp;</p>
+		          <p>याच संदर्भात इनिस पुढे म्हणाले की जे ज्ञानावर ताबा मिळवतात ते सत्तेवर ताबा मिळवतात, तेच ज्ञानाची वैधतादेखील ठरवतात. अशाप्रकारे ‘मोनोपॉलिज ऑफ नॉलेज’ (ज्ञानाचा एकाधिकार) तयार होतो. अशाप्रकारची एकाधिकारशाही समाजाचे ध्रुवीकरण करते ज्यामुळे कालांतराने त्या एकाधिकारशाहीलाच आव्हान दिले जाते.		          </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis" target="_blank">लिंक 1</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis's_communications_theories" target="_blank">लिंक 2</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis_and_the_cod_fishery" target="_blank">लिंक 3</a><br>
+                    <a href="http://www.media-studies.ca/articles/innis.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=5xvSvWg8550" target="_blank">लिंक 5</a><br>
+                    <a href="http://www.youtube.com/watch?v=FLxBle8QBKY" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="laswell"> 
+		        <a href="#laswell">हॅरॉल्ड लॅस्वेल यांचे मॉडेल ऑफ कम्युनिकेशन</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/lasswell.png" alt="Harold Lasswell" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> हॅरॉल्ड लॅस्वेल हे अमेरिकेतील राज्यशास्त्रातील तज्ज्ञ होते. त्यांच्यानुसार संज्ञापन प्रक्रियेचे वर्णन पुढील प्रश्नांतून सहज शक्य आहे – <br>
+			          कोण? <br>
+			          काय म्हणाले? <br>
+			          कुठल्या माध्यमाद्वारे? <br>
+			          कोणाला म्हणाले? <br>
+		            त्याचा परिणाम काय झाला? </p>
+			        <p>या मॉडेल द्वारे संज्ञापनाची प्रक्रिया आणि कार्याचे विश्लेषण करता येते. </p>
+			        <p>&nbsp;</p>
+			        <p><br>
+                    </p>
+			        <div class="imagePanel2"><img src="assets/images/laswellmodel.jpg" alt="Lasswell's Model"></div>
+		            <br>
+		            लॅस्वेलनुसार संज्ञापनाची तीन कार्ये आहेत – <br>
+	            एंव्हायरन्मेंट सर्व्हेलंस (सभोवतालचे सर्वेक्षण), <br>
+	            कोरिलेशन ऑफ कॉम्पोनंट्स (सुट्या सुट्या भागांचा आंतरसंबंध स्पष्ट करणे) आणि <br>
+	            कल्चरल ट्रांस्मिशन बिटवीन जेनेरेशन (दोन पिढ्यांमधील सांस्कृतिक अंतर भरून काढणे). <br>
+	            <br>
+	            लॅस्वेलनुसार संदेशाचे वहन बहुसांस्कृतिक समाजातून होत असते जिथे अनेक प्रकारचे प्रेक्षक असतात. हे संदेश विविध माध्यमांतून प्रवाहित होतात. लॅस्वेलचे मॉडेल ऍरिस्टॉटलच्या संज्ञापन मॉडेलसारखे आहे. येथे संज्ञापन प्रक्रियेतील ‘कोण’ या प्रश्नाचे उत्तर शोधण्यासाठी ‘कंट्रोल अनॅलिसिस’ (नियंत्रणाचे विश्लेषण), ‘काय म्हणाले’ साठी ‘कंटेंट अनॅलिसिस’ (विषय विश्लेषण), ‘कुठल्या माध्यमातून’ साठी मीडिया अनॅलिसिस (माध्यम विश्लेषण), ‘कोणाला’ साठी ‘ऑडियंस अनॅलिसिस (प्रेक्षकांचे विश्लेषण) आणि ‘कुठल्या परिणामी’ साठी ‘इफेक्टॅ अनॅलिसिस’ (परिणाम विश्लेषण या संशोधन प्रक्रियांतून जावे लागते.<br>
+	            <br>
+	            </p>
+			        <p>
+		         	<strong>लिंकs for more reading: </strong><br>
+		         	<br>
+                	<a href="http://en.wikipedia.org/wiki/Lasswell's_Model_of_Communication" target="_blank">लिंक 1</a><br>
+                	<a href="http://communicationtheory.org/lasswells-model/ " target="_blank">लिंक 2</a><br>
+                	<a href="http://itc-maribor.blogspot.in/2012/01/harold-lasswell.html " target="_blank">लिंक 3</a><br>
+                	<a href="http://zimmer.csufresno.edu/~johnca/spch100/masscomm.htm" target="_blank">लिंक 4</a><br>
+		        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+           
+            <li class="acc-header" id="hypo"> 
+		        <a href="#hypo">हायपोडर्मिक नीडल सिद्धांत</a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/hypodermic.jpg" alt="Hypodermic Needle Theory" ></div>
+		          <p>&nbsp;</p>
+		          <p><strong>विचारवंत:</strong> 1930च्या दशकात जेव्हा जनमाध्यमांचा उगम झाला तेव्हा हा सिद्धांत मांडला गेला. हा सिद्धांत तयार होण्याला आधार शास्त्रीय नसून केवळ माध्यमांच्या परिणामांबाबत सर्वसाधारण कल्पना आहे. </p>
+			        <p>&nbsp;</p>
+			        <p>याच सिद्धांताला डायरेक्ट रेस्पॉंस सिद्धांत किंवा मॅजिक बुलेट सिद्धांतही म्हणतात. हा सिद्धांत चुकीचा आहे असे आता सिद्ध झाले आहे.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> एखादी सुई माणसाच्या मेंदूत खुपसली किंवा एखादी गोळी डोक्यात घालावी त्याप्रमाणे संदेश व्यक्तीच्या मेंदूत थेट घुसवला जाऊ शकतो असे हा सिद्धांत सांगतो. 1944 साली पॉल लाझार्सफेल्ड याने अमेरिकेतील राष्ट्राध्यक्षांच्या निवडणूकीचा अभ्यास केला व सिद्ध केले की माध्यमांतील संदेशांचा मतदारांवर कुठलाही परिणाम होत नाही. </p>
+                    <p>&nbsp;</p>
+                    <p><strong>Further reading:</strong>		            </p>
+                  <p><br>
+			          <a href"http://en.wikipedia.org/wiki/Hypodermic_needle_model" target="_blank">लिंक 1</a><br>
+			          <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Mass%20Media/Hypodermic_Needle_Theory.doc/" target="_blank">लिंक 2</a><br>
+			          <a href"http://www.youtube.com/watch?v=Qt5MjBlvGcY" target="_blank">लिंक 3</a><br>
+			          <a href"http://communicationtheory.org/magic-bullet-or-hypodermic-needle-theory-of-communication/" target="_blank">लिंक 4</a>
+                  <p>&nbsp;</p>
+              </div>
+	      </li>
+          
+           
+            <li class="acc-header2" id="rasa"> 
+		        <a href="#rasa">रस सिद्धांत -संज्ञापनाचा भारतीय दृष्टिकोन </a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rasa.png" alt="Rasa Theory" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>रस्यत इति रस:</strong> - ज्याचा स्वाद घेता येतो तो रस. रस सहा असतात - कटू, तिक्त, कषाय, मधुर, लवण, आम्ल. हे सहा रस केवळ जिह्वेने अनुभवता येतात. षड्रसभोजन ही संज्ञा यातून आली. </p>
+			        <p>&nbsp;</p>
+			        <p>स्वाद हा विचार नाट्य आणि काव्यालासुद्धा लावण्यात आला. रस आठ सांगितले आहेत. शृंगार, हस्य, करूण, रौद्र, वीर, भयानक, बीभत्स, अद्भुत. विविध अभ्यासकांनी आणखी रस सांगितले आहेत. भरताचे नाट्यशास्त्र हे रस सिद्धांत मांडणारे पहिले मानले जाते. ख्रिस्तपूर्व दोनशे वर्श ते ख्रिस्तानंतर सातशे वर्श या काळात केव्हातरी नाट्यशास्त्र लिहिले गेले असावे. भरत ही एक व्यक्ती होती अथवा अनेक व्यक्तींचा समूह होता त्याबद्द्ल मतमतांतरे आहेत. भरताअगोदर आचार्य द्रुहिन आणि वासुकी यंनीही रसाबाबत विचार मांडला होता असे जी.टी.देशपांडे यांनी म्हटले आहे. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> रससिद्धांत बहुधा भारतीय संज्ञापन शास्त्रातील सर्वात जुना सिद्धांत आहे जो संज्ञापन, परफॉर्मर आणि प्रेक्षक यांच्यातील संबंध स्पष्ट करतो. रस हा रसिकात वास करतो जो रसिक संज्ञापन अनुभवातून जातो. रसिक आणि परफॉर्मर जाणीव-नेणिवेच्या एकाच पातळीवर येतात, सहृदय होतात, तेव्हा संज्ञापन उद्देश्य साध्य होतो.</p>
+		        <p>&nbsp;</p>
+		         <strong>Further reading:</strong><br>
+		         <br>
+                 <a href="http://www.karandikars.com/rasa.htm" target="_blank">लिंक</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+       		
+            
+            
+          <li class="acc-header" id="kgt"> 
+		        <a href="#kgt">नॉलेज गॅप सिद्धांत </a>
+		        <div class="acc-content">
+                  <div class="imagePanel"><img src="assets/images/tichenordonahue.png" alt="ATichenor-Donahue" ></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत:</strong> फिलिप टिकनॉर, जॉर्ज डॉनॉह्यू आणि क्लारिस ओलियन यांनी 1970च्या दशकात हा सिद्धांत मांडला</p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> कुठल्याही इतर धनाप्रमाणे, ज्ञानही एक प्रकारचे धन आहे आणि त्याचे समाजातील वितरण विषम आहे ज्यामुळे काही लोकांकडे ते अधिक असते तर काही लोकांकडे त्याचा अभाव असतो. माध्यम संदेशांमुळे ही विषमता वाढत जाते आणि ज्या लोकांचा आर्थिक सामाजिक स्तर उंचावलेला असतो ते अधिक ज्ञान प्राप्त करू शकतात कारण त्यांच्याकडे माहितीचे स्रोत अधिक असतात आणि त्या माहितीचा ते अधिक प्रभावीरित्या वापर करू शकतात. याउलट गरीब लोक माहितीचा वापर करण्यास सक्षम नसतात.  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजातील ज्ञानाची विषमता समजून घेऊन विशिष्ट माध्यमांचा वापर करून विशिष्ट समाजाला सक्षम बनवता येते.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong>		            </p>
+		            <p><br>
+		              <a href="http://en.wikipedia.org/wiki/Knowledge_gap_hypothesis" target="_blank">लिंक 1</a><br>
+		              <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Media,%20Culture%20and%20Society/knowledge_gap.doc/" target="_blank">लिंक 2</a><br>
+		              <a href="http://communicationtheory.org/knowledge-gap-theory/" target="_blank">लिंक 3</a><br>
+		              <a href="http://www.oxfordbibliographies.com/view/document/obo-9780199756841/obo-9780199756841-0078.xml;jsessionid=D7155ECEBAFBF68255F8FB69A16E1E26" target="_blank">लिंक 4</a><br>
+		              <a href="http://www.zeepedia.com/read.php?knowledge_gap_theory_criticism_on_marshal_mcluhan_theories_of_communication&b=81&c=37" target="_blank">लिंक 5</a>
+	              <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header2" id="let"> 
+		        <a href="#let">लॅंग्वेज एक्स्पेक्टेंसी सिद्धांत  </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/miller.png" alt="Miller"><br></div>
+		          <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>मायकेल बरगून, जोन्स आणि स्टुअर्ट (1975)</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> या सिद्धांताचे परसुएशन सिद्धांताशी साम्य आहे. भाषेबाबतच्या अपेक्षांमुळे संज्ञापन प्रक्रिया, मनोभाव आणि वर्तणूकीत काय बदल होतात ते हा सिद्धांत सांगतो. भाषेचे काही नियम असतात आणि ते नियम जर मोडले तर भाषेबाबतच्या अपेक्षांना तडा जातो आणि त्याचा परिणाम संदेश वहनावर होतो. </p>
+			        <p>&nbsp;</p>
+			        <p>भाषेबाबतच्या अपेक्षा तीन कारणांमुळे तयार होतात – </p>
+			        <p>1) संदेश देणारा </p>
+			        <p>2) संदेश देणारा आणि प्रेक्षक यांतील नाते </p>
+			        <p>3) संदेशाचे संदर्भ  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> सामाजिक आणि संस्थात्मक संज्ञापनाचा अभ्यास करण्यासाठी या सिद्धांताचा उपयोग होतो.</p>
+			        
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Language_Expectancy_Theory.doc/" target="_blank">लिंक 1</a><br>
+	          		<a href="http://en.wikipedia.org/wiki/Language_expectancy_theory" target="_blank">लिंक 2</a><br>
+	          		<a href="http://communicationtheory.org/language-expectancy-theory/" target="_blank">लिंक 3</a><br>
+	          		<a href="http://changingminds.org/explanations/theories/language_expectancy.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://commfaculty.fullerton.edu/rgass/492T%20S2002/Language%20Expectancy%20Theory_files/v3_document.htm" target="_blank">लिंक 5</a><br>
+              		<p>&nbsp;</p>
+              </div>
+	      </li>
+          
+            <li class="acc-header" id="mcluhan"> 
+	            <a href="#mcluhan">मार्शल मॅक्लुहान </a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/marshallmcluhan.png" width="75%" alt="mcluhan"></div>
+		          <p>&nbsp;</p>
+			        <p><strong> विचारवंत:</strong> मार्शल मॅक्लुहान कॅनडातील विचारवंत – जुलै 21, 1911 – डिसेंबर 31, 1980.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> मॅक्लुहान यांनी ‘मीडियम इज दि मेसेज’ असे म्हटले. माध्यम अभ्यासकांनी संदेशाचा अभ्यास करण्यापेक्षा माध्यमांचा अभ्यास करावा कारण  संदेशावर माध्यमांचा प्रभाव पडतो. </p>
+			        <p>&nbsp;</p>
+			        <p>त्यांच्या ‘गटनबर्ग गॅलेक्सी’ या पुस्तकात त्यांनी अशी संकल्पना मांडली की आपल्या विशिष्ट जाणिवांना विशिष्ट माध्यमे अनुरूप असतात. किंबहुना एखादे माध्यम हे विशिष्ट इंद्रियांचेच विस्तृत स्वरूप असते. यामुळे आपल्या जाणिवांवर परिणाम होतो आणि सामाजिक रचनेवरही प्रभाव पडतो. </p>
+			        <p>&nbsp;</p>
+			        <p>इलेक्ट्रॉनिक माध्यमे ही आपल्या मेंदूतील रचनेप्रमाणे एकमेकांशी संलग्न आणि जिवंत असतात त्यामुळे सगळे जगच माहितीच्या एका जाळ्यात सामावलेले असते. यामुळे हे जग म्हणजे एक गाव होऊन जाते, असे मॅक्लुहान यांनी म्हटले. यालाच त्यांनी ‘ग्लोबल व्हिलेज’ अशी संज्ञा वापरली. </p>
+			        <p>&nbsp;</p>
+			        <p>माध्यमांचा विशिष्ट इंद्रियांवरील परिणाम कितपत होतो यावरून त्यांनी माध्यमांना ‘हॉट’ अथवा ‘कोल्ड’ म्हटले.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> ज्यावेळेस मॅक्लुहान यांनी हे विचार मांडले त्यावेळेस ते काळाच्या खूप पुढे विचार करत होते त्यामुळे त्यांच्या विचारांने खळबळ उडाली मात्र आज ते सर्वत्र अभ्यासले जाताहेत. .</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Marshall_McLuhan" target="_blank">लिंक 1</a><br>
+                    <a href="http://www.marshallmcluhan.com/" target="_blank">लिंक 2</a><br>
+                    <a href="http://marshallmcluhanspeaks.com/" target="_blank">लिंक 3</a><br>
+                    <a href="http://www.youtube.com/watch?v=ImaH51F4HBw" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.leaderu.com/orgs/probe/docs/mcluhan.html" target="_blank">लिंक 5</a><br>
+                    <a href="http://www.gingkopress.com/02-mcl/z_mcluhan-and-the-senses.html" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+           
+            
+            
+            
+            <li class="acc-header2" id="mc"> 
+		        <a href="#mc">मन्युफॅक्चरिंग कंसेंट सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/chomsky.png" width="75%" alt="Chomsky"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> नोम चॉम्स्की आणि एड्वर्ड हर्मन यांनी 1988 साली माध्यम उद्योगाचा अभ्यास करत असताना हा विचार मांडला</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> प्रॉपगांडा सिद्धांतालाच पुढे वाढवत मन्युफॅक्चरिंग कंसेंट सिद्धांत तयार झाला. कोर्पोरेटच्या मालकीचे असलेल्या माध्यम संस्था या व्यापारी स्पर्धेत उतरलेल्या असतात आणि त्यांना जाहिराती आणि नफा यासाठी एकामेकांशी स्पर्धा करायची असते. अमेरिकेतील माध्यमांबाबत चॉम्स्की सांगतात की माध्यमांमध्ये ‘फिल्टर’ असतात. उदाहरणार्थ मालक, जाहिरातदार, बातम्या तयार करणारे, मांडणारे जे माध्यम विषय ठरवतात आणि कुठल्याही प्रकारचा विरोध होऊ देत नाहीत.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत उपयुक्तता:</strong> माध्यमांवर जसजसा कॉर्पोरेटचा ताबा वाढत जाईल तसतसा चोम्स्की यांच्या विचारांचे महत्त्व वाढत जाते. मात्र या परिस्थितीत नव माध्यमांमुळे बदल होतो आहे.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Manufacturing_Consent:_The_Political_Economy_of_the_Mass_Media" target="_blank">लिंक 1</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Manufacturing_Consent:_Noam_Chomsky_and_the_Media" target="_blank">लिंक 2</a><br>
+                  <a href="http://www.youtube.com/watch?v=PQhEBCWMe44" target="_blank">लिंक 3</a><br>
+                  <a href="http://www.chomsky.info/interviews/1992----02.htm" target="_blank">लिंक 4</a><br>
+                  <a href="http://hope.journ.wwu.edu/tpilgrim/j190/Chomsky.summary.html" target="_blank">लिंक 5</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="mrt"> 
+		        <a href="#mrt">मिडिया रिचनेस सिद्धांत</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/daft.png" alt="Richard Daft" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> रिचर्ड डाफ्ट आणि रॉबर्ट लेंगल यांनी 1984 साली गाल्ब्रेथ यांच्या 1977 साली मांडलेल्या इन्फर्मेशन प्रोसेसिंग सिद्धांताला पुढे नेत हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> माध्यमे माहितीची पुनर्निर्मिती किती चांगल्या आणि प्रभावी पद्धतीने करू शकतात याबाबत हा सिद्धांत सांगतो. माहितीचे नुकसान न होता जितके बह्वर्थी संदेश एखादे माध्यम वाहू शकते तेवढी त्या माध्यमाची संज्ञापन क्षमता असते, तितके ते माध्यम ‘रिच’ असते. उदाहरणार्थ समोरासमोर दोन व्यक्तींतील संज्ञापन सर्वात ‘रिच’ असते मात्र ऑनलाइन लिहिलेले संज्ञापन तितके ‘रिच’ नसते. </p>
+			        <p>&nbsp;</p>
+			        <p>संघटनांतील संज्ञापनाच्या अभ्यासासाठी हा सिद्धांत वापरला गेला. यावरून संज्ञापन किती प्रभावी आहे ते कळू शकले.</p>
+			        <p>&nbsp;</p>
+                    <p><img src="assets/images/mediarichness.png" width="100%"></p>
+                  <p>(Image Source: Wikipedia page on Media Richness Theory)</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> कुठल्याही संस्थेचे संज्ञापन समजण्यासाठी या सिद्धांताचा उपयोग होऊ शकतो.</p>
+<p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                     
+		          <p><br>
+			           <a href="http://en.wikipedia.org/wiki/Media_richness_theory" target="_blank">लिंक 1</a><br>
+			           <a href="http://learngen.org/Resources/lgend101_norm1/200/210/211_3.html" target="_blank">लिंक 2</a><br>
+			           <a href="http://www.campus-adr.net/ODRmodule/media_richness_theory.html" target="_blank">लिंक 3</a><br>
+			           <a href="http://www.facultyfocus.com/articles/online-education/media-richness-and-communication-in-online-education/" target="_blank">लिंक 4</a><br>
+			           <a href="http://isr.journal.informs.org/content/9/3/256" target="_blank">लिंक 5</a><br>
+			           <a href="http://blog.timebarrow.com/2009/09/media-richness-theory/" target="_blank">लिंक 6</a><br>
+	              <p>&nbsp;</p>
+		        </div>
+		        
+		    </li>
+            
+            <li class="acc-header2" id="medt"> 
+		        <a href="#medt">मीडियम सिद्धांत</a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/JoshuaMeyrowitz.png" alt="Joshua Meyrowitz" ></div>
+		          <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> जोशुआ मेरोविट्ज याने 1985 साली ही संकल्पना मांडली. त्याअगोदर मार्शल मॅक्लुहान यांनी माध्यम लोकांच्या जीवनात कसा बदल घडवून आणू शकतात याबाबत विचार मांडला होता.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> मेरोविट्जने ‘मीडियम’ असे एकवचन वापरले आहे आणि ‘मीडिया’ हे बहुवचन नाही कारण प्रत्येक माध्यमाचे वैशिष्ट्य असते आणि माध्यमामाध्यमात फरक अनिवार्य असतो. ‘मीडिया’चे अभ्यासक सर्व माध्यमांतील समान दुवा शोधायचा प्रयत्न करतात आणि संज्ञापन प्रक्रियेत त्याचा काय परिणाम होतो इत्यादींचा विचार करतात. </p>
+			        <p>&nbsp;</p>
+			        <p>मेरोविट्जनुसार प्रत्येक माध्यमाचे वैशिष्ट्यपूर्ण पैलू लक्षात घेऊन त्या त्या माध्यमाचा व्यक्ती आणि समाज यांवर काय परिणाम होतो याचा अभ्यास करतात. मार्शल मॅक्लुहान यांनी मीडियम इज दि मेसेज असे म्हटले होते आणि कुठलेही माध्यम नव्याने आले की त्याचा लोकांच्या जीवनावर परिणाम होतो असे सांगितले. मीडियम सिद्धांत सांगतो की विषयापेक्षा माध्यमाच्या तांत्रिक बाबींचा प्रभाव अधिक असतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> नव माध्यमे जसजशी येत जाताहेत तसतशी या सिद्धांताची उपयुक्तता अधिक वाढत आहे. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong>                    
+			        <p><br>
+			          <a href="http://www.jpwalter.com/machina/?p=20" target="_blank">लिंक 1</a><br>
+			          <a href="http://media-ecology.org/publications/MEA_proceedings/v2/Meyrowitz02.pdf" target="_blank">लिंक 2</a><br>
+			          <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Media,%20Culture%20and%20Society/Medium_theory-1.doc/" target="_blank">लिंक 3</a><br>
+			          <a href="http://en.wikipedia.org/wiki/Marshall_McLuhan" target="_blank">लिंक 4</a><br>
+		          <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header" id="nmt"> 
+		        <a href="#nmt">नॉर्मेटिव्ह मीडिया सिद्धांत</a>
+		        <div class="acc-content">
+                 <div class="imagePanel"><img src="assets/images/siebert.png" alt="Fred Siebert" ></div>
+			        <p><strong>विचारवंत:</strong> फ्रेड सीबर्ट, थिओडोर पीटरसन आणि विल्बर श्राम (1956)  </p>
+		          <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> माध्यमे आणि समाज यांच्यातील संबंध आणि अशा संबंधामागील सामाजिक, राजकीय तत्त्वे यांचा अभ्यास माध्यम सिद्धांतांमधे होतो. नॉर्मेटिव्ह सिद्धांतात मात्र माध्यमांची मूल्ये काय असावीत याबाबत विचार मांडला गेला आहे. त्याव्यतिरिक्त माध्यमांवर ताबा कोणाचा आहे याची विशिष्ट चर्चा होते. </p>
+			        <blockquote>
+			          <p>&nbsp;</p>
+		          </blockquote>
+			        <p>या विचारवंतांनी सामाजिक आणि राजकीय संरचना पाहून चार सिद्धांत मांडले. <br>
+			          1) अथॉरिटेरिअन सिद्धांत – जेव्हा सरकार एकाधिकार पद्धतीने माध्यमांवर ताबा ठेवून असते. <br>
+			          2) सोविएत सिद्धांत – साम्यवादाच्या वैचारिक चौकटीत राहून माध्यमे काहीही व्यक्त करू शकतात. <br>
+			          3) लिबर्टेरियन सिद्धांत – माध्यमे कुठल्याही सरकारी बंधनापासून मुक्त असतात <br>
+			          4) सोशिअल रेस्पाँसिबिलिटी सिद्धांत – माध्यमे मुक्त असतात मात्र समाजाभिमुख असतात.   <br>
+		            <br>
+		            परंतु जे देश शीत युद्धाच्या काळात अलिप्त राहिले त्यांनी मुळातच या विचारवंतांनी मान्य केलेल्या सामाजिक आणि राजकीय चौकटी मानल्या नाहीत. त्यामुळे आणखी दोन सिद्धांत तयार झाले:</p>
+			        <p>&nbsp;</p>
+			        <p><strong>डेव्हलपमेंट कम्युनिकेशन सिद्धांत</strong> – संज्ञापनाशिवाय विकास होऊ शकत नाही असे हा सिद्धांत सांगतो. माध्यमे विकासासाठीच्या कार्यक्रमांसाठी जबाबदार असतात आणि राज्यव्यवस्थेतील नियम आणि काही बंदी त्यांच्यावर लागू होतात. या सिद्धांताबाबत आक्षेप असा की अनेकदा विकास म्हणजेच सरकारी जाहिरातबाजी इतकाच संज्ञापनातून बोध होतो.     </p>
+			        <p>&nbsp;</p>
+			        <p><strong>डेमोक्रटायझेशन/डेमोक्रटिक पार्टिसिपेंट मीडिया सिद्धांत</strong> – माध्यमांच्या व्यापारीकरणाला आणि माध्यमांमधील नोकरशाहीला विरोध या सिद्धांताचा गाभा आहे</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> हे सिद्धांत आपल्याला माध्यमांवर ताबा कोणाचा असावा याबाबत विचार करायला लावतात.  </p>
+		          <p>&nbsp;</p>
+			        <strong>Links for more reading:<br>
+			        </strong><br>
+               	  <a href="http://www.le.ac.uk/oerresources/media/ms7501/mod2unit11/page_07.htm" target="_blank">लिंक 1</a><br>
+				  <a href="http://www.h-net.org/reviews/showrev.php?id=29390" target="_blank">लिंक 2</a><br>
+				  <a href="http://www.peoi.org/Courses/Coursesba/mass/mass2.html" target="_blank">लिंक 3</a><br>
+                  <a href="http://www.docstoc.com/docs/22087889/Normative-Theories-of-Mass-Communication" target="_blank">लिंक 4</a><br>
+                  <a href="http://ccms.ukzn.ac.za/index.php?option=com_content&task=view&id=939&Itemid=145" target="_blank">लिंक 5</a><br>
+		        	<p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header2" id="pert"> 
+		        <a href="#pert">पर्सुएशन सिद्धांत  </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/persuasion.png" alt="Persuasion"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>ह्या सिद्धांतांचे मूळ ऍरिस्टॉटलच्या र्हेटॉरिकमधे आहे</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> सामाजिक प्रभाव पाडण्याचे एक तंत्र म्हणजे पर्सुएशन. प्रत्यक्षाप्रत्यक्ष पद्धतीने स्वत:ला अथवा इतरांना एखादा विचार आत्मसात करण्यास उद्युक्त करण्याची ही प्रक्रिया आहे. इतरांचे मनोभाव, मूल्ये बदलण्यासाठी अशा प्रकारे संज्ञापनाचा उपयोग केला जातो. पर्सुएशनच्या अनेक पद्धती आहेत. <br>
+		            1) रेसिप्रोसिटी – आपण कोणाचे देणे लागतो ही भावना याने जागृत होते. ही एक प्रभावी पद्धत आहे. <br>
+		            2) कमिट्मेंट आणि कंसिस्टंसी – एकदा का लोकांनी स्वत:ला एखाद्या विचारासाठी वाहून घेतले की मग ते पुढचा मागचा विचार न करता त्याचाच ध्यास धरतात. <br>
+		            3) सोशल प्रूफ – आपल्या सभोवतालचे लोक काय करताहेत तसे करण्याचा लोकांचा कल असतो. <br>
+		            4) अथोरिटी – अधिकारी व्यक्ती किंवा तज्ज्ञ यांवर लोकांचा विश्वास असतो. <br>
+		            5) लायकिंग – एखादी व्यक्ती आवडते म्हणून ते त्या व्यक्तीने सांगितलेले करतात. <br>
+		            6) स्कार्सिटी – एखादी गोष्ट अल्प प्रमाणात उपलब्ध असल्यास लोक तिला अधिक महत्त्व देतात आणि ती त्यांना अधिक हवीहवीशी वाटते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> माध्यम विपणनात पर्सुएशनचा उपयोग होतो </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Persuasion" target="_blank">लिंक 1</a><br>
+	          		<a href="http://communicationmodel.blogspot.in/2010/01/persuasion-theory-definition.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://faculty.business.utsa.edu/ljshrum/Dillard%20Ch19_FN%20to%20Publisher.pdf" target="_blank">लिंक 3</a><br>
+	          		<a href="http://changingminds.org/explanations/theories/a_persuading.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=0CV0OmiwJbc" target="_blank">लिंक 5</a><br>
+              		<p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="prime"> 
+		        <a href="#prime">प्रायमिंग सिद्धांत </a>
+	          <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/sotu_iyengar_news.png" alt="shanto iyengar"></div>
+			          <br>
+                    <strong>विचारवंत:</strong> शांतो अय्यंगार, मार्क पीटर्स आणि डॉनल्ड किंडर यांनी माध्यमांसाठी प्रायमिंग थिअरी असा शब्द प्रयोग पहिल्यांदा 1982 साली केला. हा सिद्धांत कमी आणि संकल्पना अधिक आहे.  <br>
+                    <br>
+                    <strong>सिद्धांत स्पष्टीकरण: </strong>प्रायमिंग ही संकल्पना मानसशास्त्रातून आली. एखाद्या विशिष्ट चेतनेला दिलेला  प्रतिसाद हा त्या अगोदरच्या चेतनेवर अवलंबून असतो. म्हणजे आपली स्मृती एखाद्या विशिष्ट प्रतिसादासाठी ‘तयार’ केली जाऊ शकते. यालाच प्रायमिंग असे म्हणतात. नवीन माहितीला प्रेक्षक कशाप्रकारचा प्रतिसाद देतील, कशाप्रकारे समजून घेतील यावर प्रायमिंग मुळे माध्यमे आपले नियंत्रण प्रस्थापित करू शकतात. प्रायमिंग ही संकल्पना अजेंडा सेटिंग, पर्सुएशन आणि मॅन्युफॅक्चरिंग कंसेंट यांबरोबर अभ्यासला जातो.  <br>
+                    <br>
+                    <strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांताचा उपयोग राजकारण, वर्तमान घडामोडी आणि जाहिरातींना अभ्यासण्यासाठी होतो<br>
+                    <br>
+                    <p><strong>Further reading:</strong></p>
+                    <p><br>
+                      <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Communication%20Processes/Priming.doc/" target="_blank">लिंक 1</a><br>
+                      <a href="http://www.communicationstudies.com/communication-theories/priming" target="_blank">लिंक 2</a><br>
+                      <a href="http://faculty.buffalostate.edu/smithrd/PR/Framing.htm" target="_blank">लिंक 3</a><br>
+                      <a href="http://en.wikipedia.org/wiki/Priming_(media)" target="_blank">लिंक4</a><br>                   
+                      &nbsp;&nbsp;<br>
+                    </p>
+              </div>
+          </li>
+          
+             
+            <li class="acc-header2" id="pt"> 
+		        <a href="#pt">प्रोपागॅंडा सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/propaganda.png" width="75%" alt="Propaganda"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>वॉल्टर लिपमन, हॅरॉल्ड लॅस्वेल, जाक्स एलुल आणि एडवर्ड बर्नीस यांनी 1900च्या सुरवातीला प्रचाराच्या स्वरूपाबाबत सिद्धांत मांडले.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> लोकमतावर प्रभाव पाडण्यासाठी प्रचाराचा उपयोग केला जातो. दुसर्‍या महायुद्धाच्या वेळी अडॉल्फ हिटलरने ज्या पद्धातीने नाझी विचारसरणी जर्मनीतील लोकांवर प्रचारातून बिबंबवली त्यामुळे एकूणच प्रचाराला नकारात्मक स्वरूप प्राप्त झाले. </p>
+			        <p>&nbsp;</p>
+			        <p>प्रोपागॅंडा अथवा प्रचारात संदेशाची रचना अशी केली जाते की ज्यामुळे लोकांतील तर्कसंगत प्रतिक्रिये ऐवजी भावनिक प्रतिक्रिया उमटते. राजकीय, व्यापारी, धार्मिक अथवा सामाजिक विचार पसरवण्यासाठी प्रचाराचा उपयोग होतो. लिपमननुसार प्रचाराची आवश्यकता तेव्हा निर्माण होते जेव्हा लोक आणि एखादी घटना यांच्यात एखादा अडथळा निर्माण होतो. अशावेळी माध्यमे मध्ये येतात आणि मर्यादित माहिती पुरवून घटनेबाबत छद्म निर्माण करतात. </p>
+			        <p>&nbsp;</p>
+			        <p>प्रचार तीन प्रकारचा असतो <br>
+		            1) व्हाइट प्रोपागॅंडा जो माहिती असलेल्या स्रोताकडून होतो <br>
+		            2) ग्रे प्रोपागॅंडा जेव्हा स्रोताबाबत माहिती पुरविली जात नाही आणि <br>
+		            3) ब्लॅक प्रोपागॅंडा जेव्हा माहिती एका स्रोताकडून येत असली तरी दुसर्‍याच स्रोताकडे निर्देश केला जातो</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> सरकार आपली नीती, कार्यक्रमा इत्यादींसाठी प्रचाराचा उपयोग मोठ्या प्रमाणावर करते. धार्मिक विचारसरणी आणि जीवनशैलीशी संबंधित उत्पादनांच्या विपणनासाठी देखील प्रचाराचा उपयोग होतो.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+               	  <a href="http://en.wikibooks.org/wiki/Communication_Theory/Propaganda_and_the_Public" target="_blank">लिंक 1</a><br>
+               	  <a href="http://www.zeepedia.com/read.php?propaganda_theories_origin_of_propaganda_engineering_of_consent_behaviorism_theories_of_communication&b=81&c=10" target="_blank">लिंक 2</a><br>
+               	  <a href="http://www.propagandatheory.com/" target="_blank">लिंक 3</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">लिंक 4</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">लिंक 5</a><br>
+               	  <a href="http://www.academia.edu/819415/The_Propaganda_Model_Theoretical_and_Methodological_Considerations" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="publicsphere"> 
+		        <a href="#publicsphere">पब्लिक स्फिअर </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/habermas.png" width="75%" alt="Habermas"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>या संकल्पनेचा युर्गन हॅबरमास याने त्याच्या 1962 सालच्या ‘दि स्ट्रक्चरल ट्रांस्फॉर्मेशन ऑफ दि पब्लिक स्फिअर’ या शोधनिबंधात विस्तृतपणे उहापोह केला</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> पब्लिक स्फिअर म्हणजे अशी जागा जेथे खाजगी व्यक्ती आणि सरकारी अधिकारी सार्वजनिक हिताच्या गोष्टींची खुल्या वातावरणात समीक्षा करु शकतात. ब्रिटन मधील कॉफी हाउस आणि फ्रांस मधील सॅलोन हे त्याकाळची पब्लिक स्फिअरसाठी योग्य ठिकाणे होती. अशा ठिकाणी खाजगी व्यक्ती एकत्र येऊन राज्य व्यवस्थेला आपले मत आणि गरजा सांगू शकत होत्या. खागजी क्षेत्र आणि सार्वजनिक सत्तेचे क्षेत्र यांतील पब्लिक स्फिअर हा दुवा होते. </p>
+			        <p>&nbsp;</p>
+			        <p>दोन महत्त्वाच्या बाबी पब्लिक स्फिअरसाठी आवश्यक होत्या – <br>
+		            1) समाजातील स्थानाकडे दुर्लक्ष करणे <br>
+		            2) सार्वजनिक काळजीचे ठिकाण <br>
+		            3) सर्वसमावेशकता. </p>
+			        <p>&nbsp;</p>
+			        <p>अठराव्या शतकात पब्लिक स्फिअरमधे भांडवलशाहीच्या चर्चाच होत असत, मात्र खर्‍या अर्थाने हे असे ठिकाण होते जेथे समाजातील उच्चभ्रू आणि सामान्यजन एका अनौपचारिक मात्र समान पातळीवर चर्चा करू शकत होते. पब्लिक स्फिअरमधे लोकांना माहिती मिळवणे सहज होते, स्वायत्तता होती, उतरंड नाकारली जात होती, कायद्याचे राज्य होते आणि सर्वांचा अधिकाधिक सहभाग होता. जनमाध्यमे आली आणि हे पब्लिक स्फिअर लयाला गेले कारण ही माध्यमे समाजाभिमुख नसून व्यापारी होती. </p>
+			        <p>&nbsp;</p>
+			        <p>ऍरिस्टॉटलच्या र्हेटॉरिकचा आधार घेऊन पब्लिक स्फिअरकडे पाहता येते त्याची पाच मूल्ये आहेत – <br>
+		            1. पर्मिएबल बाउंडरीज (पारगम्य सीमा), <br>
+		            2. ऍक्टिव्हिटी (सक्रीयता), <br>
+		            3. कॉंटेक्स्चुअलाइज्ड लॅंग्वेज (संदर्भात बांधलेली भाषा), <br>
+		            4. बिलीव्हेबल अपीअरंस (विश्वासार्ह दृश्य), <br>
+		            5. टॉलरंस – सहनशीलता.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> उत्तर आधुनिक काळात पब्लिक स्फिअर सोशल नेटवर्किंगमुळे आता आभासी जगात दिसायला लागलं आहे</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Jürgen_Habermas" target="_blank">लिंक 1</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Public_sphere" target="_blank">लिंक 2</a><br>
+                  <a href="http://en.wikipedia.org/wiki/The_Structural_Transformation_of_the_Public_Sphere" target="_blank">लिंक 3</a><br>
+                  <a href="http://pages.uoregon.edu/koopman/courses_readings/phil123-net/publicness/habermas_structural_trans_pub_sphere.pdf" target="_blank">लिंक 4</a><br>
+                  <a href="http://culturalstudiesnow.blogspot.in/2011/09/jurgen-habermass-public-sphere.html" target="_blank">लिंक 5</a><br>
+                  <a href="http://pages.gseis.ucla.edu/faculty/kellner/papers/habermas.htm" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="tra"> 
+		        <a href="#tra">रीझंड ऍक्शन/प्लांड बिहेव्हिअर </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/ajzen.png" alt="Ajzen"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>आयचेक आझेन आणि मार्टिन फिशबायन यांनी 1975-80 या काळात हा सिद्धांत मांडला आणि पुढे जाऊन मनोभावाच्या सिद्धांताशी जोडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> सामाजिक मानसशास्त्रामधील हा सिद्धांत माणसाच्या वागण्याचा वेध घेतो. मनोभाव, मनसूबा आणि वागणूक यांचा हा सिद्धांत एकत्रित रित्या वेध घेतू. </p>
+			        <p>&nbsp;</p>
+			        <p>याचा मुख्य आग्रह आहे की व्यक्तीचे मनोभाव हे <br>
+		            1) आचाराबाबतची धारणा, <br>
+		            2) मूल्यांबाबतची धारणा आणि <br>
+		            3) नियंत्रणाबाबतची धारणा यांवर अवलंबून असतात. <br>
+		            या सिद्धांतानुसार व्यक्तीवर आपल्या सभोवतालच्या लोकांचा खूप परिणाम असतो ज्यामुळे तिचे वागणे ठरते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजशास्त्रात याचा उपयोग होतो.</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://people.umass.edu/aizen/faq.html" target="_blank">लिंक 1</a><br>
+	          		<a href="http://sph.bu.edu/otlt/MPH-Modules/SB/SB721-Models/SB721-Models3.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://www.slideshare.net/krissyk/theory-of-planned-behavior" target="_blank">लिंक 3</a><br>
+	          		<a href="http://www.tcd.ie/civileng/Staff/Brian.Caulfield/T2%20-%20Transport%20Modelling/The%20Theory%20of%20Planned%20Behaviour.pdf" target="_blank">लिंक 4</a><br>
+					<p>&nbsp;</p>
+		        </div>
+		    </li>
+      
+            <li class="acc-header" id="spiral"><a href="#spiral"><strong>स्पायरल ऑफ सायलंस</strong></a>
+		        <div class="acc-content">
+                	<div class="imagePanel"><img src="assets/images/neumann.png" alt="Elisabeth Noelle-Neuman" ></div>
+			        <p><strong> विचारवंत: </strong>एलिझाबेथ नोएल-न्युमॅनने हा सिद्धांत 1974 साली मांडला</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> ज्या लोकांना असे वाटते की त्यांचे मत हे बहुमतापेक्षा वेगळे आहे ते आपले मत सांगत नाहीत कारण त्यांना एकटे पाडले जाण्याची अथवा स्वत:च्या मताची टिंगल टवाळी होईल अशी भीती वाटत असते असे हा सिद्धांत सांगतो. </p>
+			        <p>&nbsp;</p>
+                    <img src="assets/images/spiralofsilence.png" width="95%" alt="Spiral of Silence">
+					<p>न्युमॅननुसार लोकांमधे इतरांचे मत जोखण्यासाठी एक क्वासी-स्टॅटिस्टिकल (संख्या मोजणारे अर्धेमुर्धे) यंत्र असते. स्वत:चे मत जितके या सार्वमताला अनुकूल असते तितके ते आपले मत मांडतात आणि आपले मत वेगळे आहे असे वाटल्यास गप्प बसतात. </p>
+					<p>&nbsp;</p>
+					<p>न्युमॅनने म्हटले की माध्यमे सार्वजनिक मतावर आपला प्रभाव पाडतात आणि अशाप्रकारे गप्प राहणार्‍यांची संख्या वाढते.सिद्धांताची उपयुक्तता: भास (व्हर्चुअल) जगात स्पिरॅल ऑफ सायलंस अधिक जाणवतो जेव्हा सोशल नेटवर्किंग साइटवर सगळेच एखादी गोष्ट ‘लाइक’ करतात आणि एखाद्याचे मत त्या विरोधी असते.</p>
+			        <p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                  
+		          <p><br>
+		            <a href="http://www.afirstlook.com/docs/spiral.pdf" target="_blank">लिंक 1</a><br>
+		            <a href="http://highered.mcgraw-hill.com/sites/0767430344/student_view0/chapter24/" target="_blank">लिंक 2</a><br>
+		            <a href="http://www.uky.edu/~drlane/capstone/mass/spiral.htm/" target="_blank">लिंक 3</a><br>
+		            <a href="http://en.wikipedia.org/wiki/Spiral_of_silence" target="_blank">लिंक 4</a><br>
+	              <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="technopoly"> 
+		        <a href="#technopoly"><strong>टेक्नॉपॉली</strong></a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/postman.png" alt="Neil Postman"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> नील पोस्टमॅन याने हा शब्दप्रयोग पहिल्यांदा त्याच्या 1992च्या ‘टेक्नॉपॉली: दि सरेंडर ऑफ कल्चर टु टेक्नॉलॉजी’ या पुस्तकात केला</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> टेक्नॉपॉली एक असा समाज आहे जो तंत्रज्ञानाची पूजा करतो. ही संस्कृती आपले अधिकार तंत्रज्ञानात शोधते, तंत्रज्ञानातून ती तृप्त होते आणि तंत्रज्ञानाकडून ती आदेश घेते. सर्व सांस्कृतिक जीवन हे तंत्र आणि तंत्रज्ञानात विलीन केल्यामुळे मानवी जीवनाचे उद्दिष्ट हे नवनवीन यंत्र शोढणे हेच होऊन बसते. जी माहिती तंत्रज्ञानामुळे तयार होते त्यामुळे माध्यमांमधे माहितीची भरमार होते.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> पोस्टमॅनच्या या सिद्धांताचे अनेक विरोधक असले तरी सध्याच्या माहिती तंत्रज्ञानाच्या प्रभावाखाली असलेल्या समाजात त्याचे म्हणणे तपासून पाहण्याची गरज आहे. </p>
+		          <p>&nbsp;</p> 
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Technopoly" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.ibiblio.org/cmc/mag/1995/mar/hyper/npcontexts_119.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://kyletjantzen.wordpress.com/2012/11/03/neil-postmans-technopoly-twenty-years-later/" target="_blank">लिंक 3</a><br>
+	          		<a href="http://www.c-spanvideo.org/program/31627-1" target="_blank">लिंक 4</a><br>
+              		<a href="http://www.ucs.mun.ca/~emurphy/stemnet/technop.html" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+              </div>
+	      </li>
+            
+            <li class="acc-header" id="commtypes"><a href="#commtypes">संज्ञापनाचे प्रकार</a>    
+	          <div class="acc-content">
+                <p>&nbsp;</p>
+			        <p><strong>व्हर्बल</strong> – एक किंवा दोन व्यक्तींमधे बोलून माहितीची देवाणघेवाण <br>
+			          <strong>नॉन-व्हर्बल</strong> – नजरानजर, हावभाव, हातवारे, वास इत्यादी माध्यमांतून माहितीची देवाणघेवाण करणे<br>
+			          <strong>इंट्रापर्सनल कम्युनिकेशन </strong>– स्वत:शीच साधलेला संवाद. कॉग्निटिव्ह डिसोनन्स पाहा<br>
+			          <strong>इंटरपर्सनल कम्युनिकेशन </strong>– दोन किंवा दोनपेक्षा अधिक लोकांना मध्ये झालेला संवाद<br>
+			          <strong>ग्रूप कम्युनिकेशन</strong> – एखाद्या गटात होणारा संवाद<br>
+			          <strong>मास कम्युनिकेशन </strong>– मोठ्या जनसमुदायासोबत साधलेला संवाद<br>
+			          <strong>मास लाइन कम्युनिकेशन</strong> – माओवादी रणनीतिचा एक भाग म्हणून चीन मधे एकाच वेळी अनेक लोकांपर्यंत एकच संदेश पोहोचवण्याची प्रचार प्रक्रिया <br>
+			          <br>
+		            <strong>Online resources for further reading:</strong></p>
+			        <p><br>
+			          <a href="http://www.andrews.edu/~tidwell/bsad560/NonVerbal.html" target="_blank">लिंक 1</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Nonverbal_communication" target="_blank">लिंक 2</a><br> 
+			          <a href="http://nonverbal.ucsc.edu/" target="_blank">लिंक 3</a><br> 
+			          <a href="http://library.thinkquest.org/04oct/00451/nonverbalcom.htm" target="_blank">लिंक 4</a><br> 
+			          <a href="http://examples.yourdictionary.com/examples-of-non-verbal-communication.html" target="_blank">लिंक 5</a><br> 
+			          <a href="http://aiic.net/page/1662/the-importance-of-non-verbal-communication-in-professional-interpretation/lang/1" target="_blank">लिंक 6</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Mass_line" target="_blank">लिंक 7</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Verbal_communication" target="_blank">लिंक 8</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Mass_communication" target="_blank">लिंक 9</a><br> 
+			          <a href="http://www.wisegeek.org/what-is-mass-communications.htm" target="_blank">लिंक 10</a><br> 
+			          <a href="http://sjmc.umn.edu/ugrad/whatismasscomm.html" target="_blank">लिंक 11</a><br> 
+			          <a href="http://download.nos.org/srsec335new/ch2.pdf" target="_blank">लिंक 12</a><br>
+	            </p>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="tsft"><a href="#tsft">टू स्टेप फ्लो सिद्धांत</a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/lazarsfeldandkatz.png" alt="Paul Lazarsfeld and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> पॉल लाझार्सफेल्ड आणि एलिहु काट्ज यांनी 1955 साली हा सिद्धांत मांडला. त्यांनी त्या अगोदर 1944 साली लासार्सफेल्ड, बर्नार्ड बेरेलसन आणि हेझेल गॉडेट यांनी मांडलेल्या सिद्धांताला अधिक समृद्ध केले</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> माध्यमांचा लोकांवर थेट परिणाम होत नसला (मॅजिक बुलेट सिद्धांतात मांडल्याप्रमाणे) तरी मते ज्यांच्यामुळे तयार होतात अशा नेतृत्वातर्फे संदेश पाठवून लोक मतावर प्रभाव पाडला जाऊ शकतो. 1944 सालच्या ‘पीपल्स चॉइस स्टडी’ मधे लाझार्सफेल्डने सिद्ध केले की माध्यम संदेशांचा मतदारांवर कुठलाही परिणाम होत नाही. त्यापेक्षा व्यक्तिगत आणि अनौपचारिक पद्धतीने साधलेल्या संवादामुळे मतदारांवर परिणाम होतो असे आढळले. </p>
+			        <p>&nbsp;</p>
+			        <p>टू स्टेप फ्लो सिद्धांतानुसार संदेशवहन दोन पायर्‍यांतून होते – <br>
+		            1) ज्यांच्यायोगे मते तयार होतात अशा व्यक्ती पहिल्यांदा संदेश आणि माहितीचे ग्रहण माध्यमांतून करतात <br>
+		            2) या व्यक्ती पुढे तो संदेश स्वत:चे मत जोडून लोकांपर्यंत पोहोचवतात.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांतामुळे रडिओ, टीव्ही आणि इंटरनेट या सर्वच माध्यमांच्या परिणामांचा अभ्यास शक्य आहे</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Two-step_flow_of_communication" target="_blank">लिंक 1</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Two_Step_Flow_Theory-1.doc/" target="_blank">लिंक 2</a><br>
+					<a href="http://www.youtube.com/watch?v=cMjaekolB9g" target="_blank">लिंक 3</a><br>
+					<a href="http://lessonbucket.com/media-in-minutes/the-two-step-flow-theory/" target="_blank">लिंक 4</a><br>
+					<a href="http://communicationtheory.org/two-step-flow-theory-2/" target="_blank">लिंक 5</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            <li class="acc-header" id="st"> 
+		        <a href="#st"> सीमिऑटिक सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/sassure.png" alt="Sassure"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> फर्डिनंड सॉस्योर (1857-1913) आणि सी एस पर्स (1839-1914) आणि त्यानंतर नोम चॉम्स्की, उम्बर्टो इको, रोलँड बार्थ्स आणि जाँ बोदिला या सगळ्यांनी हा सिद्धांत मांडला आणि वाढवला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> चिन्ह प्रणालीचं विवरण आणि सिद्धांत म्हणजे सीमिऑटिक्स. कुठल्याही संस्कृतीमधे चिन्ह विवरण दुसर्‍या फळीची भाषाच असते. हे विवरण संस्कृतीचा अविभाज्य अंग असते आणि रोजच्या जीवनाचा एक भाग असते. ही चिन्हे आणि त्यांचे अर्थ प्रत्येक व्यक्ती एका कोड्याप्रमाणे संदेशात मांडत असते आणि ती कोडी त्या संदेशाचे ग्रहण करणारी व्यक्ती एका वैश्विक सांस्कृतिक शब्दकोशातून सोडवत असते. ही चिन्हे सांस्कृतिक असतात आणि त्यांचे अर्थ लावणे ज्याचे त्याला खुल्या पद्धतीने करता येते. यासाठी कुठलेच नियम नसतात. </p>
+			        <p>&nbsp;</p>
+			        <p>सीमिऑटिक्सच्या तीन शाखा आहेत – <br>
+		            1) सीमॅंटिक्स – चिन्हे आणि वस्तू यांच्यातील नाते, <br>
+		            2) सिंटॅक्टिस (चिन्हांमधील आंतरसंबंध), <br>
+		            3) प्रॅग्मॅतिक्स – चिन्हे आणि व्यक्तींवरील त्याचा परिणाम  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता: </strong>चिन्हांचा वापर रोजच्या संज्ञापनात आवाज आणि छापील संदेश, प्रतिमा, संगीत, चित्रपट, मायाजालावरील विषय यांमधे होत असतो. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Semiotics" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.aber.ac.uk/media/Documents/S4B/semiotic.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://www.uvm.edu/~tstreete/semiotics_and_ads/terminology.html" target="_blank">लिंक 3</a><br>
+	          		<a href="http://carbon.ucdenver.edu/~mryder/itc/semiotics.html" target="_blank">लिंक 4</a><br>
+              		<a href="http://www.youtube.com/watch?v=rEgxTKUP_WI" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="shannon"> 
+		        <a href="#shannon">शॅनॉन व्हीवर मॉडेल</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/shannonweaver.png" alt="Shannon and Weaver" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>या सिद्धांताला ‘मदर ऑफ ऑल मॉडेल्स’ (सर्व नमुन्यांची जननी) असे म्हटले आहे. क्लॉड शॅनॉन आणि वॉरेन व्हीवर यांनी 1948 साली हे मॉडेल सुचविले. त्याचा उल्लेख त्यांनी त्यांच्या ‘अ मॅथेमॅटिकल थिअरी ऑफ कम्युनिकेशन’ मधे केला. <br>
+			          <br>
+                <div class="imagePanel2"><img src="assets/images/shannonmodel.jpg" alt="Shannon Weaver Model"></div>
+                      <br>
+			          <strong>सिद्धांताचे स्पष्टीकरण:</strong> या सिद्धांताचा सगळ्यात महत्त्वाचा मुद्दा असा की संदेश वहनात ‘नॉइज’ म्हणजेच कोलाहलाचा अडथळा असतो आणि तो तांत्रिक, इलेक्ट्रॉनिक अथवा (सीमॅंटिक) चिन्हांमुळे होऊ शकतो.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Shannon–Weaver_model" target="_blank">लिंक 1</a><br>
+			          <a href="http://communicationtheory.org/shannon-and-weaver-model-of-communication/" target="_blank">लिंक 2</a><br>
+			          <a href="http://www.aber.ac.uk/media/Students/kjr9601.html" target="_blank">लिंक 3</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="sleeper"><a href="#sleeper"> स्लीपर इफेक्ट</a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/sleepereffect.jpg" alt="Sleeper Effect"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>या सिद्धांताचा मूळ विचार 1930च्या दशकात मांडला गेला होता मात्र त्याला खरे स्वरूप दिले ते कार्ल हॉवलँड इत्यादी विचारवंतांनी 1949 मधे. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण: </strong>जेव्हा लोक प्रचाराला सामोरे जातात तेव्हा स्लीपर इफेक्ट ही मानसशास्त्रीय संकल्पना तयार होते. ही संकल्पना अशी की लोक एखाद्या माहितीवर विश्वास ठेवत नाहीत कारण त्या माहितीचा स्रोत विश्वासार्ह नसतो मात्र कालांतराने लोक ही बाब विसरतात आणि तीच माहिती बरोबर असल्याचे मानू लागतात. अशाप्रकारे एखाद्या संदेशाच्या उशीरा झालेल्या परिणामाला स्लीपर इफेक्ट असे संबोधले जाते. ज्या कमी विश्वासार्हता असलेल्या स्रोतावर ही माहिती विसंबून होती त्याला डिस्काउंटिंग क्यू असे म्हणतात. अशाप्रकारे एखादा आग्रही संदेश एका डिस्काउंटिंग क्यू सोबत जोडला गेल्यास लोक कालांतराने संदेश लक्षात ठेवतात आणि डिस्काउंटिंग क्यू विसरतात. काही काळाने मात्र लोक त्या संदेशापासूनही दूर जातात कारण डिस्काउंटिंग क्यू हळू हळू कुजून जातो.</p>
+		          <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Sleeper_effect" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3100161/" target="_blank">लिंक 2</a><br>
+	          		<a href="http://lifehacker.com/5707484/persuasion-the-sleeper-effect" target="_blank">लिंक 3</a><br>
+	          		<a href="http://www.jstor.org/discover/10.2307/2488970?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102608488743" target="_blank">लिंक 4</a><br>
+              		<a href="http://www.fisherhouse.com/courses/2009/09/monicas-concepts-blog.html" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header2" id="sct"><a href="#sct"> सोशल कॉग्निटिव्ह सिद्धांत </a>
+		        <div class="acc-content">
+                 <div class="imagePanel"><img src="assets/images/bandura.png" alt="Bandura" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>1941 साली नील मिलर आणि जॉन डोलर्ड यांनी मांडलेल्या सोशल लर्निंगच्या सिद्धांतावर अधारून अल्बर्ट बंडूरा याने 1986 साली हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण: </strong>लोक स्वत:चे संयोजन करतात, नियमन करतात, चिंतनशील असतात आणि क्रियाशील असतात असे हा सिद्धांत मानतो. लोक एकमेकांकडून शिकतात असे हा सिद्धांत सांगतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता: </strong>सार्वजनिक स्वास्थ्य, शिक्षण, विपणन आणि माध्यम अभ्यासामधे या सिद्धांताचा उपयोग होतो</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Social_cognitive_theory" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Health%20Communication/Social_cognitive_theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://sph.bu.edu/otlt/MPH-Modules/SB/SB721-Models/SB721-Models5.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.uky.edu/~eushe2/Bandura/Bandura1999HP.pdf" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+       		
+            <li class="acc-header" id="socialcapital"><a href="#socialcapital">सोशल कॅपिटल</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/putnam.png" width="75%" alt="Putnam"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>‘बोलिंग अलोन: दि कोलॅप्स अँड रिव्हायवल ऑफ अमेरिकन कम्युनिटी’ या पुस्तकात रॉबर्ट पुट्नम यांनी 1950 पासून अमेरिकेतील सामाजिक भांडवलाच्या र्‍हासाबाबत चर्चा केली. याच भांडवलाच्या आधारावर अमेरिकेची लोकशाही उभी झाली होती मात्र हे भांडवल हळूहळू कमी होत गेले असे पुट्नम यांनी सांगितले.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>अमेरिकेतील बोलिंग या खेळाचे उदाहरण देत पुट्नम यांनी सांगितले की हा खेळ खेळण्यार्‍यांची संख्या सतत वाढत जात असतानाच या खेळाच्या संघांमध्ये सहभाग मात्र घटला होता. त्याचप्रमाणे अमेरिकेतील सार्वजनिक जीवनात लोक व्यक्ती म्हणून सहभागी होत होते मात्र समाज म्हणून ते सहभागी होत नव्हते. याचे एक कारण म्हणजे टी व्ही आणि शहरीकरण. व्यक्तीव्यक्तीमधील देवाणघेवाणीवरून सामाजिक भांडवलाचा अंदाज करता येतो असे पुट्नम यांचे मत आहे. सामाजिक भांडवल हे लोकशाही रुजवण्यासाठी महत्त्वाचे असते. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता: </strong>उत्तर-आधुनिक जगात सामाजिक भांडवल कमी होताना दिसते आहे. या सिद्धांताचा अभ्यास जनसंपर्काचा अभ्यास करण्यास आधारभूत ठरू शकतो.</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Social_capital" target="_blank">लिंक 1</a><br>
+                  <a href="http://www.socialcapitalresearch.com/literature/definition.html" target="_blank">लिंक 2</a><br>
+                  <a href="http://infed.org/mobi/robert-putnam-social-capital-and-civic-community/" target="_blank">लिंक 3</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Robert_D._Putnam" target="_blank">लिंक 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Bowling_Alone" target="_blank">लिंक 5</a><br>
+                  <a href="http://www.academia.edu/196236/Bowling_together_-_applying_Robert_Putnams_theories_of_community_and_social_capital_to_public_relations" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+             
+             
+            <li class="acc-header2" id="sit"><a href="#sit"> सोशल आयडेंटिटी सिद्धांत</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/tajfel.png" alt="Tajfel" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>हेन्री ताफेलने 1979 साली हा सिद्धांत मांडला</p>
+		          <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>या सिद्धांताचे मूळ मानसशास्त्रात आहे. व्यक्तीची ओळख ती व्यक्ती कुठल्या गटात आहे त्यावरून ठरते. उदाहरणार्थ कुटुंब, क्लब, खेळाचा संघ, सामाजिक वर्ग इत्यादी. अशाप्रकारच्या सामाजिक गटांशी व्यक्ती स्वत:ला जोडून घेतात कारण त्यात एक प्रकारची सुविधा असते आणि याने त्या त्या गटांची प्रतिष्ठा देखील वाढते. मात्र याचा एक परिणाम असाही होतो की लोक गटागटांत अंतर पाहू लागतात. किंबहुना हा सिद्धांत लोक गटागटांत कसा फरक करतात याच्या मानसशास्त्रीय कारणांची मीमांसा करण्यासाठीच तयार झाला. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजातील विषमता, पूर्वग्रह इत्यादी समजून घेण्यासाठी या सिद्धांताचा उपयोग होतो. सोशल नेटवर्किंगवरील लोकांचे वागणेही अभ्यासायला या सिद्धांतामुळे मदत होते. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+			        <p>&nbsp;</p>
+                     <a href="http://en.wikipedia.org/wiki/Social_identity_theory" target="_blank">लिंक 1</a><br>
+			         <a href="http://www.simplypsychology.org/social-identity-theory.html" target="_blank">लिंक 52</a><br>
+			         <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Social_Identity_Theory.doc/" target="_blank">लिंक 3</a><br>
+			         <a href="http://wat2146.ucr.edu/papers/00a.pdf" target="_blank">लिंक 3</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="sat"> 
+		        <a href="#sat"> स्पीच ऍक्ट सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/ludvig.png" alt="Ludwig" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>लुड्विग विट्जेंस्टाइन आणि ए एल ऑस्टिन यांनी या सिद्धांताचा पाया रचला. साम्प्रत या सिद्धांताचे श्रेय ऑस्टिन आणि त्यानंतर जॉन सर्ल यांना दिले जाते</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> स्पीच ऍक्ट भाषा विज्ञानातील एक महत्त्वाची संकल्पना आहे. भाषा आणि संज्ञापनाचे एक महत्त्वाचे कार्य म्हणजे प्रयोग. </p>
+			        <p>&nbsp;</p>
+			        <p>ऑस्टिनने स्पीच ऍक्ट्सचे तीन पातळ्यांवर विश्लेषण केले. <br>
+		            1) लोक्युशनरी ऍक्ट (एखादा उच्चार किंवा सर्वसाधारण वाक्य ज्याचा काहीएक सर्वसाधारण अर्थ बोध होतो.) <br>
+		            2) इल्लोक्युशनरी ऍक्ट (काहीएक उच्चारण्याचा प्रयोग किंवा उच्चारणे हाच प्रयोग ज्याला डायरेक्टिव्ह, कमिसिव्ह, एक्स्प्रेसिव्ह आणि देक्लरेटिव्ह अशा संज्ञा आहेत) आणि <br>
+		            3) प्रीलोक्युशनरी ऍक्ट (जेथे बोलण्याचा उद्देश एखाद्याचे मन वळवणे असतो).</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> संघटनांमधील भाषा समजणे आणि संज्ञापन प्रक्रिया समजून घेऊन गैरसमज दूर करण्याची पाउले उचलली जाऊ शकतात</p>
+		          <p>&nbsp;</p>
+			       <p><strong>Further reading: </strong></p>
+			       <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Speech_act" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.carla.umn.edu/speechacts/definition.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://www-01.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsASpeechAct.htm" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Speech_Act_Theory.doc/" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            
+             <li class="acc-header2" id="urt"><a href="#urt"> अंसर्टंटी रिडक्शन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/berger.png" alt="Berger" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>चार्ल्स बर्जर आणि रिचर्ड कॅलाब्रेस यांनी 1975 साली हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण</strong>: अनोळखी व्यक्तीव्यक्तीतील संज्ञापनात लोक विविध क्लृप्त्या लढवतात ज्यायोगे अशा भेटीत वागण्याची, लोक आपल्याबाबत काय म्हणतील इत्यादींबाबतची अनिश्चितता कमी होण्यास मदत होते. </p>
+			        <p>&nbsp;</p>
+			        <p>तीन पद्धतींनी लोक समोरच्या व्यक्तीबाबत माहिती घेत असतात. <br>
+		            1) पॅसिव्ह स्ट्रॅटजीस (जेव्हा आपण एखाद्या व्यक्तीला त्याच्या नकळत न्याहाळतो) <br>
+		            2) ऍक्टिव्ह स्ट्रॅटजीस (जेव्हा आपण इतरांना एखाद्या व्यक्तीबाबत विचारतो) <br>
+		            3) इंटरऍक्टिव्ह स्ट्रॅटजीस (जेव्हा आपण ज्याच्याशी बोलायच आहे त्याच्याशी थेट संवाद साधतो).</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> संघटनात्मक अथवा सामाजिक गटांमधे या सिद्धांताचा उपयोग होतो</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Uncertainty_Reduction_Theory.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://oregonstate.edu/instruct/theory/ur.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Communication_Theory/Uncertainty_Reduction" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.academia.edu/2942637/Uncertainty_Reduction_Theory" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header" id="uandg"><a href="#uandg"> युजेस अँड ग्रॅटिफिकेशंस सिद्धांत </a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/katzblumler.png" alt="Jay Blumler and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>एलिहु काट्ज आणि ब्लुम्लर यांनी हा सिद्धांत 1974 साली औपचारिकरित्या मांडला. या सिद्धांताची मुळे 1940च्या दशकांपासून तयार केलेल्या माध्यम परिणामांच्या सिद्धांतांमध्ये आहे.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> प्रेक्षकांना माध्यम अभ्यासात समाविष्ट करणारा हा पहिला सिद्धांत आहे. माध्यमांचे ग्राहक आणि उपभोक्ता हे सक्रीय असतात आणि त्यांना हवं ते निवडून ते बाकीचं सोडून देतात. यामुळे माध्यम परिणामाला मर्यादा पडतात आणि प्रेक्षक माध्यमांवर आपले नियंत्रण ठेवतात. </p>
+			        <p>&nbsp;</p>
+			        <p>प्रेक्षक पाच कारणांसाठी माध्यमांकडे वळतात. <br>
+		            1) कॉग्निटिव्ह (ज्या माध्यमातून आपले सर्वाधिक समाधान होते ते माध्यम आपण निवडतो), <br>
+		            2) अफेक्टिव्ह (आपले भावनिक समाधान होते), <br>
+		            3) पर्सनल इंटिग्रेटिव्ह (सामाजिक स्तर, विश्वासार्हता वाढवण्यासाठी), <br>
+		            4) सोशल इंटिग्रेटिव्ह (कुटुंब आणि मित्रांसोबत घालवलेला वेळ), <br>
+		            5) टेंशन रिलीज (रोजच्या दबावापासून मन इतरत्र वळवण्यासाठी). समीक्षकांनुसार माध्यमांचीही काही जबाबदारी असते आणि हा सिद्धांत माध्यमांनावरून सगळी जबाबदारी प्रेक्षकांवर टाकतो.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> सर्वच माध्यम परिणाम अभ्यासाला उपयुक्त</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Uses_and_gratifications_theory" target="_blank">लिंक 1</a><br>
+					<a href="http://www.aber.ac.uk/media/Documents/short/usegrat.html" target="_blank">लिंक 2</a><br>
+					<a href="https://umdrive.memphis.edu/cbrown14/public/Mass%20Comm%20Theory/Week%207%20Uses%20and%20Gratifications/Ruggiero.pdf" target="_blank">लिंक 3</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Uses_and_Gratifications_Approach.doc/" target="_blank">लिंक 4</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+     
+     
+            <li class="acc-header2" id="schramm"><a href="#schramm"><strong>विल्बर श्राम मॉडेल</strong></a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/schramm.png" alt="Wilbur Schramm" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p> संदेशाच्या देवण-घेवाणीच्या प्रक्रियेत एका कोड्याची देवाण-घेवाण होते. त्यामुळे संज्ञापन प्रक्रियात पूर्ण होते जेव्हा संदेश देणारा आपले कोडे मांडतो,पाठवतो, ते कोडे सोडवले जाते आणि पुन्हा नव्याने एक कोडे तयार करून प्रथम ज्याने संदेश पाठवला त्याच्याकडे परत पाठविले जाते. <br>
+			          <br>
+                      <div class="imagePanel"><img src="assets/images/shrammmodel.jpg" width="90%" alt="Schramm's Model"></div>
+                      <br>
+                      याच मॉडेलचा पुढे टूवे मॉडेल म्हणून विकास  झाला.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Wilbur_Schramm" target="_blank">लिंक लिंक 1</a><br>
+			          <a href="http://www.managementstudyguide.com/schramm-model-of-communication.htm" target="_blank">लिंक 2</a><br>
+			          <a href="http://knowledge.sagepub.com/view/key-concepts-in-marketing/n46.xml" target="_blank">लिंक 3</a><br>
+			          <a href="http://en.wikipedia.org/wiki/Models_of_communication" target="_blank">लिंक 4</a><br>
+			          <a href="http://www.uri.edu/personal/carson/kulveted/wlsmodel.html" target="_blank">लिंक 5</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+          
+          <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"><a href="early.html">काही मॉडेल आणि सुरूवातीचे सिद्धांत</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm"><a href="communication.html">आंतर वैयक्तिक संजापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">प्रेक्षक आणि समाज</a>
+		    </li>
+            
+            <li class="acc-header5" id="media"><a href="media.html">माध्यम सिद्धांत</a></li>
+            
+            <li class="acc-header5" id="effects"><a href="effects.html">माध्यम परिणाम</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"><a href="organization.html">संस्थात्मक संजापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"><a href="a2z.html">अे २ झेड</a>
+		    </li>
+        
+            
+		</ul>
+	</div>
+  </body>
+</html>

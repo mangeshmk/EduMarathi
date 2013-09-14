@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        	 <li class="acc-header3" id="orgths"> 
+		        <a href="#orgths">Organizational Communication Theories</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            
+            
+             <li class="acc-header" id="astr"> 
+		        <a href="#astr">अडॅप्टिव्ह स्ट्रक्चरेशन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/gerry.png" alt="DeSanctis"><br></div>
+			        <p><strong>विचारक:</strong> जेरारडीन डेसॅन्क्टिस आणि मार्शल स्कॉट पूल यांनी 1994 साली ऍंथोनी गिड्डन्सच्या स्ट्रक्चरेशन सिद्धांताला पुढे नेत हा सिद्धांत मांडला.</p>
+		          <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>तंत्रज्ञानाचा उगम आणि विकास आणि संस्थांच्या संरचनांचा ताळमेळ कसा होतो हे समजण्यासाठी अडॅप्टिव्ह स्ट्रक्चरेशन सिद्धांताचा उपयोग होतो. या सिद्धांतामुळे संस्थांमधील उतरंड कशी तयार होते, गट कसे तयार होतात, त्यांतील संज्ञापन प्रक्रिया कशी असते आणि या सगळ्याचा संज्ञापन आणि निर्णय क्षमतेवर काय परिणाम होतो हे समजते. तंत्रज्ञानाकडे पाहायचा एक सामाजिक दृष्टिकोनही आहे हे या सिद्धांतातून कळते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> तंत्रज्ञानाचा प्रवास छपाई तंत्रज्ञान, टेलिग्राफ, रेडिओ, दूरचित्रवाणी, मायाजाल असा झाला आहे. अडॅप्टिव्ह स्ट्रक्चरेशन सिद्धांताचा उपयोग करून या तंत्रज्ञानाचा परिणाम संस्थात्मक आणि सामाजिक संरचनांवर कसा होतो याचा अभ्यास शक्य आहे.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.academia.edu/667633/Adaptive_Structuration_Theory_Understanding_How_Advancing_Technologies_Drive_Organizational_Change" target="_blank">लिंक 1</a><br>
+			        <a href="http://istheory.byu.edu/wiki/Adaptive_structuration_theory" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.business.unr.edu/faculty/davec/adaptive%20structuration%20theory%20poole%20and%20desanctis.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://highered.mcgraw-hill.com/sites/0073135615/student_view0/chapter15/" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Organizational%20Communication/AST_theory.doc/" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="diffu"> 
+		        <a href="#diffu">डिफ्युशन ऑफ इनोव्हेशंस सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rogers.png" alt="Rogers"><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत: </strong>एव्हेरेट रॉजर्स याने 1962 साली हा सिद्धांत मांडला</p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> वेगवेगळ्या संस्कृतींतून तंत्रज्ञान आणि नवे विचार कसे प्रसरण पावतात याबाबत हा सिद्धांत सांगतो. एखाद्या संस्कृतीत नवे विचार, उत्पादन किंवा तंत्रज्ञान कसे रुजतात याबाबत विचार मांडत असताना हा सिद्धांत टू स्टेप फ्लो सिद्धांताच्या पुढे जातो. </p>
+		            <p>&nbsp;</p>
+		            <p>समाजात वैचारिक पुढाकार घेणारे नेते असतात ज्यांच्यावर माध्यमांचा प्रभाव असतो. अशा लोकांना ‘अडॉप्टर’ असे म्हटले आहे. जे सर्व नवीन असते ते सर्व समाजांत किंवा संस्कृतीत एक सारखेच आणि एकाच वेळी रुजत नाही. येथे बदल घडवू पाहणारे, माध्यमे, ‘अडॉप्टर’ आणि सरते शेवटी प्रेक्षक अथवा समाजातील व्यक्ती यांच्यात आंतरसंज्ञापनाची आवश्यकता असते. अशाप्रकारे कालांतराने एखादा विचार, उत्पादन गती पकडते आणि त्याचे प्रसारण विशिष्ट समाजात होते. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्तता:</strong> नवमाध्यम तंत्रज्ञान किती खोलवर रुजले आहे आणि समाजात कशाप्रकारचे बदल घडवून आणते आहे ते अभ्यासण्यासाठी या सिद्धांताचा उपयोग होतो. एखाद्या संघटनेत विचारांचे आदानप्रदान समान व्हावे आणि नवीन विचारांसोबत काम करणे सोपे जावे यासाठीही या सिद्धांताचा उपयोग होतो. </p>
+	              <p>&nbsp;</p>
+		            <p><strong>Further reading: </strong></p>
+		            <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Diffusion_of_innovations" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Communication%20and%20Information%20Technology/Diffusion_of_Innovations_Theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.enablingchange.com.au/Summary_Diffusion_Theory.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.stanford.edu/class/symbsys205/Diffusion%20of%20Innovations.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.rogerclarke.com/SOS/InnDiff.html" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+             <li class="acc-header" id="mrt"> 
+		        <a href="#mrt">मिडिया रिचनेस सिद्धांत</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/daft.png" alt="Richard Daft" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> रिचर्ड डाफ्ट आणि रॉबर्ट लेंगल यांनी 1984 साली गाल्ब्रेथ यांच्या 1977 साली मांडलेल्या इन्फर्मेशन प्रोसेसिंग सिद्धांताला पुढे नेत हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> माध्यमे माहितीची पुनर्निर्मिती किती चांगल्या आणि प्रभावी पद्धतीने करू शकतात याबाबत हा सिद्धांत सांगतो. माहितीचे नुकसान न होता जितके बह्वर्थी संदेश एखादे माध्यम वाहू शकते तेवढी त्या माध्यमाची संज्ञापन क्षमता असते, तितके ते माध्यम ‘रिच’ असते. उदाहरणार्थ समोरासमोर दोन व्यक्तींतील संज्ञापन सर्वात ‘रिच’ असते मात्र ऑनलाइन लिहिलेले संज्ञापन तितके ‘रिच’ नसते. </p>
+			        <p>&nbsp;</p>
+			        <p>संघटनांतील संज्ञापनाच्या अभ्यासासाठी हा सिद्धांत वापरला गेला. यावरून संज्ञापन किती प्रभावी आहे ते कळू शकले.</p>
+			        <p>&nbsp;</p>
+                    <p><img src="assets/images/mediarichness.png" width="100%"></p>
+                  <p>(Image Source: Wikipedia page on Media Richness Theory)</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> कुठल्याही संस्थेचे संज्ञापन समजण्यासाठी या सिद्धांताचा उपयोग होऊ शकतो.</p><p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                     
+		          <p><br>
+			           <a href="http://en.wikipedia.org/wiki/Media_richness_theory" target="_blank">लिंक 1</a><br>
+			           <a href="http://learngen.org/Resources/lgend101_norm1/200/210/211_3.html" target="_blank">लिंक 2</a><br>
+			           <a href="http://www.campus-adr.net/ODRmodule/media_richness_theory.html" target="_blank">लिंक 3</a><br>
+			           <a href="http://www.facultyfocus.com/articles/online-education/media-richness-and-communication-in-online-education/" target="_blank">लिंक 4</a><br>
+			           <a href="http://isr.journal.informs.org/content/9/3/256" target="_blank">लिंक 5</a><br>
+			           <a href="http://blog.timebarrow.com/2009/09/media-richness-theory/" target="_blank">लिंक 6</a><br>
+	              <p>&nbsp;</p>
+		        </div>
+			</li>
+           
+            <li class="acc-header2" id="let"> 
+		        <a href="#let">लॅंग्वेज एक्स्पेक्टेंसी सिद्धांत  </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/miller.png" alt="Miller"><br></div>
+		          <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>मायकेल बरगून, जोन्स आणि स्टुअर्ट (1975)</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> या सिद्धांताचे परसुएशन सिद्धांताशी साम्य आहे. भाषेबाबतच्या अपेक्षांमुळे संज्ञापन प्रक्रिया, मनोभाव आणि वर्तणूकीत काय बदल होतात ते हा सिद्धांत सांगतो. भाषेचे काही नियम असतात आणि ते नियम जर मोडले तर भाषेबाबतच्या अपेक्षांना तडा जातो आणि त्याचा परिणाम संदेश वहनावर होतो. </p>
+			        <p>&nbsp;</p>
+			        <p>भाषेबाबतच्या अपेक्षा तीन कारणांमुळे तयार होतात – </p>
+			        <p>1) संदेश देणारा </p>
+			        <p>2) संदेश देणारा आणि प्रेक्षक यांतील नाते </p>
+			        <p>3) संदेशाचे संदर्भ  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> सामाजिक आणि संस्थात्मक संज्ञापनाचा अभ्यास करण्यासाठी या सिद्धांताचा उपयोग होतो.</p>
+			        
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Language_Expectancy_Theory.doc/" target="_blank">लिंक 1</a><br>
+	          		<a href="http://en.wikipedia.org/wiki/Language_expectancy_theory" target="_blank">लिंक 2</a><br>
+	          		<a href="http://communicationtheory.org/language-expectancy-theory/" target="_blank">लिंक 3</a><br>
+	          		<a href="http://changingminds.org/explanations/theories/language_expectancy.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://commfaculty.fullerton.edu/rgass/492T%20S2002/Language%20Expectancy%20Theory_files/v3_document.htm" target="_blank">लिंक 5</a><br>
+              		<p>&nbsp;</p>
+              </div>
+	      </li>
+            
+            
+             <li class="acc-header2" id="urt"><a href="#urt"> अंसर्टंटी रिडक्शन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/berger.png" alt="Berger" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>चार्ल्स बर्जर आणि रिचर्ड कॅलाब्रेस यांनी 1975 साली हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण</strong>: अनोळखी व्यक्तीव्यक्तीतील संज्ञापनात लोक विविध क्लृप्त्या लढवतात ज्यायोगे अशा भेटीत वागण्याची, लोक आपल्याबाबत काय म्हणतील इत्यादींबाबतची अनिश्चितता कमी होण्यास मदत होते. </p>
+			        <p>&nbsp;</p>
+			        <p>तीन पद्धतींनी लोक समोरच्या व्यक्तीबाबत माहिती घेत असतात. <br>
+		            1) पॅसिव्ह स्ट्रॅटजीस (जेव्हा आपण एखाद्या व्यक्तीला त्याच्या नकळत न्याहाळतो) <br>
+		            2) ऍक्टिव्ह स्ट्रॅटजीस (जेव्हा आपण इतरांना एखाद्या व्यक्तीबाबत विचारतो) <br>
+		            3) इंटरऍक्टिव्ह स्ट्रॅटजीस (जेव्हा आपण ज्याच्याशी बोलायच आहे त्याच्याशी थेट संवाद साधतो).</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> संघटनात्मक अथवा सामाजिक गटांमधे या सिद्धांताचा उपयोग होतो</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Uncertainty_Reduction_Theory.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://oregonstate.edu/instruct/theory/ur.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Communication_Theory/Uncertainty_Reduction" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.academia.edu/2942637/Uncertainty_Reduction_Theory" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+             <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"><a href="early.html">काही मॉडेल आणि सुरूवातीचे सिद्धांत</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm"><a href="communication.html">आंतर वैयक्तिक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">प्रेक्षक आणि समाज</a>
+		    </li>
+            
+            <li class="acc-header5" id="media"><a href="media.html">माध्यम सिद्धांत</a></li>
+            
+            <li class="acc-header5" id="effects"><a href="effects.html">माध्यम परिणाम</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"><a href="organization.html">संस्थात्मक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"><a href="a2z.html">अे २ झेड</a>
+		    </li>
+            
+            
+		</ul>
+	</div>
+  </body>
+</html>

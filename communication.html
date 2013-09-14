@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        
+        <li class="acc-header3" id="intcom"> 
+		        <a href="#intcom">आंतर वैयक्तिक संज्ञापन</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            
+            
+        	<li class="acc-header" id="commtypes"><a href="#commtypes">संज्ञापनाचे प्रकार</a>    
+	          <div class="acc-content">
+                <p>&nbsp;</p>
+			        <p><strong>व्हर्बल</strong> – एक किंवा दोन व्यक्तींमधे बोलून माहितीची देवाणघेवाण <br>
+			          <strong>नॉन-व्हर्बल</strong> – नजरानजर, हावभाव, हातवारे, वास इत्यादी माध्यमांतून माहितीची देवाणघेवाण करणे<br>
+			          <strong>इंट्रापर्सनल कम्युनिकेशन </strong>– स्वत:शीच साधलेला संवाद. कॉग्निटिव्ह डिसोनन्स पाहा<br>
+			          <strong>इंटरपर्सनल कम्युनिकेशन </strong>– दोन किंवा दोनपेक्षा अधिक लोकांना मध्ये झालेला संवाद<br>
+			          <strong>ग्रूप कम्युनिकेशन</strong> – एखाद्या गटात होणारा संवाद<br>
+			          <strong>मास कम्युनिकेशन </strong>– मोठ्या जनसमुदायासोबत साधलेला संवाद<br>
+			          <strong>मास लाइन कम्युनिकेशन</strong> – माओवादी रणनीतिचा एक भाग म्हणून चीन मधे एकाच वेळी अनेक लोकांपर्यंत एकच संदेश पोहोचवण्याची प्रचार प्रक्रिया <br>
+			          <br>
+		            <strong>Online resources for further reading:</strong></p>
+			        <p><br>
+			          <a href="http://www.andrews.edu/~tidwell/bsad560/NonVerbal.html" target="_blank">लिंक 1</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Nonverbal_communication" target="_blank">लिंक 2</a><br> 
+			          <a href="http://nonverbal.ucsc.edu/" target="_blank">लिंक 3</a><br> 
+			          <a href="http://library.thinkquest.org/04oct/00451/nonverbalcom.htm" target="_blank">लिंक 4</a><br> 
+			          <a href="http://examples.yourdictionary.com/examples-of-non-verbal-communication.html" target="_blank">लिंक 5</a><br> 
+			          <a href="http://aiic.net/page/1662/the-importance-of-non-verbal-communication-in-professional-interpretation/lang/1" target="_blank">लिंक 6</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Mass_line" target="_blank">लिंक 7</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Verbal_communication" target="_blank">लिंक 8</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Mass_communication" target="_blank">लिंक 9</a><br> 
+			          <a href="http://www.wisegeek.org/what-is-mass-communications.htm" target="_blank">लिंक 10</a><br> 
+			          <a href="http://sjmc.umn.edu/ugrad/whatismasscomm.html" target="_blank">लिंक 11</a><br> 
+			          <a href="http://download.nos.org/srsec335new/ch2.pdf" target="_blank">लिंक 12</a><br>
+	            </p>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+             <li class="acc-header2" id="commbarriers"> 
+		        <a href="#commbarriers">बॅरिअर्स टु कम्युनिकेशन - संज्ञापन प्रक्रियेतील अडचणी</a>    
+	            <div class="acc-content">
+                <p>&nbsp;</p>
+			        <p>संज्ञापन प्रक्रियेतील अडचणी अनेक आहेत. </p>
+			        <p>&nbsp;</p>
+			        <p>उदाहरणार्थ <br>
+		            शारीरिक, <br>
+		            मानसशास्त्रीय, <br>
+		            तांत्रिक, <br>
+		            स्वत:बाबतची प्रतिमा, <br>
+		            बदलाला असलेला विरोध, <br>
+		            बचावात्मक भूमिका, <br>
+		            भीती इत्यादि. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>References</strong></p>
+			        <p>&nbsp; </p>
+			        <a href="http://my.safaribooksonline.com/book/medicine/9789332501461/chapter-1-review-of-communication-process/ch1_7_xhtml" target="_blank">लिंक 1</a> <br>
+			        <a href="http://www.opin.ca/article/seven-barriers-communication" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.skillsyouneed.com/ips/barriers-communication.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Communication" target="_blank">लिंक 4</a><br>
+			        <a href="http://cas.upes.ac.in/pdf/Barriers%20to%20Commn%203.pdf" target="_blank">लिंक 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+        	
+            
+            
+            
+            <li class="acc-header" id="rasa"> 
+		        <a href="#rasa">रस सिद्धांत -संज्ञापनाचा भारतीय दृष्टिकोन </a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rasa.png" alt="Rasa Theory" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>रस्यत इति रस:</strong> - ज्याचा स्वाद घेता येतो तो रस. रस सहा असतात - कटू, तिक्त, कषाय, मधुर, लवण, आम्ल. हे सहा रस केवळ जिह्वेने अनुभवता येतात. षड्रसभोजन ही संज्ञा यातून आली. </p>
+			        <p>&nbsp;</p>
+			        <p>स्वाद हा विचार नाट्य आणि काव्यालासुद्धा लावण्यात आला. रस आठ सांगितले आहेत. शृंगार, हस्य, करूण, रौद्र, वीर, भयानक, बीभत्स, अद्भुत. विविध अभ्यासकांनी आणखी रस सांगितले आहेत. भरताचे नाट्यशास्त्र हे रस सिद्धांत मांडणारे पहिले मानले जाते. ख्रिस्तपूर्व दोनशे वर्श ते ख्रिस्तानंतर सातशे वर्श या काळात केव्हातरी नाट्यशास्त्र लिहिले गेले असावे. भरत ही एक व्यक्ती होती अथवा अनेक व्यक्तींचा समूह होता त्याबद्द्ल मतमतांतरे आहेत. भरताअगोदर आचार्य द्रुहिन आणि वासुकी यंनीही रसाबाबत विचार मांडला होता असे जी.टी.देशपांडे यांनी म्हटले आहे. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> रससिद्धांत बहुधा भारतीय संज्ञापन शास्त्रातील सर्वात जुना सिद्धांत आहे जो संज्ञापन, परफॉर्मर आणि प्रेक्षक यांच्यातील संबंध स्पष्ट करतो. रस हा रसिकात वास करतो जो रसिक संज्ञापन अनुभवातून जातो. रसिक आणि परफॉर्मर जाणीव-नेणिवेच्या एकाच पातळीवर येतात, सहृदय होतात, तेव्हा संज्ञापन उद्देश्य साध्य होतो.</p>
+		        <p>&nbsp;</p>
+		         <strong>Further reading:</strong><br>
+		         <br>
+                 <a href="http://www.karandikars.com/rasa.htm" target="_blank">लिंक</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            
+            
+            
+            
+            
+            <li class="acc-header2" id="argu"> 
+		        <a href="#argu"><strong>आर्ग्युमेंटेशन सिद्धांत</strong></a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/toulmin.png" alt="Toulmin" ></div>
+			        <p><strong>विचारक: </strong>स्टीफन टोलमिन याने ‘दि युसेस ऑफ आर्ग्युमेंट’ हा लेख 1958 साली लिहिला आणि या सिद्धांताची मुळे ऍरिस्टॉटलच्या तत्त्वांमध्ये आहेत हे दाखवून दिले. त्यापुढे जाऊन 1969 मध्ये पेरेलमनने ‘दि न्यू र्हेटॉरिक’ मध्ये आणि त्यानंतर शेलेंस (1985), वॅन इमेरेन आणि ग्रूनटेनडॉर्स्ट (1996) यांनी या सिद्धांताची अधिक परिपूर्ण मांडणी केली.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> लोकांतील संज्ञापनात तर्क आणि विचाराचा वापर कसा आणि कितपत असतो याबाबतचा हा सिद्धांत आहे. टोलमिननुसार आर्ग्युमेंटेशनचे सहा भाग आहेत – <br>
+		            क्लेम (दावा करणे), <br>
+		            डेटा (माहिती), <br>
+		            वॉरंट (एखादा मुद्द्यावर अधिकार स्पष्ट करणे), <br>
+		            बॅकिंग (मुद्द्यासाठीची सामग्री समोर ठेवणे), <br>
+		            रिबुट्टल (खंडन करणे) आणि <br>
+		            क्वालिफायर (मुद्द्याच्या मर्यादा स्पष्ट करणे). </p>
+			        <p>&nbsp;</p>
+			        <p>शेलेंस याने आर्ग्युमेंटेशनचे दोन प्रकार सांगितले - <br>
+		            रेस्ट्रिक्टेड (प्रतिबंधित) आणि <br>
+		            अनरेस्ट्रिक्टेड (प्रतिबंधित नसलेले). </p>
+			        <p>&nbsp;</p>
+			        <p>वॅन इमेरेन आणि ग्रूनटेनडॉर्स्ट यांनी आर्ग्युमेंटेशनच्या चार पायर्‍या स्पष्ट केल्या – <br>
+		            कन्फ्रंटेशन (सामना), <br>
+		            ओपनिंग (प्रारंभ), <br>
+		            आर्ग्युमेंटेशन (विवाद) आणि <br>
+		            कंक्ल्यूजन (निर्णय). </p>
+			        <p>&nbsp;</p>
+			        <p>एखाद्या विवादाची संरचना साधारणपणे अशाप्रकारची असते – विवादामधे अंतर्गत संरचना असते जिच्यात काही गृहित धरलेले असते, तर्काच्या काही पद्धती असतात, आणि विशिष्ट मुद्दा असतो. कुठल्याही विवादामधे किमान दोन पूर्वपक्ष असतात आणि एक निर्णय असतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांताचा उपयोग कुठल्याही दोन व्यक्ती अथवा गट यांच्यातील संज्ञापनाच्या अभ्यासासाठी होऊ शकतो. शास्त्रज्ञ, कायदेपंडित, पत्रकार, माध्यम व्यावसायिक, जाहिरातदार यांसारख्या अनेक क्षेत्रांतील व्यावसायिकांना याचा उपयोग होतो.</p>
+		          <p>&nbsp;</p>
+			        <strong>Links for more reading: </strong><br>
+			        <br>
+                	<a href="http://en.wikipedia.org/wiki/Argumentation_theory" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/levels%20of%20theories/micro/argumentation%20theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.dougwalton.ca/papers%20in%20pdf/09ArgShort.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.sjsu.edu/people/anand.vaidya/courses/c5/s2/Why%20Do%20Humans%20Reason%20Sperber.pdf" target="_blank">लिंक 4</a><br>
+			        <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="attr"> 
+		        <a href="#attr">ऍट्रिब्युशन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/heider.png" alt="Heider" ><br></div>
+                  <br>
+			        <p><strong>विचारक:</strong> फ्रिट्ज हायडर याने 1958 साली पहिल्यांदा हा विचार मांडला. त्यानंतर एडवर्ड जोन्स आणि कीथ डेव्हिस यांनी 1965 साली करस्पॉन्डंट इफरंस सिद्धांत मांडला आणि हॅरॉल्ड केलीने को-व्हेरियेशन मॉडेल यावरून तयार केला. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> या सिद्धांताची मुळे मानसशास्त्रात आहेत. स्वत:च्या आणि इतरांच्या वागण्या-बोलण्याचा लोक काय अर्थ लावतात याबाबत हा सिद्धांतविचार आहे. कुठल्याही शास्त्रीय आधाराशिवाय लोक स्वानुभवावरून भोवतालच्या घटनांबाबत मते तयार करतात. असे करण्यामागे आपल्या अनुभवविश्वाशी जुळवून घेणे, चहूकडे घडणार्‍या घटनांशी स्वत:च्या इच्छा, आकांक्षांचा ताळमेळ बसवणे हा असतो. </p>
+			        <p>&nbsp;</p>
+			        <p>हायडर याने ऍट्रिब्युशनचे दोन प्रकार सांगितले – <br>
+		            इंटर्नल (व्यक्तीच्या वर्तणूकीशी संबंधित) आणि <br>
+		            एक्स्टर्नल (व्यक्तीच्या सामाजिक परिसरातील घडामोडींशी संबंधित). </p>
+			        <p>&nbsp;</p>
+			        <p>हायडरने लोकांना ‘भोळसट मानसशास्त्रज्ञ’ म्हटले कारण ते आपल्या जगाचा अर्थ लावण्यासाठी आपल्या स्वानुभवाचा उपयोग करतात. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजशास्त्रीय अभ्यासात ऍट्रिब्युशन सिद्धांताचा उपयोग होतो आणि विशिष्ट प्रसंगात लोकांची वागणूक समजून घेण्यास मदत होते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong><br>
+			          <br>
+			        </p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/attribution_theory.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Attribution_(psychology)" target="_blank">लिंक 2</a><br>
+			        <a href="http://education.purduecal.edu/Vockell/EdPsyBook/Edpsy5/edpsy5_attribution.htm" target="_blank">लिंक 3</a><br>
+			        <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="contag"> 
+		        <a href="#contag">कंटेजियन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/gustaveLeBon.png" alt="Gustav" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत:</strong> गस्ताव ल बाँ याने मानसशास्त्रीय अंगाने हा सिद्धांत मांडला आहे. याचा पुढे माध्यम अभ्यासात अंतर्भाव करण्यात आला.  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांत स्पष्टीकरण:</strong> भावनांचा वापर करून एखाद्या मोठ्या गटाची किंवा गर्दीची वर्तणूक प्रभावित करता येते असे मानसशास्त्र सांगते. ले बाँच्या मते गर्दीत लोक भावनेला आहारी जाऊन एकमेकांचे अनुकरण करू लागतात आणि त्यायोगे एखाद्या झुंडीप्रमाणे, अतार्किक वागतात. आंतरवैयक्तिक संज्ञापन सिद्धांतांमध्ये संज्ञापनाचा परिणाम व्यक्तींच्या वागण्यावर आणि मनोभावावर काय होतो याचा अभ्यास करता येतो. कंटेजियन सिद्धांताचा येथे उपयोग होतो. त्याचप्रमाणे जे लोक एकसारखी संज्ञापन प्रक्रिया अथवा नवमाध्यमे वापरतात त्यांत देखील कंटेजियन आढळते. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयुक्ततता:</strong> ज्या संस्थांमधे आंतरविभागीय संज्ञापन असते अथवा स्वयंकेंद्री गट किंवा जे गट एकसारखी संज्ञापन रचना वापरतात अशांना कंटेजियन सिद्धांत लागू होतो.  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading: </strong><br>
+		              <br>
+		            </p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Contagion_theories.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Introduction_to_Sociology/Collective_Behavior" target="_blank">लिंक 2</a><br>
+			        <a href="http://humannaturelab.net/wp-content/themes/human-nature-lab/media/pdf/publications/articles/136.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.columbia.edu/itc/hs/medical/bioethics/nyspi/material/MediaContagionAndSuicide.pdf" target="_blank">लिंक 4</a><br>
+			        <a href="http://www.terrorismanalysts.com/pt/index.php/pot/article/view/73/html" target="_blank">लिंक 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+          </li>
+          
+          
+            
+            <li class="acc-header" id="diss"> 
+		        <a href="#diss">कॉग्निटिव्ह दिसोनन्स सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/festinger.png" alt="Festinger" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत:</strong> लिआँ फेस्टिंगर याने 1951 साली हा सिद्धांत मांडला <br>
+		              <br>
+	                <strong>	                सिद्धांताचे स्पष्टीकरण:</strong> मानसशास्त्रीय सिद्धांतांचा आधार घेऊन हा सिद्धांत असे सांगतो की व्यक्ति एखाद्या घटनेबद्दल अस्वस्थ होते जेव्हा तिला तिच्या समोरील दोन विरोधी भूमिकांतून एक पर्याय निवडायचा असतो. व्यक्तींना आपली मते आणि मनोभाव प्यारे असतात आणि त्यांसमरस राहण्याचा ते आटोकाट प्रयत्न करत असतात. पर्याय निवडीमुळे त्रास, असंगत वर्तणूक करावी लागणार अथवा समरसता गमवावी लागणार असेल तर ते आपल्या मतांमध्ये आणि मनोभावांमध्ये अफरातफर करतात. फेस्टिंगरच्या मते कॉग्निटिव्ह कंसिसटंसी (सुसंगत जाणीव) इतकी महत्त्वाची असते की लोक कधी कधी अतार्किक पद्धतीने वागताने दिसतात जेव्हा घटना त्यांच्या जाणीवांच्या दृष्टीने असंगत वाटतात. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>सिद्धांताची उपयक्तता: </strong>कठीण प्रसंगी किंवा संकटकाळी लोक कसे वागतात हे समजून घेण्यासाठी या सिद्धांताचा उपयोग होतो.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong><br>
+		              <br>
+		             <a href="http://en.wikipedia.org/wiki/Cognitive_dissonance" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.simplypsychology.org/cognitive-dissonance.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://www.ithaca.edu/faculty/stephens/cdback.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Cognitive_Dissonance_theory.doc/" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            
+            <li class="acc-header2" id="sit"><a href="#sit"> सोशल आयडेंटिटी सिद्धांत</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/tajfel.png" alt="Tajfel" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>हेन्री ताफेलने 1979 साली हा सिद्धांत मांडला</p>
+		          <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>या सिद्धांताचे मूळ मानसशास्त्रात आहे. व्यक्तीची ओळख ती व्यक्ती कुठल्या गटात आहे त्यावरून ठरते. उदाहरणार्थ कुटुंब, क्लब, खेळाचा संघ, सामाजिक वर्ग इत्यादी. अशाप्रकारच्या सामाजिक गटांशी व्यक्ती स्वत:ला जोडून घेतात कारण त्यात एक प्रकारची सुविधा असते आणि याने त्या त्या गटांची प्रतिष्ठा देखील वाढते. मात्र याचा एक परिणाम असाही होतो की लोक गटागटांत अंतर पाहू लागतात. किंबहुना हा सिद्धांत लोक गटागटांत कसा फरक करतात याच्या मानसशास्त्रीय कारणांची मीमांसा करण्यासाठीच तयार झाला. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजातील विषमता, पूर्वग्रह इत्यादी समजून घेण्यासाठी या सिद्धांताचा उपयोग होतो. सोशल नेटवर्किंगवरील लोकांचे वागणेही अभ्यासायला या सिद्धांतामुळे मदत होते. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+			        <p>&nbsp;</p>
+                     <a href="http://en.wikipedia.org/wiki/Social_identity_theory" target="_blank">लिंक 1</a><br>
+			         <a href="http://www.simplypsychology.org/social-identity-theory.html" target="_blank">लिंक 52</a><br>
+			         <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Social_Identity_Theory.doc/" target="_blank">लिंक 3</a><br>
+			         <a href="http://wat2146.ucr.edu/papers/00a.pdf" target="_blank">लिंक 3</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="sct"><a href="#sct"> सोशल कॉग्निटिव्ह सिद्धांत </a>
+		        <div class="acc-content">
+                 <div class="imagePanel"><img src="assets/images/bandura.png" alt="Bandura" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>1941 साली नील मिलर आणि जॉन डोलर्ड यांनी मांडलेल्या सोशल लर्निंगच्या सिद्धांतावर अधारून अल्बर्ट बंडूरा याने 1986 साली हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण: </strong>लोक स्वत:चे संयोजन करतात, नियमन करतात, चिंतनशील असतात आणि क्रियाशील असतात असे हा सिद्धांत मानतो. लोक एकमेकांकडून शिकतात असे हा सिद्धांत सांगतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता: </strong>सार्वजनिक स्वास्थ्य, शिक्षण, विपणन आणि माध्यम अभ्यासामधे या सिद्धांताचा उपयोग होतो</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Social_cognitive_theory" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Health%20Communication/Social_cognitive_theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://sph.bu.edu/otlt/MPH-Modules/SB/SB721-Models/SB721-Models5.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.uky.edu/~eushe2/Bandura/Bandura1999HP.pdf" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="sat"> 
+		        <a href="#sat"> स्पीच ऍक्ट सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/ludvig.png" alt="Ludwig" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>लुड्विग विट्जेंस्टाइन आणि ए एल ऑस्टिन यांनी या सिद्धांताचा पाया रचला. साम्प्रत या सिद्धांताचे श्रेय ऑस्टिन आणि त्यानंतर जॉन सर्ल यांना दिले जाते</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> स्पीच ऍक्ट भाषा विज्ञानातील एक महत्त्वाची संकल्पना आहे. भाषा आणि संज्ञापनाचे एक महत्त्वाचे कार्य म्हणजे प्रयोग. </p>
+			        <p>&nbsp;</p>
+			        <p>ऑस्टिनने स्पीच ऍक्ट्सचे तीन पातळ्यांवर विश्लेषण केले. <br>
+		            1) लोक्युशनरी ऍक्ट (एखादा उच्चार किंवा सर्वसाधारण वाक्य ज्याचा काहीएक सर्वसाधारण अर्थ बोध होतो.) <br>
+		            2) इल्लोक्युशनरी ऍक्ट (काहीएक उच्चारण्याचा प्रयोग किंवा उच्चारणे हाच प्रयोग ज्याला डायरेक्टिव्ह, कमिसिव्ह, एक्स्प्रेसिव्ह आणि देक्लरेटिव्ह अशा संज्ञा आहेत) आणि <br>
+		            3) प्रीलोक्युशनरी ऍक्ट (जेथे बोलण्याचा उद्देश एखाद्याचे मन वळवणे असतो).</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> संघटनांमधील भाषा समजणे आणि संज्ञापन प्रक्रिया समजून घेऊन गैरसमज दूर करण्याची पाउले उचलली जाऊ शकतात</p>
+		          <p>&nbsp;</p>
+			       <p><strong>Further reading: </strong></p>
+			       <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Speech_act" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.carla.umn.edu/speechacts/definition.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://www-01.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsASpeechAct.htm" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Speech_Act_Theory.doc/" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header" id="evt"> 
+		        <a href="#evt">एक्स्पेक्टेंसी व्हॅल्यू सिद्धांत  </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/fishbein.png" alt="Fishbein" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>विचारवंत: </strong>मार्टिन फिश्बाइन याने 1970च्या दशकात हा सिद्धांत मांडला </p>
+	              <p>&nbsp;</p>
+		            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> युजेस अँड ग्रॅटिफिकेशन्स सिद्धांतावरून हा सिद्धांत पुढे जातो. अपेक्षांचं मूल्यांकन याबाबत हा सिद्धांत सांगतो. जगाकडे कसे पाहावे, त्याच्याशी कसे वागावे हे लोकांच्या जगाबाबतच्या अपेक्षा आणि त्याचे मूल्यांकन यांवर आधारलेले असते. </p>
+		            <p>&nbsp;</p>
+		            <p>या अपेक्षा दोन प्रकारच्या असतात <br>
+	                1) विश्वास कशात आहे <br>
+	                2) विश्वास कशाबाबत आहे. <br>
+	                <br>
+	                लोकांचा विश्वास आणि मूल्ये हे त्यांच्या उद्दिष्टांवर अवलंबून असतात आणि जेथे विश्वासाबाबत दुमत तयार होते, विभाजन होते तेथे ते असा पर्याय निवडतात ज्यातून यश आणि मूल्य अधिकाधिक प्राप्त होईल.  <br>
+	                <br>
+	                <strong>	                सिद्धांताची उपयुक्तता:</strong> मतदार कसे वागतील याचा अंदाज बांधण्यात या सिद्धांताचा उपयोग होतो किंवा जाहिरातीचा काय परिणाम होईल याचा अंदाज घेण्यासाठी होतो. . </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong></p>
+		            <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Expectancy-value_theory" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Expectancy_Value_Theory.doc/" target="_blank">लिंक 2</a><br>
+			        <a href="http://aguda.org.il/files/academic_bank/2/322/55859/2_2007_55859_1170980723.97.pdf" target="_blank">लिंक 3</a><br>
+			        <a href="http://130.18.140.19/persuasion/ExpectancyValueTheory.htm" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="urt"><a href="#urt"> अंसर्टंटी रिडक्शन सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/berger.png" alt="Berger" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>चार्ल्स बर्जर आणि रिचर्ड कॅलाब्रेस यांनी 1975 साली हा सिद्धांत मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण</strong>: अनोळखी व्यक्तीव्यक्तीतील संज्ञापनात लोक विविध क्लृप्त्या लढवतात ज्यायोगे अशा भेटीत वागण्याची, लोक आपल्याबाबत काय म्हणतील इत्यादींबाबतची अनिश्चितता कमी होण्यास मदत होते. </p>
+			        <p>&nbsp;</p>
+			        <p>तीन पद्धतींनी लोक समोरच्या व्यक्तीबाबत माहिती घेत असतात. <br>
+		            1) पॅसिव्ह स्ट्रॅटजीस (जेव्हा आपण एखाद्या व्यक्तीला त्याच्या नकळत न्याहाळतो) <br>
+		            2) ऍक्टिव्ह स्ट्रॅटजीस (जेव्हा आपण इतरांना एखाद्या व्यक्तीबाबत विचारतो) <br>
+		            3) इंटरऍक्टिव्ह स्ट्रॅटजीस (जेव्हा आपण ज्याच्याशी बोलायच आहे त्याच्याशी थेट संवाद साधतो).</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> संघटनात्मक अथवा सामाजिक गटांमधे या सिद्धांताचा उपयोग होतो</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Uncertainty_Reduction_Theory.doc/" target="_blank">लिंक 1</a><br>
+			        <a href="http://oregonstate.edu/instruct/theory/ur.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Communication_Theory/Uncertainty_Reduction" target="_blank">लिंक 3</a><br>
+			        <a href="http://www.academia.edu/2942637/Uncertainty_Reduction_Theory" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+             <li class="acc-header" id="alter"> 
+		        <a href="#alter"><strong>आल्टरकास्टिंग सिद्धांत</strong></a>
+	          <div class="acc-content">
+			        <p><strong> विचारक: </strong>हा विचार यूजीन वाइनस्टाइन आणि पॉल डॉइशबर्जर यांनी 1963 साली मांडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> या माध्यम सिद्धांताचे मूळ समाजशास्त्रात आहे. या सिद्धांताची व्याख्या ‘आपली ओळख प्रक्षेपित करणे’ असा होतो. व्यक्ति समाजात कुठली ‘भूमिका’ पार पाडते किंवा कुठल्या भूमिका तिच्यावर सामाजिक दबावामुळे थोपवल्या जातात याबाबत हा सिद्धांत स्पष्टीकरण देतो. </p>
+			        <p>&nbsp;</p>
+			        <p>आल्टरकास्टिंग दोन प्रकारचे असते. <br>
+		            1) मँडेड आल्टरकास्टिंग होते जेव्हा एखाद्या व्यक्तीला ती व्यक्ती कोण आहे, तिने काय करावे आणि तिने कसे वागावे हे तिला दिलेल्या भूमिकेच्या आधारावर ठरते. उदाहरणर्थ शिक्षक-विद्यार्थी <br>
+		            2) टॅक्ट आल्टरकास्टिंग होते जेव्हा व्यक्ति स्वत: एखादी भूमिका स्वीकारते ज्यामुळे इतरांच्या तिच्याकडून काही अपेक्षा असतात. उदाहरणार्थ एखाद्या कीर्तनकाराकडून ‘कीर्तनकाराला शोभेल’ असे वर्तन अपेक्षित असते.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांताचा माध्यम विपणन प्रक्रियेत उपयोग होतो जेथे प्रेक्षकांना वेगवेगळ्या भूमिकांमध्ये घालून त्यांच्या वागण्याला प्रभावित केले जाते. . </p>
+		        <p>&nbsp;</p>
+			       <p><strong>Further reading: </strong></p>
+			       <p>&nbsp;</p>
+                    <a href="http://www.jstor.org/discover/10.2307/2786148?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102603804433" target="_blank">लिंक 1</a><br>
+			        <a href="http://www.sagepub.com/newman5study/resources/blumstein1.htm" target="_blank">लिंक 2</a><br>
+			        <a href="http://singmeanadoreimi.wordpress.com/2011/10/16/altercasting-theory/" target="_blank">लिंक 3</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Altercasting" target="_blank">लिंक 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+	          </div>
+            </li>
+            
+            
+            <li class="acc-header2" id="pert"> 
+		        <a href="#pert">पर्सुएशन सिद्धांत  </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/persuasion.png" alt="Persuasion"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>ह्या सिद्धांतांचे मूळ ऍरिस्टॉटलच्या र्हेटॉरिकमधे आहे</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> सामाजिक प्रभाव पाडण्याचे एक तंत्र म्हणजे पर्सुएशन. प्रत्यक्षाप्रत्यक्ष पद्धतीने स्वत:ला अथवा इतरांना एखादा विचार आत्मसात करण्यास उद्युक्त करण्याची ही प्रक्रिया आहे. इतरांचे मनोभाव, मूल्ये बदलण्यासाठी अशा प्रकारे संज्ञापनाचा उपयोग केला जातो. पर्सुएशनच्या अनेक पद्धती आहेत. <br>
+		            1) रेसिप्रोसिटी – आपण कोणाचे देणे लागतो ही भावना याने जागृत होते. ही एक प्रभावी पद्धत आहे. <br>
+		            2) कमिट्मेंट आणि कंसिस्टंसी – एकदा का लोकांनी स्वत:ला एखाद्या विचारासाठी वाहून घेतले की मग ते पुढचा मागचा विचार न करता त्याचाच ध्यास धरतात. <br>
+		            3) सोशल प्रूफ – आपल्या सभोवतालचे लोक काय करताहेत तसे करण्याचा लोकांचा कल असतो. <br>
+		            4) अथोरिटी – अधिकारी व्यक्ती किंवा तज्ज्ञ यांवर लोकांचा विश्वास असतो. <br>
+		            5) लायकिंग – एखादी व्यक्ती आवडते म्हणून ते त्या व्यक्तीने सांगितलेले करतात. <br>
+		            6) स्कार्सिटी – एखादी गोष्ट अल्प प्रमाणात उपलब्ध असल्यास लोक तिला अधिक महत्त्व देतात आणि ती त्यांना अधिक हवीहवीशी वाटते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> माध्यम विपणनात पर्सुएशनचा उपयोग होतो </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Persuasion" target="_blank">लिंक 1</a><br>
+	          		<a href="http://communicationmodel.blogspot.in/2010/01/persuasion-theory-definition.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://faculty.business.utsa.edu/ljshrum/Dillard%20Ch19_FN%20to%20Publisher.pdf" target="_blank">लिंक 3</a><br>
+	          		<a href="http://changingminds.org/explanations/theories/a_persuading.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=0CV0OmiwJbc" target="_blank">लिंक 5</a><br>
+              		<p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            <li class="acc-header" id="st"> 
+		        <a href="#st"> सीमिऑटिक सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/sassure.png" alt="Sassure"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> फर्डिनंड सॉस्योर (1857-1913) आणि सी एस पर्स (1839-1914) आणि त्यानंतर नोम चॉम्स्की, उम्बर्टो इको, रोलँड बार्थ्स आणि जाँ बोदिला या सगळ्यांनी हा सिद्धांत मांडला आणि वाढवला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> चिन्ह प्रणालीचं विवरण आणि सिद्धांत म्हणजे सीमिऑटिक्स. कुठल्याही संस्कृतीमधे चिन्ह विवरण दुसर्‍या फळीची भाषाच असते. हे विवरण संस्कृतीचा अविभाज्य अंग असते आणि रोजच्या जीवनाचा एक भाग असते. ही चिन्हे आणि त्यांचे अर्थ प्रत्येक व्यक्ती एका कोड्याप्रमाणे संदेशात मांडत असते आणि ती कोडी त्या संदेशाचे ग्रहण करणारी व्यक्ती एका वैश्विक सांस्कृतिक शब्दकोशातून सोडवत असते. ही चिन्हे सांस्कृतिक असतात आणि त्यांचे अर्थ लावणे ज्याचे त्याला खुल्या पद्धतीने करता येते. यासाठी कुठलेच नियम नसतात. </p>
+			        <p>&nbsp;</p>
+			        <p>सीमिऑटिक्सच्या तीन शाखा आहेत – <br>
+		            1) सीमॅंटिक्स – चिन्हे आणि वस्तू यांच्यातील नाते, <br>
+		            2) सिंटॅक्टिस (चिन्हांमधील आंतरसंबंध), <br>
+		            3) प्रॅग्मॅतिक्स – चिन्हे आणि व्यक्तींवरील त्याचा परिणाम  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता: </strong>चिन्हांचा वापर रोजच्या संज्ञापनात आवाज आणि छापील संदेश, प्रतिमा, संगीत, चित्रपट, मायाजालावरील विषय यांमधे होत असतो. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Semiotics" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.aber.ac.uk/media/Documents/S4B/semiotic.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://www.uvm.edu/~tstreete/semiotics_and_ads/terminology.html" target="_blank">लिंक 3</a><br>
+	          		<a href="http://carbon.ucdenver.edu/~mryder/itc/semiotics.html" target="_blank">लिंक 4</a><br>
+              		<a href="http://www.youtube.com/watch?v=rEgxTKUP_WI" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            
+            
+            
+            <li class="acc-header2" id="tra"> 
+		        <a href="#tra">रीझंड ऍक्शन/प्लांड बिहेव्हिअर </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/ajzen.png" alt="Ajzen"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>आयचेक आझेन आणि मार्टिन फिशबायन यांनी 1975-80 या काळात हा सिद्धांत मांडला आणि पुढे जाऊन मनोभावाच्या सिद्धांताशी जोडला.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> सामाजिक मानसशास्त्रामधील हा सिद्धांत माणसाच्या वागण्याचा वेध घेतो. मनोभाव, मनसूबा आणि वागणूक यांचा हा सिद्धांत एकत्रित रित्या वेध घेतू. </p>
+			        <p>&nbsp;</p>
+			        <p>याचा मुख्य आग्रह आहे की व्यक्तीचे मनोभाव हे <br>
+		            1) आचाराबाबतची धारणा, <br>
+		            2) मूल्यांबाबतची धारणा आणि <br>
+		            3) नियंत्रणाबाबतची धारणा यांवर अवलंबून असतात. <br>
+		            या सिद्धांतानुसार व्यक्तीवर आपल्या सभोवतालच्या लोकांचा खूप परिणाम असतो ज्यामुळे तिचे वागणे ठरते.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> समाजशास्त्रात याचा उपयोग होतो.</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://people.umass.edu/aizen/faq.html" target="_blank">लिंक 1</a><br>
+	          		<a href="http://sph.bu.edu/otlt/MPH-Modules/SB/SB721-Models/SB721-Models3.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://www.slideshare.net/krissyk/theory-of-planned-behavior" target="_blank">लिंक 3</a><br>
+	          		<a href="http://www.tcd.ie/civileng/Staff/Brian.Caulfield/T2%20-%20Transport%20Modelling/The%20Theory%20of%20Planned%20Behaviour.pdf" target="_blank">लिंक 4</a><br>
+					<p>&nbsp;</p>
+		        </div>
+		    </li>
+      
+      
+        <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"><a href="early.html">काही मॉडेल आणि सुरूवातीचे सिद्धांत</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm"><a href="communication.html">आंतर वैयक्तिक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">प्रेक्षक आणि समाज</a>
+		    </li>
+            
+            <li class="acc-header5" id="media"><a href="media.html">माध्यम सिद्धांत</a></li>
+            
+            <li class="acc-header5" id="effects"><a href="effects.html">माध्यम परिणाम</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"><a href="organization.html">संस्थात्मक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"><a href="a2z.html">अे २ झेड</a>
+		    </li>
+            
+            
+		</ul>
+	</div>
+  </body>
+</html>

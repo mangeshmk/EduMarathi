@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        	
+            <li class="acc-header3" id="models"> 
+		        <a href="#models">काही मॉडेल आणि सिद्धांत</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            <li class="acc-header" id="rasa"> 
+		        <a href="#rasa">रस सिद्धांत -संज्ञापनाचा भारतीय दृष्टिकोन </a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rasa.png" alt="Rasa Theory" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>रस्यत इति रस:</strong> - ज्याचा स्वाद घेता येतो तो रस. रस सहा असतात - कटू, तिक्त, कषाय, मधुर, लवण, आम्ल. हे सहा रस केवळ जिह्वेने अनुभवता येतात. षड्रसभोजन ही संज्ञा यातून आली. </p>
+			        <p>&nbsp;</p>
+			        <p>स्वाद हा विचार नाट्य आणि काव्यालासुद्धा लावण्यात आला. रस आठ सांगितले आहेत. शृंगार, हस्य, करूण, रौद्र, वीर, भयानक, बीभत्स, अद्भुत. विविध अभ्यासकांनी आणखी रस सांगितले आहेत. भरताचे नाट्यशास्त्र हे रस सिद्धांत मांडणारे पहिले मानले जाते. ख्रिस्तपूर्व दोनशे वर्श ते ख्रिस्तानंतर सातशे वर्श या काळात केव्हातरी नाट्यशास्त्र लिहिले गेले असावे. भरत ही एक व्यक्ती होती अथवा अनेक व्यक्तींचा समूह होता त्याबद्द्ल मतमतांतरे आहेत. भरताअगोदर आचार्य द्रुहिन आणि वासुकी यंनीही रसाबाबत विचार मांडला होता असे जी.टी.देशपांडे यांनी म्हटले आहे. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> रससिद्धांत बहुधा भारतीय संज्ञापन शास्त्रातील सर्वात जुना सिद्धांत आहे जो संज्ञापन, परफॉर्मर आणि प्रेक्षक यांच्यातील संबंध स्पष्ट करतो. रस हा रसिकात वास करतो जो रसिक संज्ञापन अनुभवातून जातो. रसिक आणि परफॉर्मर जाणीव-नेणिवेच्या एकाच पातळीवर येतात, सहृदय होतात, तेव्हा संज्ञापन उद्देश्य साध्य होतो.</p>
+		        <p>&nbsp;</p>
+		         <strong>Further reading:</strong><br>
+		         <br>
+                 <a href="http://www.karandikars.com/rasa.htm" target="_blank">लिंक</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            
+            <li class="acc-header2" id="laswell"> 
+		        <a href="#laswell">हॅरॉल्ड लॅस्वेल यांचे मॉडेल ऑफ कम्युनिकेशन</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/lasswell.png" alt="Harold Lasswell" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> हॅरॉल्ड लॅस्वेल हे अमेरिकेतील राज्यशास्त्रातील तज्ज्ञ होते. त्यांच्यानुसार संज्ञापन प्रक्रियेचे वर्णन पुढील प्रश्नांतून सहज शक्य आहे – <br>
+			          कोण? <br>
+			          काय म्हणाले? <br>
+			          कुठल्या माध्यमाद्वारे? <br>
+			          कोणाला म्हणाले? <br>
+		            त्याचा परिणाम काय झाला? </p>
+			        <p>या मॉडेल द्वारे संज्ञापनाची प्रक्रिया आणि कार्याचे विश्लेषण करता येते. </p>
+			        <p>&nbsp;</p>
+			        <p><br>
+                    </p>
+			        <div class="imagePanel2"><img src="assets/images/laswellmodel.jpg" alt="Lasswell's Model"></div>
+		            <br>
+		            लॅस्वेलनुसार संज्ञापनाची तीन कार्ये आहेत – <br>
+	            एंव्हायरन्मेंट सर्व्हेलंस (सभोवतालचे सर्वेक्षण), <br>
+	            कोरिलेशन ऑफ कॉम्पोनंट्स (सुट्या सुट्या भागांचा आंतरसंबंध स्पष्ट करणे) आणि <br>
+	            कल्चरल ट्रांस्मिशन बिटवीन जेनेरेशन (दोन पिढ्यांमधील सांस्कृतिक अंतर भरून काढणे). <br>
+	            <br>
+	            लॅस्वेलनुसार संदेशाचे वहन बहुसांस्कृतिक समाजातून होत असते जिथे अनेक प्रकारचे प्रेक्षक असतात. हे संदेश विविध माध्यमांतून प्रवाहित होतात. लॅस्वेलचे मॉडेल ऍरिस्टॉटलच्या संज्ञापन मॉडेलसारखे आहे. येथे संज्ञापन प्रक्रियेतील ‘कोण’ या प्रश्नाचे उत्तर शोधण्यासाठी ‘कंट्रोल अनॅलिसिस’ (नियंत्रणाचे विश्लेषण), ‘काय म्हणाले’ साठी ‘कंटेंट अनॅलिसिस’ (विषय विश्लेषण), ‘कुठल्या माध्यमातून’ साठी मीडिया अनॅलिसिस (माध्यम विश्लेषण), ‘कोणाला’ साठी ‘ऑडियंस अनॅलिसिस (प्रेक्षकांचे विश्लेषण) आणि ‘कुठल्या परिणामी’ साठी ‘इफेक्टॅ अनॅलिसिस’ (परिणाम विश्लेषण या संशोधन प्रक्रियांतून जावे लागते.<br>
+	            <br>
+	            </p>
+			        <p>
+		         	<strong>लिंकs for more reading: </strong><br>
+		         	<br>
+                	<a href="http://en.wikipedia.org/wiki/Lasswell's_Model_of_Communication" target="_blank">लिंक 1</a><br>
+                	<a href="http://communicationtheory.org/lasswells-model/ " target="_blank">लिंक 2</a><br>
+                	<a href="http://itc-maribor.blogspot.in/2012/01/harold-lasswell.html " target="_blank">लिंक 3</a><br>
+                	<a href="http://zimmer.csufresno.edu/~johnca/spch100/masscomm.htm" target="_blank">लिंक 4</a><br>
+		        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="shannon"> 
+		        <a href="#shannon">शॅनॉन व्हीवर मॉडेल</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/shannonweaver.png" alt="Shannon and Weaver" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>या सिद्धांताला ‘मदर ऑफ ऑल मॉडेल्स’ (सर्व नमुन्यांची जननी) असे म्हटले आहे. क्लॉड शॅनॉन आणि वॉरेन व्हीवर यांनी 1948 साली हे मॉडेल सुचविले. त्याचा उल्लेख त्यांनी त्यांच्या ‘अ मॅथेमॅटिकल थिअरी ऑफ कम्युनिकेशन’ मधे केला. <br>
+			          <br>
+                <div class="imagePanel2"><img src="assets/images/shannonmodel.jpg" alt="Shannon Weaver Model"></div>
+                      <br>
+			          <strong>सिद्धांताचे स्पष्टीकरण:</strong> या सिद्धांताचा सगळ्यात महत्त्वाचा मुद्दा असा की संदेश वहनात ‘नॉइज’ म्हणजेच कोलाहलाचा अडथळा असतो आणि तो तांत्रिक, इलेक्ट्रॉनिक अथवा (सीमॅंटिक) चिन्हांमुळे होऊ शकतो.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Shannon–Weaver_model" target="_blank">लिंक 1</a><br>
+			          <a href="http://communicationtheory.org/shannon-and-weaver-model-of-communication/" target="_blank">लिंक 2</a><br>
+			          <a href="http://www.aber.ac.uk/media/Students/kjr9601.html" target="_blank">लिंक 3</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            <li class="acc-header2" id="schramm"><a href="#schramm"><strong>विल्बर श्राम मॉडेल</strong></a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/schramm.png" alt="Wilbur Schramm" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p> संदेशाच्या देवण-घेवाणीच्या प्रक्रियेत एका कोड्याची देवाण-घेवाण होते. त्यामुळे संज्ञापन प्रक्रियात पूर्ण होते जेव्हा संदेश देणारा आपले कोडे मांडतो,पाठवतो, ते कोडे सोडवले जाते आणि पुन्हा नव्याने एक कोडे तयार करून प्रथम ज्याने संदेश पाठवला त्याच्याकडे परत पाठविले जाते. <br>
+			          <br>
+                      <div class="imagePanel"><img src="assets/images/shrammmodel.jpg" width="90%" alt="Schramm's Model"></div>
+                      <br>
+                      याच मॉडेलचा पुढे टूवे मॉडेल म्हणून विकास  झाला.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Wilbur_Schramm" target="_blank">लिंक लिंक 1</a><br>
+			          <a href="http://www.managementstudyguide.com/schramm-model-of-communication.htm" target="_blank">लिंक 2</a><br>
+			          <a href="http://knowledge.sagepub.com/view/key-concepts-in-marketing/n46.xml" target="_blank">लिंक 3</a><br>
+			          <a href="http://en.wikipedia.org/wiki/Models_of_communication" target="_blank">लिंक 4</a><br>
+			          <a href="http://www.uri.edu/personal/carson/kulveted/wlsmodel.html" target="_blank">लिंक 5</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+
+            
+            
+            
+       		<li class="acc-header" id="aristotle"> 
+		        <a href="#aristotle">ऍरिस्टॉटलचे र्हेटॉरिक</a>    
+	            <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/Aristotele.png" alt="Aristotle" ></div>
+			        <p>&nbsp;</p>
+			        <p> <strong>विचारक:</strong> ऍरिस्टॉटलने या विषयावर आपले मत इसवीसनपूर्व 350 मधे मांडले. यालाच आर्ट ऑफ परसुएशन (पटवून देण्याची कला) असेही म्हणतात. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> ऍरिस्टॉटलच्या मते एखाद्या विषयात पटवून देण्यासारखे काय आहे हे समजून घेणे आवश्यक असते आणि ते मुद्दा पटवून देण्यापेक्षा अधिक महत्त्वाचे असते. </p>
+			        <p>&nbsp;</p>
+			        <p>एखादा विषय पटवून देण्याच्या उपकरणांची ऍरिस्टॉटलने तीन वर्गात विभागाणी केली. <br>
+		            1) ईथॉस – बोलणारी व्यक्ती कोण आहे, विषयावर तिचा काय आणि किती अधिकार आहे <br>
+		            2) पॅथॉस – श्रोत्याची मनस्थिती काय आहे <br>
+		            3) लोगॉस – विषयाची तर्कशुद्ध मांडणी. </p>
+			        <p>&nbsp;</p>
+			        <p>र्हेटॉरिक मधे आर्ग्युमेंटेशन (विवाद) आणि पर्सुएशन (पटवून देणे) यांचा समन्वय दिसून येतो.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> प्रेक्षकांना एखादा मुद्दा पटवून देण्यासाठी र्हेटॉरिकचा उपयोग होतो. मात्र जे पटवून दिले जाते ते अयोग्य अथवा चुकीचे नसते. जाहिरातींमधे तर याचा उपयोग केला जातोच त्याचबरोबर सामाजिक जागृति घडवून आणण्यासाठीच्या संज्ञापनातही याचा उपयोग होतो. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Links for more reading: </strong><br>
+		         <br>
+                	<a href="http://plato.stanford.edu/entries/aristotle-rhetoric" target="_blank">लिंक 1</a><br>
+			        <a href="http://classics.mit.edu/Aristotle/rhetoric.html" target="_blank">लिंक 2</a><br>
+			        <a href="http://courses.durhamtech.edu/perkins/aris.html" target="_blank">लिंक 3</a><br>
+			        <a href="http://spot.colorado.edu/~hauserg/ArSynop.htm" target="_blank">लिंक 4</a><br>
+		        	<a href="http://en.wikipedia.org/wiki/Rhetoric_(Aristotle)" target="_blank">लिंक 5</a><br>
+			        </p>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            
+            <li class="acc-header2" id="innis"> 
+	            <a href="#innis">हॅरॉल्ड इनिस </a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/innis.png" width="75%" alt="Innis"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>हॅरॉल्ड इनिस – नोव्हेंबर 5, 1894 – नोव्हेंबर 8, 1952</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> इनिस यांनी मांडलेल्या सिद्धांताला स्टेपल्स थिसिस असेही म्हणतात. या शोधनिबंधात इनिसनी दाखवून दिले की देशाच्या अर्थकारणावर त्या देशातील कच्च्या मालाची निर्यात आणि शोध यांचा परिणाम होतो. कॅनडामधील फर, लाकूड आणि कागदाच्या व्यापारावर आपला अभ्यास सादर करताना इनिस यांनी पुढे सांगितले की जे साधनांवर नियंत्रण ठेवतात, सत्ता त्यांच्या हाती असते. याचाच परिणाम होतो की जे माहितीवर नियंत्रण ठेवतात, सत्ता त्यांच्या हातात असते. </p>
+			        <p>&nbsp;</p>
+			        <p>माध्यम अभ्यासात इनिसने टाइम-बायज्ड मीडिया आणि स्पेस-बायज्ड मीडिया अशा संकल्पना मांडल्या.(बायज्ड=पूर्वग्रहदूषित) </p>
+			        <p><strong>टाइम-बायज्ड मीडिया</strong> – काही माध्यमे कालातीत असतात, खूप काळ टिकणारी असतात, एका ठिकाणहून दुसरीकडे हलवण्यास कठीण आणि त्यामुळे स्थिर असतात. या सर्व कारणांमुळे या माध्यमांमुळे तयार होणारी सत्ता खूप काळ टिकते मात्र तिचा प्रभाव क्षेत्र मर्यादित असतो. दगड, माती, मौखिक परंपरा ही सगळी माध्यमे टाइम-बायज्ड आहेत. या माध्यमांतून माहिती पिढ्यानपिढ्या टिकते मात्र खूप कमी प्रेक्षकांपर्यंत ती पोहोचते. </p>
+			        <p><strong>स्पेस-बायज्ड मीडिया</strong> – ही माध्यमे हलकी, एका ठिकाणाहून दुसर्‍या ठिकाणी नेण्यासारखी असतात. ही माध्यमे टिकाऊ नसतात त्यामुळे यांची सत्ता फार काळ टिकत नाही. रेडिओ, दूरचित्रवाणी, वर्तमानपत्रे हे सगळे एका खूप मोठ्या परिसरावर आपला प्रभाव टाकतात. टाइम-बायज्ड मीडियामुळे स्थिरता, समाजग़ट, परंपरा, धार्मिकता तयार होण्यास मदत होते तर स्पेस-बायज्ड मीडियामुळे झपाट्याने बदल घडवून आणता येतो, भौतिकवाद, धर्मनिरपेक्षता आणि साम्राज्य तयार करण्यास मदत होते. </p>
+		          <p>&nbsp;</p>
+		          <p>याच संदर्भात इनिस पुढे म्हणाले की जे ज्ञानावर ताबा मिळवतात ते सत्तेवर ताबा मिळवतात, तेच ज्ञानाची वैधतादेखील ठरवतात. अशाप्रकारे ‘मोनोपॉलिज ऑफ नॉलेज’ (ज्ञानाचा एकाधिकार) तयार होतो. अशाप्रकारची एकाधिकारशाही समाजाचे ध्रुवीकरण करते ज्यामुळे कालांतराने त्या एकाधिकारशाहीलाच आव्हान दिले जाते.		          </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis" target="_blank">लिंक 1</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis's_communications_theories" target="_blank">लिंक 2</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis_and_the_cod_fishery" target="_blank">लिंक 3</a><br>
+                    <a href="http://www.media-studies.ca/articles/innis.htm" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=5xvSvWg8550" target="_blank">लिंक 5</a><br>
+                    <a href="http://www.youtube.com/watch?v=FLxBle8QBKY" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header" id="mcluhan"> 
+	            <a href="#mcluhan">मार्शल मॅक्लुहान </a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/marshallmcluhan.png" width="75%" alt="mcluhan"></div>
+		          <p>&nbsp;</p>
+			        <p><strong> विचारवंत:</strong> मार्शल मॅक्लुहान कॅनडातील विचारवंत – जुलै 21, 1911 – डिसेंबर 31, 1980.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> मॅक्लुहान यांनी ‘मीडियम इज दि मेसेज’ असे म्हटले. माध्यम अभ्यासकांनी संदेशाचा अभ्यास करण्यापेक्षा माध्यमांचा अभ्यास करावा कारण  संदेशावर माध्यमांचा प्रभाव पडतो. </p>
+			        <p>&nbsp;</p>
+			        <p>त्यांच्या ‘गटनबर्ग गॅलेक्सी’ या पुस्तकात त्यांनी अशी संकल्पना मांडली की आपल्या विशिष्ट जाणिवांना विशिष्ट माध्यमे अनुरूप असतात. किंबहुना एखादे माध्यम हे विशिष्ट इंद्रियांचेच विस्तृत स्वरूप असते. यामुळे आपल्या जाणिवांवर परिणाम होतो आणि सामाजिक रचनेवरही प्रभाव पडतो. </p>
+			        <p>&nbsp;</p>
+			        <p>इलेक्ट्रॉनिक माध्यमे ही आपल्या मेंदूतील रचनेप्रमाणे एकमेकांशी संलग्न आणि जिवंत असतात त्यामुळे सगळे जगच माहितीच्या एका जाळ्यात सामावलेले असते. यामुळे हे जग म्हणजे एक गाव होऊन जाते, असे मॅक्लुहान यांनी म्हटले. यालाच त्यांनी ‘ग्लोबल व्हिलेज’ अशी संज्ञा वापरली. </p>
+			        <p>&nbsp;</p>
+			        <p>माध्यमांचा विशिष्ट इंद्रियांवरील परिणाम कितपत होतो यावरून त्यांनी माध्यमांना ‘हॉट’ अथवा ‘कोल्ड’ म्हटले.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> ज्यावेळेस मॅक्लुहान यांनी हे विचार मांडले त्यावेळेस ते काळाच्या खूप पुढे विचार करत होते त्यामुळे त्यांच्या विचारांने खळबळ उडाली मात्र आज ते सर्वत्र अभ्यासले जाताहेत. .</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Marshall_McLuhan" target="_blank">लिंक 1</a><br>
+                    <a href="http://www.marshallmcluhan.com/" target="_blank">लिंक 2</a><br>
+                    <a href="http://marshallmcluhanspeaks.com/" target="_blank">लिंक 3</a><br>
+                    <a href="http://www.youtube.com/watch?v=ImaH51F4HBw" target="_blank">लिंक 4</a><br>
+                    <a href="http://www.leaderu.com/orgs/probe/docs/mcluhan.html" target="_blank">लिंक 5</a><br>
+                    <a href="http://www.gingkopress.com/02-mcl/z_mcluhan-and-the-senses.html" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            
+             <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"><a href="early.html">काही मॉडेल आणि सुरूवातीचे सिद्धांत</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm"><a href="communication.html">आंतर वैयक्तिक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">प्रेक्षक आणि समाज</a>
+		    </li>
+            
+            <li class="acc-header5" id="media"><a href="media.html">माध्यम सिद्धांत</a></li>
+            
+            <li class="acc-header5" id="effects"><a href="effects.html">माध्यम परिणाम</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"><a href="organization.html">संस्थात्मक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"><a href="a2z.html">अे २ झेड</a>
+		    </li>
+            
+            
+		</ul>
+	</div>
+  </body>
+</html>

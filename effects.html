@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+</style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        	<li class="acc-header3" id="medeff"> 
+		        <a href="#mededd">माध्यम परिणाम</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            
+            <li class="acc-header" id="hypo"> 
+		        <a href="#hypo">हायपोडर्मिक नीडल सिद्धांत</a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/hypodermic.jpg" alt="Hypodermic Needle Theory" ></div>
+		          <p>&nbsp;</p>
+		          <p><strong>विचारवंत:</strong> 1930च्या दशकात जेव्हा जनमाध्यमांचा उगम झाला तेव्हा हा सिद्धांत मांडला गेला. हा सिद्धांत तयार होण्याला आधार शास्त्रीय नसून केवळ माध्यमांच्या परिणामांबाबत सर्वसाधारण कल्पना आहे. </p>
+			        <p>&nbsp;</p>
+			        <p>याच सिद्धांताला डायरेक्ट रेस्पॉंस सिद्धांत किंवा मॅजिक बुलेट सिद्धांतही म्हणतात. हा सिद्धांत चुकीचा आहे असे आता सिद्ध झाले आहे.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> एखादी सुई माणसाच्या मेंदूत खुपसली किंवा एखादी गोळी डोक्यात घालावी त्याप्रमाणे संदेश व्यक्तीच्या मेंदूत थेट घुसवला जाऊ शकतो असे हा सिद्धांत सांगतो. 1944 साली पॉल लाझार्सफेल्ड याने अमेरिकेतील राष्ट्राध्यक्षांच्या निवडणूकीचा अभ्यास केला व सिद्ध केले की माध्यमांतील संदेशांचा मतदारांवर कुठलाही परिणाम होत नाही. </p>
+                    <p>&nbsp;</p>
+                    <p><strong>Further reading:</strong>		            </p>
+                  <p><br>
+			          <a href"http://en.wikipedia.org/wiki/Hypodermic_needle_model" target="_blank">लिंक 1</a><br>
+			          <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Mass%20Media/Hypodermic_Needle_Theory.doc/" target="_blank">लिंक 2</a><br>
+			          <a href"http://www.youtube.com/watch?v=Qt5MjBlvGcY" target="_blank">लिंक 3</a><br>
+			          <a href"http://communicationtheory.org/magic-bullet-or-hypodermic-needle-theory-of-communication/" target="_blank">लिंक 4</a>
+                  <p>&nbsp;</p>
+              </div>
+	      </li>
+          
+          
+          
+            <li class="acc-header2" id="pt"> 
+		        <a href="#pt">प्रोपागॅंडा सिद्धांत </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/propaganda.png" width="75%" alt="Propaganda"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>वॉल्टर लिपमन, हॅरॉल्ड लॅस्वेल, जाक्स एलुल आणि एडवर्ड बर्नीस यांनी 1900च्या सुरवातीला प्रचाराच्या स्वरूपाबाबत सिद्धांत मांडले.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> लोकमतावर प्रभाव पाडण्यासाठी प्रचाराचा उपयोग केला जातो. दुसर्‍या महायुद्धाच्या वेळी अडॉल्फ हिटलरने ज्या पद्धातीने नाझी विचारसरणी जर्मनीतील लोकांवर प्रचारातून बिबंबवली त्यामुळे एकूणच प्रचाराला नकारात्मक स्वरूप प्राप्त झाले. </p>
+			        <p>&nbsp;</p>
+			        <p>प्रोपागॅंडा अथवा प्रचारात संदेशाची रचना अशी केली जाते की ज्यामुळे लोकांतील तर्कसंगत प्रतिक्रिये ऐवजी भावनिक प्रतिक्रिया उमटते. राजकीय, व्यापारी, धार्मिक अथवा सामाजिक विचार पसरवण्यासाठी प्रचाराचा उपयोग होतो. लिपमननुसार प्रचाराची आवश्यकता तेव्हा निर्माण होते जेव्हा लोक आणि एखादी घटना यांच्यात एखादा अडथळा निर्माण होतो. अशावेळी माध्यमे मध्ये येतात आणि मर्यादित माहिती पुरवून घटनेबाबत छद्म निर्माण करतात. </p>
+			        <p>&nbsp;</p>
+			        <p>प्रचार तीन प्रकारचा असतो <br>
+		            1) व्हाइट प्रोपागॅंडा जो माहिती असलेल्या स्रोताकडून होतो <br>
+		            2) ग्रे प्रोपागॅंडा जेव्हा स्रोताबाबत माहिती पुरविली जात नाही आणि <br>
+		            3) ब्लॅक प्रोपागॅंडा जेव्हा माहिती एका स्रोताकडून येत असली तरी दुसर्‍याच स्रोताकडे निर्देश केला जातो</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> सरकार आपली नीती, कार्यक्रमा इत्यादींसाठी प्रचाराचा उपयोग मोठ्या प्रमाणावर करते. धार्मिक विचारसरणी आणि जीवनशैलीशी संबंधित उत्पादनांच्या विपणनासाठी देखील प्रचाराचा उपयोग होतो.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+               	  <a href="http://en.wikibooks.org/wiki/Communication_Theory/Propaganda_and_the_Public" target="_blank">लिंक 1</a><br>
+               	  <a href="http://www.zeepedia.com/read.php?propaganda_theories_origin_of_propaganda_engineering_of_consent_behaviorism_theories_of_communication&b=81&c=10" target="_blank">लिंक 2</a><br>
+               	  <a href="http://www.propagandatheory.com/" target="_blank">लिंक 3</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">लिंक 4</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">लिंक 5</a><br>
+               	  <a href="http://www.academia.edu/819415/The_Propaganda_Model_Theoretical_and_Methodological_Considerations" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="uandg"><a href="#uandg"> युजेस अँड ग्रॅटिफिकेशंस सिद्धांत </a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/katzblumler.png" alt="Jay Blumler and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>एलिहु काट्ज आणि ब्लुम्लर यांनी हा सिद्धांत 1974 साली औपचारिकरित्या मांडला. या सिद्धांताची मुळे 1940च्या दशकांपासून तयार केलेल्या माध्यम परिणामांच्या सिद्धांतांमध्ये आहे.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> प्रेक्षकांना माध्यम अभ्यासात समाविष्ट करणारा हा पहिला सिद्धांत आहे. माध्यमांचे ग्राहक आणि उपभोक्ता हे सक्रीय असतात आणि त्यांना हवं ते निवडून ते बाकीचं सोडून देतात. यामुळे माध्यम परिणामाला मर्यादा पडतात आणि प्रेक्षक माध्यमांवर आपले नियंत्रण ठेवतात. </p>
+			        <p>&nbsp;</p>
+			        <p>प्रेक्षक पाच कारणांसाठी माध्यमांकडे वळतात. <br>
+		            1) कॉग्निटिव्ह (ज्या माध्यमातून आपले सर्वाधिक समाधान होते ते माध्यम आपण निवडतो), <br>
+		            2) अफेक्टिव्ह (आपले भावनिक समाधान होते), <br>
+		            3) पर्सनल इंटिग्रेटिव्ह (सामाजिक स्तर, विश्वासार्हता वाढवण्यासाठी), <br>
+		            4) सोशल इंटिग्रेटिव्ह (कुटुंब आणि मित्रांसोबत घालवलेला वेळ), <br>
+		            5) टेंशन रिलीज (रोजच्या दबावापासून मन इतरत्र वळवण्यासाठी). समीक्षकांनुसार माध्यमांचीही काही जबाबदारी असते आणि हा सिद्धांत माध्यमांनावरून सगळी जबाबदारी प्रेक्षकांवर टाकतो.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> सर्वच माध्यम परिणाम अभ्यासाला उपयुक्त</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Uses_and_gratifications_theory" target="_blank">लिंक 1</a><br>
+					<a href="http://www.aber.ac.uk/media/Documents/short/usegrat.html" target="_blank">लिंक 2</a><br>
+					<a href="https://umdrive.memphis.edu/cbrown14/public/Mass%20Comm%20Theory/Week%207%20Uses%20and%20Gratifications/Ruggiero.pdf" target="_blank">लिंक 3</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Uses_and_Gratifications_Approach.doc/" target="_blank">लिंक 4</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+     
+     
+            
+            <li class="acc-header2" id="sleeper"><a href="#sleeper"> स्लीपर इफेक्ट</a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/sleepereffect.jpg" alt="Sleeper Effect"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>या सिद्धांताचा मूळ विचार 1930च्या दशकात मांडला गेला होता मात्र त्याला खरे स्वरूप दिले ते कार्ल हॉवलँड इत्यादी विचारवंतांनी 1949 मधे. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण: </strong>जेव्हा लोक प्रचाराला सामोरे जातात तेव्हा स्लीपर इफेक्ट ही मानसशास्त्रीय संकल्पना तयार होते. ही संकल्पना अशी की लोक एखाद्या माहितीवर विश्वास ठेवत नाहीत कारण त्या माहितीचा स्रोत विश्वासार्ह नसतो मात्र कालांतराने लोक ही बाब विसरतात आणि तीच माहिती बरोबर असल्याचे मानू लागतात. अशाप्रकारे एखाद्या संदेशाच्या उशीरा झालेल्या परिणामाला स्लीपर इफेक्ट असे संबोधले जाते. ज्या कमी विश्वासार्हता असलेल्या स्रोतावर ही माहिती विसंबून होती त्याला डिस्काउंटिंग क्यू असे म्हणतात. अशाप्रकारे एखादा आग्रही संदेश एका डिस्काउंटिंग क्यू सोबत जोडला गेल्यास लोक कालांतराने संदेश लक्षात ठेवतात आणि डिस्काउंटिंग क्यू विसरतात. काही काळाने मात्र लोक त्या संदेशापासूनही दूर जातात कारण डिस्काउंटिंग क्यू हळू हळू कुजून जातो.</p>
+		          <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Sleeper_effect" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3100161/" target="_blank">लिंक 2</a><br>
+	          		<a href="http://lifehacker.com/5707484/persuasion-the-sleeper-effect" target="_blank">लिंक 3</a><br>
+	          		<a href="http://www.jstor.org/discover/10.2307/2488970?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102608488743" target="_blank">लिंक 4</a><br>
+              		<a href="http://www.fisherhouse.com/courses/2009/09/monicas-concepts-blog.html" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"><a href="early.html">काही मॉडेल आणि सुरूवातीचे सिद्धांत</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm"><a href="communication.html">आंतर वैयक्तिक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">प्रेक्षक आणि समाज</a>
+		    </li>
+            
+            <li class="acc-header5" id="media"><a href="media.html">माध्यम सिद्धांत</a></li>
+            
+            <li class="acc-header5" id="effects"><a href="effects.html">माध्यम परिणाम</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"><a href="organization.html">संस्थात्मक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"><a href="a2z.html">अे २ झेड</a>
+		    </li>
+            
+           
+		</ul>
+	</div>
+  </body>
+</html>

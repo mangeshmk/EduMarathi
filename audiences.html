@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.लिंकers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="accordion">
+    	<ul>
+        	<li class="acc-header3" id="audi"> 
+		        <a href="#audi">प्रेक्षक आणि समाज</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            
+           <li class="acc-header" id="publicsphere"> 
+		        <a href="#publicsphere">पब्लिक स्फिअर </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/habermas.png" width="75%" alt="Habermas"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>या संकल्पनेचा युर्गन हॅबरमास याने त्याच्या 1962 सालच्या ‘दि स्ट्रक्चरल ट्रांस्फॉर्मेशन ऑफ दि पब्लिक स्फिअर’ या शोधनिबंधात विस्तृतपणे उहापोह केला</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> पब्लिक स्फिअर म्हणजे अशी जागा जेथे खाजगी व्यक्ती आणि सरकारी अधिकारी सार्वजनिक हिताच्या गोष्टींची खुल्या वातावरणात समीक्षा करु शकतात. ब्रिटन मधील कॉफी हाउस आणि फ्रांस मधील सॅलोन हे त्याकाळची पब्लिक स्फिअरसाठी योग्य ठिकाणे होती. अशा ठिकाणी खाजगी व्यक्ती एकत्र येऊन राज्य व्यवस्थेला आपले मत आणि गरजा सांगू शकत होत्या. खागजी क्षेत्र आणि सार्वजनिक सत्तेचे क्षेत्र यांतील पब्लिक स्फिअर हा दुवा होते. </p>
+			        <p>&nbsp;</p>
+			        <p>दोन महत्त्वाच्या बाबी पब्लिक स्फिअरसाठी आवश्यक होत्या – <br>
+		            1) समाजातील स्थानाकडे दुर्लक्ष करणे <br>
+		            2) सार्वजनिक काळजीचे ठिकाण <br>
+		            3) सर्वसमावेशकता. </p>
+			        <p>&nbsp;</p>
+			        <p>अठराव्या शतकात पब्लिक स्फिअरमधे भांडवलशाहीच्या चर्चाच होत असत, मात्र खर्‍या अर्थाने हे असे ठिकाण होते जेथे समाजातील उच्चभ्रू आणि सामान्यजन एका अनौपचारिक मात्र समान पातळीवर चर्चा करू शकत होते. पब्लिक स्फिअरमधे लोकांना माहिती मिळवणे सहज होते, स्वायत्तता होती, उतरंड नाकारली जात होती, कायद्याचे राज्य होते आणि सर्वांचा अधिकाधिक सहभाग होता. जनमाध्यमे आली आणि हे पब्लिक स्फिअर लयाला गेले कारण ही माध्यमे समाजाभिमुख नसून व्यापारी होती. </p>
+			        <p>&nbsp;</p>
+			        <p>ऍरिस्टॉटलच्या र्हेटॉरिकचा आधार घेऊन पब्लिक स्फिअरकडे पाहता येते त्याची पाच मूल्ये आहेत – <br>
+		            1. पर्मिएबल बाउंडरीज (पारगम्य सीमा), <br>
+		            2. ऍक्टिव्हिटी (सक्रीयता), <br>
+		            3. कॉंटेक्स्चुअलाइज्ड लॅंग्वेज (संदर्भात बांधलेली भाषा), <br>
+		            4. बिलीव्हेबल अपीअरंस (विश्वासार्ह दृश्य), <br>
+		            5. टॉलरंस – सहनशीलता.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> उत्तर आधुनिक काळात पब्लिक स्फिअर सोशल नेटवर्किंगमुळे आता आभासी जगात दिसायला लागलं आहे</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Jürgen_Habermas" target="_blank">लिंक 1</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Public_sphere" target="_blank">लिंक 2</a><br>
+                  <a href="http://en.wikipedia.org/wiki/The_Structural_Transformation_of_the_Public_Sphere" target="_blank">लिंक 3</a><br>
+                  <a href="http://pages.uoregon.edu/koopman/courses_readings/phil123-net/publicness/habermas_structural_trans_pub_sphere.pdf" target="_blank">लिंक 4</a><br>
+                  <a href="http://culturalstudiesnow.blogspot.in/2011/09/jurgen-habermass-public-sphere.html" target="_blank">लिंक 5</a><br>
+                  <a href="http://pages.gseis.ucla.edu/faculty/kellner/papers/habermas.htm" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            
+              <li class="acc-header2" id="socialcapital"><a href="#socialcapital">सोशल कॅपिटल</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/putnam.png" width="75%" alt="Putnam"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत: </strong>‘बोलिंग अलोन: दि कोलॅप्स अँड रिव्हायवल ऑफ अमेरिकन कम्युनिटी’ या पुस्तकात रॉबर्ट पुट्नम यांनी 1950 पासून अमेरिकेतील सामाजिक भांडवलाच्या र्‍हासाबाबत चर्चा केली. याच भांडवलाच्या आधारावर अमेरिकेची लोकशाही उभी झाली होती मात्र हे भांडवल हळूहळू कमी होत गेले असे पुट्नम यांनी सांगितले.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण: </strong>अमेरिकेतील बोलिंग या खेळाचे उदाहरण देत पुट्नम यांनी सांगितले की हा खेळ खेळण्यार्‍यांची संख्या सतत वाढत जात असतानाच या खेळाच्या संघांमध्ये सहभाग मात्र घटला होता. त्याचप्रमाणे अमेरिकेतील सार्वजनिक जीवनात लोक व्यक्ती म्हणून सहभागी होत होते मात्र समाज म्हणून ते सहभागी होत नव्हते. याचे एक कारण म्हणजे टी व्ही आणि शहरीकरण. व्यक्तीव्यक्तीमधील देवाणघेवाणीवरून सामाजिक भांडवलाचा अंदाज करता येतो असे पुट्नम यांचे मत आहे. सामाजिक भांडवल हे लोकशाही रुजवण्यासाठी महत्त्वाचे असते. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता: </strong>उत्तर-आधुनिक जगात सामाजिक भांडवल कमी होताना दिसते आहे. या सिद्धांताचा अभ्यास जनसंपर्काचा अभ्यास करण्यास आधारभूत ठरू शकतो.</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Social_capital" target="_blank">लिंक 1</a><br>
+                  <a href="http://www.socialcapitalresearch.com/literature/definition.html" target="_blank">लिंक 2</a><br>
+                  <a href="http://infed.org/mobi/robert-putnam-social-capital-and-civic-community/" target="_blank">लिंक 3</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Robert_D._Putnam" target="_blank">लिंक 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Bowling_Alone" target="_blank">लिंक 5</a><br>
+                  <a href="http://www.academia.edu/196236/Bowling_together_-_applying_Robert_Putnams_theories_of_community_and_social_capital_to_public_relations" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header" id="civil"> 
+		        <a href="#civil">सिव्हिल सोसायटी सिद्धांत</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/hobbes.png" width="75%" alt="Hobbes"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारक:</strong> थॉमस हॉब्स  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांत स्पष्टीकरण:</strong> समाजात सभ्यता ठेवण्यासाठी सक्षम राज्यव्यवस्थेची आवश्यकता हॉब्स याने मांडली. माणसे स्वहित जपणारी आणि आत्मकेंद्री असतात. त्यामुळे त्यांची उद्दिष्ट्ये अनेकदा परस्पर विरोधी असतात ज्यामुळे स्वाभाविकपणे सगळेच सगळ्यांच्या विरोधात उभे असल्यासारखे होते. यावर सिव्हिल सोसायटी (नागरिकांचा समाज) असा उपाय हॉब्सने सुचवला. स्वयंस्फूर्तीतून तयार झालेले सामाजिक संबंध, नागरी आणि सामाजिक संघटना आणि संस्था हे समाज आधारस्तंभ असतात. याउलट जबरदस्तीने तयार केलेली राज्याची संरचना, बाजाराधिष्ठित व्यापारी संस्था आणि संघटित गुन्हेगारी असते. समाज म्हणजे राज्य व्यवस्था, बाजारव्यवस्था आणि नागरिकांचा समाज. या तीनही व्यवस्थांचा समाजातील आंतरसंबंध, नाती, चारित्र्य आणि संरचना यांवर परिणाम होतो. तर्कसंगतपणा आणि स्वहित यांमुळे माणसे आपणहून एकमेकांशी करार करायला तयार होतात आणि आपले सार्वभौमत्व एका सार्वजनिक सत्तेकडे द्यायला तयार होतात. यामुळे समाजात शांति प्रस्थापित करण्यासाठी सामाजिक करार करण्याची आवश्यकता असते. अशा समाजात अधिकार आणि मूल्ये स्वाभाविकपणे तयार होतात. मार्क्सनुसार असा समाज उत्पादकीय शक्ती आणि सामाजिक संबंधांचा पाया असतो तर राजकीय समाज त्यावर उभा असतो. मार्क्सनुसार भांडवलशाही व्यवस्था आणि नागरिकांच्या समाजात परस्पर संबंध असतो आणि भांडवशहांचे हित अशा नागरिकांच्या समजांतून जपले जातात. </p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+                    <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Thomas_Hobbes" target="_blank">लिंक 1</a><br>
+                  <a href="http://jim.com/hobbes.htm" target="_blank">लिंक 2</a><br>
+                  <a href="http://www.jstor.org/discover/10.2307/3235060?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102596922137" target="_blank">लिंक 3</a><br>
+                  <a href="http://graduateinstitute.ch/files/live/sites/iheid/files/sites/political_science/shared/political_science/1836/Week_3_Pietrzyk.pdf" target="_blank">लिंक 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Civil_society" target="_blank">लिंक 5</a><br>
+                  <a href="http://www.arabmediasociety.com/?article=773" target="_blank">लिंक 6</a><br>
+		        </div>
+		    </li>
+            
+           <li class="acc-header2" id="depend"> 
+		        <a href="#depend">डिपेंडन्सी सिद्धांत </a>
+	        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/sandraball.png" alt="Sandra Ball"></div>
+	              <br>
+              <p><strong>विचारवंत: </strong>सँड्रा बॉल-रॉकईच आणि मेल्विन दफ्लोर यांनी 1976 मध्ये त्याअगोदर अस्तिवात असलेल्या युजेस अँड ग्रॅटिफिकेशन्स आणि अजेंडा सेटिंग या सिद्धांतांवर हा सिद्धांत आधारला.  </p>
+	            <p>&nbsp;</p>
+	            <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> माध्यमांवर अवलंबित्व जसजसे वाढत जाते तसे तसे माध्यमांचा प्रभाव व्यक्तीच्या जीवनात वाढत जातो. या सिद्धांताने पहिल्यांदा असे दाखवून दिले की प्रेक्षक संज्ञापन प्रक्रियेत सक्रीय असतात आणि माध्यमे, प्रेक्षक आणि एकंदर समाज यांत परस्पर संबंध असतत. युजेस अँड ग्रॅटिफिकेशन्स सिद्धांत असे सांगतो की प्रेक्षक माध्यमांतून जे हवे असते तेच घेतात मात्र डिपेंडन्सी सिद्धांत असे सांगतो की माध्यमे प्रेक्षकांच्या गरजा भागवून  स्वत:वर अवलंबित बनवतात. </p>
+	            <p>&nbsp;</p>
+	            <p>हे अवलंबित्व किती असेल हे दोन गोष्टींवर ठरते. <br>
+	              1) जेव्हा आपल्या गरजा भागवेल असे माध्यम आपल्या सापडते तेव्हा आपण त्या मध्यमावर अधिकाधिक अवलंबून असतो <br>
+	              2) जेव्हा आपल्यासमोर एखादा सामाजिक संघर्ष उभा राहतो किंवा आपली मते, धार्मिक रीति रिवाज इत्यादींचे पुनरावलोकन करणे भाग असते तेव्हा माध्यमांवर आपले अवलंबित्व वाढते. स्थिरता आली की माध्यमांवरील अवलंबित्व कमी होत जाते.   <br>
+	              <br>
+	              <strong>Further reading:</strong></p>
+	            <p><br>
+	              <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Dependency%20Theory.doc/" target="_blank">लिंक 1</a><br>
+	              <a href"http://en.wikipedia.org/wiki/Media_systems_dependency_theory" target="_blank">लिंक 2</a><br>
+	              <br>
+              </p>
+	        </div>
+	      </li>
+          
+            
+            <li class="acc-header" id="tsft"><a href="#tsft">टू स्टेप फ्लो सिद्धांत</a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/lazarsfeldandkatz.png" alt="Paul Lazarsfeld and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> पॉल लाझार्सफेल्ड आणि एलिहु काट्ज यांनी 1955 साली हा सिद्धांत मांडला. त्यांनी त्या अगोदर 1944 साली लासार्सफेल्ड, बर्नार्ड बेरेलसन आणि हेझेल गॉडेट यांनी मांडलेल्या सिद्धांताला अधिक समृद्ध केले</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> माध्यमांचा लोकांवर थेट परिणाम होत नसला (मॅजिक बुलेट सिद्धांतात मांडल्याप्रमाणे) तरी मते ज्यांच्यामुळे तयार होतात अशा नेतृत्वातर्फे संदेश पाठवून लोक मतावर प्रभाव पाडला जाऊ शकतो. 1944 सालच्या ‘पीपल्स चॉइस स्टडी’ मधे लाझार्सफेल्डने सिद्ध केले की माध्यम संदेशांचा मतदारांवर कुठलाही परिणाम होत नाही. त्यापेक्षा व्यक्तिगत आणि अनौपचारिक पद्धतीने साधलेल्या संवादामुळे मतदारांवर परिणाम होतो असे आढळले. </p>
+			        <p>&nbsp;</p>
+			        <p>टू स्टेप फ्लो सिद्धांतानुसार संदेशवहन दोन पायर्‍यांतून होते – <br>
+		            1) ज्यांच्यायोगे मते तयार होतात अशा व्यक्ती पहिल्यांदा संदेश आणि माहितीचे ग्रहण माध्यमांतून करतात <br>
+		            2) या व्यक्ती पुढे तो संदेश स्वत:चे मत जोडून लोकांपर्यंत पोहोचवतात.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> या सिद्धांतामुळे रडिओ, टीव्ही आणि इंटरनेट या सर्वच माध्यमांच्या परिणामांचा अभ्यास शक्य आहे</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Two-step_flow_of_communication" target="_blank">लिंक 1</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Two_Step_Flow_Theory-1.doc/" target="_blank">लिंक 2</a><br>
+					<a href="http://www.youtube.com/watch?v=cMjaekolB9g" target="_blank">लिंक 3</a><br>
+					<a href="http://lessonbucket.com/media-in-minutes/the-two-step-flow-theory/" target="_blank">लिंक 4</a><br>
+					<a href="http://communicationtheory.org/two-step-flow-theory-2/" target="_blank">लिंक 5</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+           <li class="acc-header2" id="technopoly"> 
+		        <a href="#technopoly"><strong>टेक्नॉपॉली</strong></a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/postman.png" alt="Neil Postman"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>विचारवंत:</strong> नील पोस्टमॅन याने हा शब्दप्रयोग पहिल्यांदा त्याच्या 1992च्या ‘टेक्नॉपॉली: दि सरेंडर ऑफ कल्चर टु टेक्नॉलॉजी’ या पुस्तकात केला</p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताचे स्पष्टीकरण:</strong> टेक्नॉपॉली एक असा समाज आहे जो तंत्रज्ञानाची पूजा करतो. ही संस्कृती आपले अधिकार तंत्रज्ञानात शोधते, तंत्रज्ञानातून ती तृप्त होते आणि तंत्रज्ञानाकडून ती आदेश घेते. सर्व सांस्कृतिक जीवन हे तंत्र आणि तंत्रज्ञानात विलीन केल्यामुळे मानवी जीवनाचे उद्दिष्ट हे नवनवीन यंत्र शोढणे हेच होऊन बसते. जी माहिती तंत्रज्ञानामुळे तयार होते त्यामुळे माध्यमांमधे माहितीची भरमार होते.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>सिद्धांताची उपयुक्तता:</strong> पोस्टमॅनच्या या सिद्धांताचे अनेक विरोधक असले तरी सध्याच्या माहिती तंत्रज्ञानाच्या प्रभावाखाली असलेल्या समाजात त्याचे म्हणणे तपासून पाहण्याची गरज आहे. </p>
+		          <p>&nbsp;</p> 
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Technopoly" target="_blank">लिंक 1</a><br>
+	          		<a href="http://www.ibiblio.org/cmc/mag/1995/mar/hyper/npcontexts_119.html" target="_blank">लिंक 2</a><br>
+	          		<a href="http://kyletjantzen.wordpress.com/2012/11/03/neil-postmans-technopoly-twenty-years-later/" target="_blank">लिंक 3</a><br>
+	          		<a href="http://www.c-spanvideo.org/program/31627-1" target="_blank">लिंक 4</a><br>
+              		<a href="http://www.ucs.mun.ca/~emurphy/stemnet/technop.html" target="_blank">लिंक 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+              </div>
+	      </li>
+            
+             <li class="acc-header5" id="home"> 
+		        <a href="index.html">मुख्य मेनू</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"><a href="early.html">काही मॉडेल आणि सुरूवातीचे सिद्धांत</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm"><a href="communication.html">आंतर वैयक्तिक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">प्रेक्षक आणि समाज</a>
+		    </li>
+            
+            <li class="acc-header5" id="media"><a href="media.html">माध्यम सिद्धांत</a></li>
+            
+            <li class="acc-header5" id="effects"><a href="effects.html">माध्यम परिणाम</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"><a href="organization.html">संस्थात्मक संज्ञापन</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"><a href="a2z.html">अे २ झेड</a>
+		    </li>
+            
+            
+		</ul>
+	</div>
+  </body>
+</html>
