@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.edusanchar.commthm"
+    id        = "com.sancharfirst.commthmarathi"
     version   = "1.0.0">
 
 <name>EduSanchar मराठी - संजापन सिद्धांत</name>
@@ -10,7 +10,7 @@
 सर्व माध्यम विद्यार्थ्यांकरिता संजापन व माध्यम सिद्धांत चटकन शिकण्याकरिता
 </description>
 
-<author href="http://www.edusanchar.in" email="commth_marathi@edusanchar.in">
+<author href="http://www.edusanchar.in" email="quicklearn@edusanchar.in">
 डॉ. मंगेश करंदीकर
 </author>
 
